@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mszana INFO — Mszana – Przejrzysta Gmina &amp; Sprawy Mieszkańców</title>
+    <meta name="description" content="Forum mieszkańców Mszany, Połomi, Gogołowej - Twój Głos jest ważny. Ogłoszenia, wydarzenia, drogi, bezpieczeństwo. Powiązane z grupą FB.">
+    <meta name="author" content="Mszana INFO — portal mieszkańców gminy Mszana">
+    <meta name="theme-color" content="#3d6549">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mszana INFO">
+    <meta property="og:title" content="Mszana INFO — Mszana – Przejrzysta Gmina &amp; Sprawy Mieszkańców">
+    <meta property="og:description" content="Aktualności, ogłoszenia i forum mieszkańców Mszany, Połomi i Gogołowej. Twój głos się liczy!">
+    <meta property="og:url" content="https://mszana.info/">
+    <meta property="og:image" content="https://mszana.info/assets/og-mszana-info.png">
+    <meta property="og:locale" content="pl_PL">
+    <meta name="twitter:card" content="summary_large_image">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        readable: ['Atkinson Hyperlegible', 'system-ui', 'sans-serif'],
+                        display: ['Fraunces', 'serif'],
+                    },
+                    colors: {
+                        warm: { 50:'#fdfaf3', 100:'#f9f0e0', 200:'#f3e8d0', 300:'#e8e0d0', 800:'#4a453e', 900:'#2d2a26' },
+                        sage: { 50:'#f4f7f4', 100:'#e3ebe3', 200:'#c8d9ca', 500:'#6b8f71', 600:'#4a7c59', 700:'#3d6549' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #fdfaf3; color: #2d2a26; line-height: 1.8; font-size: 17px; }
+        .soft-card { background: #ffffff; border: 1px solid #f0e9db; box-shadow: 0 4px 24px -8px rgba(45,42,38,0.08), 0 1px 4px rgba(45,42,38,0.04); border-radius: 20px; transition: all 0.25s ease; }
+        .soft-card:hover { box-shadow: 0 12px 32px -10px rgba(45,42,38,0.12), 0 4px 12px rgba(0,0,0,0.04); }
+        .clamp2 { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+        .active-cat { box-shadow: 0 0 0 2px #4a7c59; transform: scale(1.02); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        section[id], #kontakt, footer { scroll-margin-top: 92px; }
+    </style>
+</head>
+<body class="font-readable antialiased" id="bodyRoot">
+
+    <!-- ACCESSIBILITY BAR -->
+    <div class="sticky top-0 z-50 bg-warm-50/90 backdrop-blur-md border-b border-warm-200 shadow-sm">
+        <div class="max-w-[1280px] mx-auto px-5 h-[52px] flex items-center justify-between gap-3">
+            <div class="flex items-center gap-2 min-w-0 shrink-0">
+                <a href="mailto:kontakt@mszana.info" class="px-3 sm:px-4 h-8 rounded-full bg-teal-600 text-white text-[13px] font-bold inline-flex items-center gap-1.5 whitespace-nowrap" title="Kontakt do redakcji">📧 kontakt@mszana.info</a>
+            </div>
+            <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar">
+                <a href="https://www.facebook.com/groups/1245680220713294?locale=pl_PL" target="_blank" rel="noopener" class="px-3 sm:px-4 h-8 rounded-full bg-white border border-warm-200 text-[13px] font-bold inline-flex items-center gap-1.5 whitespace-nowrap" title="Mszana – Przejrzysta Gmina &amp; Sprawy Mieszkańców">f Grupa</a>
+                <a href="https://www.facebook.com/mszana.gmina?locale=pl_PL" target="_blank" rel="noopener" class="px-3 sm:px-4 h-8 rounded-full bg-[#0866FF] text-white text-[13px] font-bold inline-flex items-center gap-1.5 whitespace-nowrap">f Gmina</a>
+                <a href="https://mszana.ug.gov.pl" target="_blank" rel="noopener" class="hidden sm:inline-flex px-3 sm:px-4 h-8 rounded-full bg-sage-600 text-white text-[13px] font-bold items-center gap-1.5 whitespace-nowrap" title="Oficjalna strona Gminy Mszana">
+                    <img src="assets/herb-mszana.png" alt="Herb Gminy Mszana" class="h-5 w-auto rounded-full border border-white/40">
+                    Gmina Mszana
+                </a>
+                <a href="#forum" class="px-4 h-8 rounded-full bg-warm-900 text-warm-50 text-[13px] font-bold inline-flex items-center whitespace-nowrap">💬 Forum</a>
+                <a href="#wideo" class="px-3 sm:px-4 h-8 rounded-full bg-red-600 text-white text-[13px] font-bold inline-flex items-center gap-1.5 whitespace-nowrap" title="Taneczny Workout Cardio w rytmie hitów Sanah">🎬 Workout</a>
+                <a href="https://mszana.ug.gov.pl/kontakt-do-radnych.html" target="_blank" rel="noopener" class="hidden lg:inline-flex px-3 sm:px-4 h-8 rounded-full bg-amber-600 text-white text-[13px] font-bold items-center gap-1.5 whitespace-nowrap" title="Kontakt do radnych z poszczególnych okręgów">👥 Radni</a>
+                <a href="https://mszana.ug.gov.pl/wybory-samorzadowe-w-2024-roku.html" target="_blank" rel="noopener" class="hidden lg:inline-flex px-3 sm:px-4 h-8 rounded-full bg-amber-700 text-white text-[13px] font-bold items-center gap-1.5 whitespace-nowrap" title="Okręgi Wyborcze w 2024 roku">🗺️ Okręgi</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="max-w-[1280px] mx-auto px-5 pt-7 pb-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="assets/herb-mszana.png" alt="Herb Gminy Mszana" class="h-14 w-auto rounded-xl shadow-sm border border-warm-200 bg-white p-0.5" loading="lazy">
+                <div>
+                    <div class="font-display text-[23px] leading-none tracking-tight text-warm-900 font-bold">Mszana INFO</div>
+                    <div class="text-[10.5px] sm:text-[11.5px] tracking-[0.1em] uppercase font-bold text-sage-600 mt-1 leading-snug">Mszana – Przejrzysta Gmina &amp; Sprawy Mieszkańców</div>
+                </div>
+            </div>
+            <nav aria-label="Nawigacja główna" class="hidden lg:flex items-center gap-5 text-[14.5px] font-bold text-warm-900/75">
+                <a class='text-sage-700 bg-sage-50 px-3 py-1 rounded-full border border-sage-200' href='artykuly/remont-ul-1-maja.html'>📰 Aktualności</a>
+                <a href="#ogloszenia" class="hover:text-sage-700">Ogłoszenia</a>
+                <a href="#forum" class="hover:text-sage-700">Forum - Twój Głos</a>
+                <a href="#mapa" class="hover:text-sage-700">Mapa</a>
+                <a href="#kontakt" class="hover:text-sage-700">Sołtysi</a>
+                <a href="#wideo" class="hover:text-sage-700">🎬 Wideo</a>
+                <a href="#onas" class="hover:text-sage-700">O nas</a>
+                <a href="https://mszana.ug.gov.pl" target="_blank" rel="noopener" class="hover:text-sage-700">🏛️ UG Mszana</a>
+                <a href="https://www.facebook.com/mszana.gmina?locale=pl_PL" target="_blank" rel="noopener" class="hover:text-sage-700">f Gmina</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO MINI - FORUM TEASER -->
+    <section class="max-w-[1280px] mx-auto px-5 pt-6 pb-8">
+        <div class="soft-card p-0 overflow-hidden grid lg:grid-cols-[1.1fr_0.9fr] items-stretch">
+            <div class="p-8 sm:p-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sage-600 text-white text-[12px] font-bold tracking-wide uppercase">
+                    <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                    Forum Mieszkańców Gminy Mszana — Twój Głos
+                </div>
+                <h1 class="font-display text-[38px] sm:text-[44px] leading-[1.05] mt-5 tracking-tight">
+                    Twoja ulica, <br>Twój głos się <span class="text-sage-600">liczy.</span>
+                </h1>
+                <div class="mt-5 flex items-center gap-4">
+                    <img src="assets/herb-mszana.png" alt="Herb Gminy Mszana" class="h-24 w-auto rounded-2xl bg-white p-1 border border-warm-200 shadow-sm" loading="lazy">
+                    <div>
+                        <div class="font-bold text-[16px]">Gmina Mszana</div>
+                        <div class="text-[13.5px] text-warm-800/65">Mszana • Połomia • Gogołowa — Twój głos się liczy. 💚</div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-3 mt-7">
+                    <a href="#forum" class="h-11 px-6 rounded-full bg-warm-900 text-white font-bold inline-flex items-center gap-2">Wejdź na Forum 💬</a>
+                    <button onclick="openNewTopicModal()" class="h-11 px-6 rounded-full bg-white border border-warm-200 font-bold">+ Nowy temat</button>
+                </div>
+                <div class="mt-8 flex items-center gap-3 text-[13px] text-warm-800/60">
+                    <div class="flex -space-x-2">
+                        <img src="https://i.pravatar.cc/32?img=12" alt="Avatar użytkownika" class="w-8 h-8 rounded-full border-2 border-white">
+                        <img src="https://i.pravatar.cc/32?img=14" alt="Avatar użytkownika" class="w-8 h-8 rounded-full border-2 border-white">
+                        <img src="https://i.pravatar.cc/32?img=32" alt="Avatar użytkownika" class="w-8 h-8 rounded-full border-2 border-white">
+                    </div>
+                    <span>Anna, Marek i 23 sąsiadów dyskutuje dziś</span>
+                </div>
+            </div>
+            <div class="bg-[#f5efe0] p-0 flex items-center justify-center relative overflow-hidden">
+                <img src="assets/forum-graphic.png" alt="Forum mieszkańców ilustracja" class="w-full h-full object-cover min-h-[360px]" style="filter: sepia(0.1) saturate(0.9);">
+                <div class="absolute bottom-4 left-4 right-4 soft-card p-4 bg-white/90 backdrop-blur">
+                    <div class="text-[12px] font-bold uppercase tracking-widest text-warm-800/60">Ostatnio na Forum</div>
+                    <div class="font-bold text-[14px] leading-tight mt-1">💡 Pomysł: Oświetlenie ścieżki Mszana - Połomia</div>
+                    <div class="text-[12px] text-warm-800/70">12 głosów za • 8 komentarzy • 2h temu</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMO: TANECZNY WORKOUT (link prowadzi na sam dół strony) -->
+    <div class="max-w-[1280px] mx-auto px-5 pt-2">
+        <a href="#wideo" class="soft-card p-4 sm:p-5 flex flex-wrap items-center gap-4 justify-between bg-gradient-to-r from-red-50 via-rose-50 to-warm-50 border-red-100 hover:border-red-300 transition">
+            <div class="flex items-center gap-4">
+                <span class="w-12 h-12 rounded-2xl bg-red-600 text-white flex items-center justify-center text-[22px] shrink-0">🎬</span>
+                <div>
+                    <div class="font-display font-bold text-[17px] leading-tight">Taneczny Workout Cardio w rytmie hitów Sanah</div>
+                    <div class="text-[13.5px] text-warm-800/75 mt-1">Ćwicz bez wychodzenia z domu! Zobacz fragment treningu (7:00 – 9:30) — kliknij i przewiń 👇</div>
+                </div>
+            </div>
+            <span class="h-10 px-5 rounded-full bg-red-600 text-white font-bold text-[13.5px] inline-flex items-center gap-2 hover:bg-red-700 shrink-0">Obejrzyj wideo →</span>
+        </a>
+    </div>
+
+    <!-- AKTUALNOŚCI - ważny artykuł -->
+    <section id="aktualnosci" class="max-w-[1280px] mx-auto px-5 py-8">
+        <div class="flex items-end justify-between gap-4">
+            <h2 class="font-display text-[28px]">📰 Aktualności</h2>
+            <span class="text-[12px] font-bold text-warm-800/60 hidden sm:inline">Źródło: <a href="https://mszana.ug.gov.pl" target="_blank" rel="noopener" class="text-sage-700 hover:text-sage-600">mszana.ug.gov.pl</a> • <a href="https://www.facebook.com/mszana.gmina?locale=pl_PL" target="_blank" rel="noopener" class="text-sage-700 hover:text-sage-600">f Gmina (FB)</a></span>
+        </div>
+        <a class='soft-card mt-5 grid lg:grid-cols-[0.95fr_1.05fr] overflow-hidden hover:scale-[1.005] transition-transform block' href='artykuly/remont-ul-1-maja.html'>
+            <div class="relative bg-[#f5efe0]">
+                <img src="assets/ul-1-maja-mapa-trasa.png" alt="Mapa: remontowany odcinek ul. 1 Maja w Mszanie" class="w-full h-full object-cover min-h-[250px]">
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-[#e12b26] text-white text-[11px] font-bold uppercase tracking-widest">Ważne</span>
+            </div>
+            <div class="p-6 sm:p-8">
+                <div class="text-[11.5px] font-bold uppercase tracking-widest text-sage-600">🚧 Utrudnienia i drogi • po sesji Rady Gminy (27.07.2026)</div>
+                <h3 class="font-display text-[26px] leading-[1.15] mt-2">Co dalej z remontem ul. 1 Maja w Mszanie? Sprawdzamy najnowsze informacje!</h3>
+                <p class="text-[15.5px] text-warm-800/75 mt-3">Przepust do 1 września, pełna mobilizacja na odcinku Dino – Piekarnia Kozielski i wyjaśnienie sprawy płyt ażurowych na skarpach — najważniejsze ustalenia w jednym miejscu. 🚜</p>
+                <div class="mt-5 inline-flex items-center gap-2 h-10 px-5 rounded-full bg-warm-900 text-white font-bold text-[13.5px]">Czytaj artykuł →</div>
+            </div>
+        </a>
+        <a class='soft-card mt-5 p-6 sm:p-8 block hover:scale-[1.005] transition-transform bg-white' href='artykuly/sesja-27-lipca-2026-relacja.html'>
+            <div class="flex flex-wrap items-center gap-2">
+                <span class="text-[11.5px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-[#e12b26]/10 text-[#e12b26]">📋 Relacja z sesji</span>
+                <span class="text-[11.5px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-amber-100 text-amber-800">Ważne</span>
+                <span class="text-[13px] text-warm-800/60">XXVII Sesja Rady Gminy Mszana • 27.07.2026</span>
+            </div>
+            <h3 class="font-display text-[26px] leading-[1.15] mt-3">XXVII Sesja Rady Gminy Mszana – 27 lipca 2026 r. – co się działo naprawdę?</h3>
+            <p class="text-[15.5px] text-warm-800/75 mt-3">Afera wodna w Połomi, spór o ulicę Ładną, inwestycje drogowe, CPK, kanalizacja, Młodzieżowa Rada Gminy, Karta Seniora i więcej — pełna relacja z wolnych wniosków ze znacznikami czasu nagrania (13:32 – 92:35) i wszystkimi źródłami. 🎥</p>
+            <div class="mt-4 inline-flex items-center gap-2 h-10 px-5 rounded-full bg-warm-900 text-white font-bold text-[13.5px]">Czytaj pełną relację →</div>
+        </a>
+        <div class="grid md:grid-cols-2 gap-5 mt-5">
+            <a class='soft-card p-6 block hover:scale-[1.005] transition-transform' href='artykuly/fundusz-solecki-jak-bo.html'>
+                <span class="text-[11.5px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-yellow-100 text-yellow-800">🏘️ Fundusz Sołecki</span>
+                <h3 class="font-display text-[22px] leading-[1.15] mt-3">Fundusz sołecki jako budżet obywatelski gminy wiejskiej</h3>
+                <p class="text-[14.5px] text-warm-800/75 mt-2">66 401,80 zł na każde sołectwo w 2026! Czym jest fundusz sołecki, jak działa i dlaczego to „budżet obywatelski wsi”. Zebrania wiejskie już we wrześniu.</p>
+                <div class="mt-4 inline-flex items-center gap-2 h-9 px-4 rounded-full bg-warm-900 text-white font-bold text-[13px]">Czytaj artykuł →</div>
+            </a>
+            <a class='soft-card p-6 block hover:scale-[1.005] transition-transform' href='artykuly/afera-wodna-polomia.html'>
+                <span class="text-[11.5px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-sky-100 text-sky-800">💧 Sprawy gminne</span>
+                <h3 class="font-display text-[22px] leading-[1.15] mt-3">„Afera wodna” w Połomi — co ustalono na sesji?</h3>
+                <p class="text-[14.5px] text-warm-800/75 mt-2">Pełny przebieg dyskusji radnych (nagranie 13:32–19:42 i 41:26–48:53) + UZUPEŁNIENIE: sprawdziliśmy w Dzienniku Ustaw, czy „nowe przepisy z 22 maja” to prawda.</p>
+                <div class="mt-4 inline-flex items-center gap-2 h-9 px-4 rounded-full bg-warm-900 text-white font-bold text-[13px]">Czytaj artykuł →</div>
+            </a>
+        </div>
+
+        <div class="soft-card p-6 sm:p-8 bg-white mt-6 border-l-4 border-l-[#2563eb] shadow-sm">
+            <div class="flex items-center gap-2.5">
+                <span class="w-10 h-10 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-[18px] shrink-0">🔎</span>
+                <h3 class="font-display text-[21px] font-bold text-warm-900">UZUPEŁNIENIE do wcześniejszej relacji z sesji (27.07.2026) – sprawa wody w Połomi.</h3>
+            </div>
+            <p class="mt-3 text-[15px] leading-[1.8] text-warm-900">W poprzednim poście opisywaliśmy dyskusję radnych o opóźnionym poinformowaniu mieszkańców o przekroczeniu norm w wodzie z kranu w Połomi. Wicewójt na sesji powołał się na "nowe, bardziej restrykcyjne przepisy z 22 maja 2026 r." – sprawdziliśmy to w oficjalnych źródłach i potwierdzamy, że to prawda, nie żadna wymówka:</p>
+            
+            <div class="info-box green mt-4 bg-emerald-50 border border-emerald-200 border-l-4 border-l-emerald-600 p-4 rounded-xl">
+                <span class="font-bold block text-emerald-900 mb-1">✅ Potwierdzenie w Dzienniku Ustaw:</span>
+                <span class="text-[14.5px] text-warm-900">Rzeczywiście istnieje Rozporządzenie Ministra Zdrowia z dnia 22 maja 2026 r. w sprawie jakości wody przeznaczonej do spożycia przez ludzi, opublikowane 9 czerwca 2026 r. w Dzienniku Ustaw pod poz. 748 [3]. Weszło w życie 24 czerwca 2026 r. i uchyliło dotychczasowe przepisy z 2017 r. [4]. To wdrożenie unijnej dyrektywy o jakości wody pitnej.</span>
+            </div>
+            
+            <p class="font-bold mt-4 text-[15.5px] text-warm-900">🔑 Co się realnie zmieniło i tłumaczy sytuację ze starą szkołą w Połomi:</p>
+            <ul class="list-disc pl-6 mt-2 space-y-1.5 text-[14.5px] text-warm-900">
+                <li>Kontrola jakości wody <b>nie kończy się już na granicy budynku/sieci wodociągowej</b>, tylko obejmuje monitoring „aż do kranu" – czyli też wewnętrzne instalacje w budynkach [1].</li>
+                <li><b>Szkoły są uznane za „obiekty priorytetowe"</b>, podlegające obowiązkowym kontrolom Sanepidu/GIS – stąd akurat tam pobrano próbkę [2].</li>
+                <li>Nowe przepisy kładą duży nacisk na <b>ryzyko związane z wodą stojącą w instalacji</b> (np. w długo nieużywanym kranie) – co pasuje do wyjaśnień wodociągów, że przekroczenie wynikało z odstania wody przez weekend, a nie ze skażenia sieci głównej.</li>
+                <li>Co ciekawe, nowe przepisy w niektórych aspektach są łagodniejsze – samo wykrycie <b>bakterii grupy coli</b> (bez E. coli/enterokoków) nie musi już automatycznie oznaczać uznania wody za „nienadającą się do spożycia" [2] – co tłumaczy komunikat Sanepidu, że woda była „zdatna do użycia po przygotowaniu".</li>
+                <li>Już na etapie konsultacji gminy (np. Związek Gmin Warmińsko-Mazurskich) ostrzegały, że nowe przepisy oznaczają <b>dodatkowe koszty badań dla samorządów</b> i mniejszych wodociągów [2].</li>
+            </ul>
+            
+            <div class="info-box blue mt-4 bg-sky-50 border border-sky-200 border-l-4 border-l-sky-600 p-4 rounded-xl">
+                <span class="font-bold block text-sky-900 mb-1">📅 Warto zwrócić uwagę na czas:</span>
+                <span class="text-[14.5px] text-warm-900">rozporządzenie weszło w życie 24 czerwca 2026 r., czyli zaledwie ok. 2 tygodnie przed incydentem z wodą w Połomi (próbka pobrana w poniedziałek, informacja z Sanepidu dotarła do urzędu w czwartek 9 lipca ok. 15:10). Gmina Mszana rzeczywiście "złapała się" na jedną z pierwszych kontroli realizowanych już według nowych, świeżo wprowadzonych zasad.</span>
+            </div>
+            
+            <p class="mt-4 text-[15px] leading-[1.8] text-warm-900"><b>Podsumowując:</b> argument wicewójta o nowych przepisach jako przyczynie wykrycia przekroczenia jest <b>merytorycznie prawdziwy i potwierdzony w oficjalnym Dzienniku Ustaw</b> – to nie była wymówka. Nie zmienia to jednak faktu, że sposób i szybkość poinformowania mieszkańców (dopiero po kilku dniach, częściowo przez sąsiednią gminę) pozostaje osobną kwestią, którą krytykowali radni na sesji, i to nadal jest zasadny temat do dyskusji.</p>
+            
+            <div class="mt-5 pt-4 border-t border-warm-200 text-[13px] space-y-1.5 text-warm-800">
+                <div class="font-bold text-warm-900">Źródła:</div>
+                <div>[1] <a href="https://www.portalsamorzadowy.pl/gospodarka-komunalna/od-22-czerwca-resort-zdrowia-zaostrza-normy-monitoring-wody-az-do-kranu,664291.html" target="_blank" rel="noopener" class="text-sage-700 font-bold underline break-all">[1] portalsamorzadowy.pl – Od 22 czerwca resort zdrowia zaostrza normy: monitoring wody aż do kranu</a></div>
+                <div>[2] <a href="https://biznes.interia.pl/gospodarka/news-nowe-przepisy-dot-jakosci-wody-beda-kontrole-w-szkolach-i-ho,nId,23494476" target="_blank" rel="noopener" class="text-sage-700 font-bold underline break-all">[2] biznes.interia.pl – Nowe przepisy dot. jakości wody: będą kontrole w szkołach i hotelach</a></div>
+                <div>[3] <a href="https://www.igwp.org.pl/rozporzadzenie-ministra-zdrowia-w-sprawie-jakosci-wody-przeznaczonej-do-spozycia-ogloszone-w-dzienniku-ustaw/" target="_blank" rel="noopener" class="text-sage-700 font-bold underline break-all">[3] igwp.org.pl – Rozporządzenie Ministra Zdrowia z 22 maja 2026 r. (Dz.U. 2026 poz. 748)</a></div>
+                <div>[4] <a href="https://www.merieuxnutrisciences.com/pl/nowe-rozporzadzenie-w-sprawie-jakosci-wody-przeznaczonej-do-spozycia-opublikowane/" target="_blank" rel="noopener" class="text-sage-700 font-bold underline break-all">[4] merieuxnutrisciences.com – Nowe rozporządzenie w sprawie jakości wody przeznaczonej do spożycia opublikowane</a></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- INFORMACJE O POSIEDZENIACH KOMISJI RADY GMINY -->
+    <section id="komisje" class="max-w-[1280px] mx-auto px-5 pt-2 pb-4">
+        <div class="soft-card p-6 sm:p-8 bg-white">
+            <div class="flex flex-wrap items-start justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <span class="w-11 h-11 rounded-2xl bg-sage-600 text-white flex items-center justify-center text-[20px] shrink-0">🏛️</span>
+                    <div>
+                        <div class="font-bold text-[16px]">Informacje o posiedzeniach komisji Rady Gminy</div>
+                        <div class="text-[12.5px] text-warm-800/60 mt-0.5">Zawiadomienia, porządki obrad i protokoły posiedzeń komisji — w BIP oraz na oficjalnych stronach komisji</div>
+                    </div>
+                </div>
+                <a href="https://www.mszana.finn.pl/bipkod/35112360" target="_blank" rel="noopener" class="h-10 px-5 rounded-full bg-sage-600 text-white text-[13.5px] font-bold inline-flex items-center gap-2 hover:bg-sage-700">📋 Porządek obrad komisji (BIP)</a>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3.5 mt-5">
+                <a href="https://mszana.ug.gov.pl/komisja-rewizyjna.html" target="_blank" rel="noopener" class="soft-card p-4 hover:border-sage-300 hover:shadow-lg transition block">
+                    <div class="text-[20px]">🔍</div>
+                    <div class="font-bold text-[14.5px] mt-2 leading-tight">Komisja Rewizyjna</div>
+                    <div class="text-[12.5px] text-warm-800/65 mt-1.5 leading-snug">Kontrola działalności wójta, jednostek gminnych i gospodarki finansowej.</div>
+                    <div class="text-[12px] font-bold text-sage-700 mt-2.5">Zobacz informacje →</div>
+                </a>
+                <a href="https://mszana.ug.gov.pl/komisja-skarg-wnioskow-i-petycji.html" target="_blank" rel="noopener" class="soft-card p-4 hover:border-sage-300 hover:shadow-lg transition block">
+                    <div class="text-[20px]">📬</div>
+                    <div class="font-bold text-[14.5px] mt-2 leading-tight">Komisja Skarg, Wniosków i Petycji</div>
+                    <div class="text-[12.5px] text-warm-800/65 mt-1.5 leading-snug">Rozpatruje skargi, wnioski i petycje mieszkańców kierowane do Rady Gminy.</div>
+                    <div class="text-[12px] font-bold text-sage-700 mt-2.5">Zobacz informacje →</div>
+                </a>
+                <a href="https://mszana.ug.gov.pl/komisja-budzetu-i-infrastruktury.html" target="_blank" rel="noopener" class="soft-card p-4 hover:border-sage-300 hover:shadow-lg transition block">
+                    <div class="text-[20px]">💰</div>
+                    <div class="font-bold text-[14.5px] mt-2 leading-tight">Komisja Budżetu i Infrastruktury</div>
+                    <div class="text-[12.5px] text-warm-800/65 mt-1.5 leading-snug">Budżet, inwestycje, drogi i infrastruktura techniczna gminy.</div>
+                    <div class="text-[12px] font-bold text-sage-700 mt-2.5">Zobacz informacje →</div>
+                </a>
+                <a href="https://mszana.ug.gov.pl/komisja-spraw-spolecznych.html" target="_blank" rel="noopener" class="soft-card p-4 hover:border-sage-300 hover:shadow-lg transition block">
+                    <div class="text-[20px]">🤝</div>
+                    <div class="font-bold text-[14.5px] mt-2 leading-tight">Komisja Spraw Społecznych</div>
+                    <div class="text-[12.5px] text-warm-800/65 mt-1.5 leading-snug">Oświata, kultura, zdrowie, pomoc społeczna, sport i rekreacja.</div>
+                    <div class="text-[12px] font-bold text-sage-700 mt-2.5">Zobacz informacje →</div>
+                </a>
+            </div>
+
+            <div class="mt-5 p-5 rounded-2xl bg-amber-50/80 border border-amber-200">
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                        <span class="text-[20px]">📅</span>
+                        <div>
+                            <div class="font-bold text-[15px]">Najbliższe posiedzenie — Komisja Rewizyjna</div>
+                            <div class="text-[13px] text-warm-800/75 mt-0.5">11 sierpnia 2026 r. • godz. 8:00 • Urząd Gminy Mszana</div>
+                        </div>
+                    </div>
+                    <a href="https://www.mszana.finn.pl/bipkod/35112360" target="_blank" rel="noopener" class="text-[12.5px] font-bold text-amber-800 hover:underline">Pełne zawiadomienie w BIP →</a>
+                </div>
+                <div class="mt-3 pt-3 border-t border-amber-200/70">
+                    <div class="text-[11.5px] font-bold uppercase tracking-widest text-amber-900/70">Porządek posiedzenia:</div>
+                    <ol class="mt-2 space-y-1 text-[13.5px] leading-[1.6] text-warm-800/85 list-decimal pl-5">
+                        <li>Otwarcie posiedzenia.</li>
+                        <li>Projekty, realizacja i funkcjonowanie inwestycji w Gminie Mszana, dofinansowanych z funduszu „Polski Ład” i programów unijnych za lata 2022–2025.</li>
+                        <li>Gospodarka odpadami komunalnymi za lata 2024–2025 — umowy, faktury, dokumentacja przetargowa.</li>
+                        <li>Zakończenie posiedzenia.</li>
+                    </ol>
+                    <div class="text-[12px] text-warm-800/55 mt-2">Przewodniczący Komisji Rewizyjnej: Sebastian Berger • Źródło: BIP Gminy Mszana</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFORMACJE O POSIEDZENIACH SESJI RADY GMINY -->
+    <section id="sesje" class="max-w-[1280px] mx-auto px-5 pb-4">
+        <div class="soft-card p-6 sm:p-8 bg-white">
+            <div class="flex flex-wrap items-start justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <span class="w-11 h-11 rounded-2xl bg-red-600 text-white flex items-center justify-center text-[20px] shrink-0">📢</span>
+                    <div>
+                        <div class="font-bold text-[16px]">Informacje o posiedzeniach sesji Rady Gminy</div>
+                        <div class="text-[12.5px] text-warm-800/60 mt-0.5">Zawiadomienia o sesjach, porządki obrad i transmisje na żywo</div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-2.5">
+                    <a href="https://www.mszana.finn.pl/bipkod/005/003" target="_blank" rel="noopener" class="h-10 px-5 rounded-full bg-sage-600 text-white text-[13.5px] font-bold inline-flex items-center gap-2 hover:bg-sage-700">📋 Porządek obrad sesji (BIP)</a>
+                    <a href="https://esesja.tv/transmisja_na_zywo/1159/rada-gminy-mszana.htm" target="_blank" rel="noopener" class="h-10 px-5 rounded-full bg-red-600 text-white text-[13.5px] font-bold inline-flex items-center gap-2 hover:bg-red-700">🎥 Transmisja na żywo (eSesja.tv)</a>
+                    <a href="https://www.facebook.com/mszana.gmina?locale=pl_PL" target="_blank" rel="noopener" class="h-10 px-5 rounded-full bg-[#0866FF] text-white text-[13.5px] font-bold inline-flex items-center gap-2">f Powiadomienia na FB gminy</a>
+                </div>
+            </div>
+
+            <div class="mt-5 p-5 rounded-2xl bg-sky-50/80 border border-sky-200">
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                        <span class="text-[20px]">🗓️</span>
+                        <div>
+                            <div class="font-bold text-[15px]">Ostatnia sesja — 27 lipca 2026 r. • godz. 14:30</div>
+                            <div class="text-[13px] text-warm-800/75 mt-0.5">Sala posiedzeń Urzędu Gminy Mszana • XXVII Sesja Rady Gminy</div>
+                        </div>
+                    </div>
+                    <a href="https://www.mszana.finn.pl/bipkod/005/003" target="_blank" rel="noopener" class="text-[12.5px] font-bold text-sky-800 hover:underline">Porządek obrad i projekty uchwał w BIP →</a>
+                </div>
+                <div class="mt-3 pt-3 border-t border-sky-200/70">
+                    <div class="text-[11.5px] font-bold uppercase tracking-widest text-sky-900/70">Porządek obrad:</div>
+                    <ol class="mt-2 grid sm:grid-cols-2 gap-x-6 gap-y-1 text-[13.5px] leading-[1.6] text-warm-800/85 list-decimal pl-5">
+                        <li>Otwarcie posiedzenia.</li>
+                        <li>Sprawdzenie listy obecności i stwierdzenie prawomocności obrad.</li>
+                        <li>Przedstawienie porządku obrad.</li>
+                        <li>Przyjęcie protokołu z sesji Rady Gminy w dniu 25 czerwca 2026 r.</li>
+                        <li>Sprawozdania z prac komisji.</li>
+                        <li>Sprawozdanie Wójta Gminy z działalności w okresie międzysesyjnym.</li>
+                        <li>Rozpatrzenie projektów uchwał (m.in. plan ogólny gminy, tryb prac nad projektem uchwały budżetowej).</li>
+                        <li>Wolne wnioski i zapytania.</li>
+                        <li>Zakończenie obrad.</li>
+                    </ol>
+                    <div class="text-[12px] text-warm-800/55 mt-2">Przewodniczący Rady Gminy Mszana: Marek Liśnikowski • Sesje odbywają się zwykle raz w miesiącu — śledź zawiadomienia w BIP • Źródło: BIP Gminy Mszana</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- FORUM - GŁÓWNY MODUŁ -->
+    <section id="forum" class="bg-white border-y border-warm-200">
+        <div class="max-w-[1280px] mx-auto px-5 py-12">
+            <div class="flex flex-wrap items-start justify-between gap-6">
+                <div>
+                    <div class="inline-flex items-center gap-2">
+                        <h2 class="font-display text-[36px] font-bold tracking-tight">Forum - Twój Głos jest ważny</h2>
+                        <span class="px-3 py-1 rounded-full bg-sage-600 text-white text-[11px] font-bold uppercase tracking-widest">Nowość</span>
+                    </div>
+                    <p class="text-[17px] leading-[1.6] text-warm-800/70 max-w-[70ch] mt-2">Każdy temat ma swoją zakładkę. Możesz stworzyć własną kategorię. Głosujemy, dyskutujemy, a najlepsze pomysły trafiają do sołtysów i UG. Bez anonimowego hejtu - podpisujesz się imieniem i miejscowością.</p>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="openNewCategoryModal()" class="h-10 px-5 rounded-full bg-white border border-warm-200 font-bold text-[14px] hover:bg-warm-50">+ Nowa zakładka tematyczna</button>
+                    <button onclick="openNewTopicModal()" class="h-10 px-5 rounded-full bg-warm-900 text-white font-bold text-[14px]">+ Nowy temat</button>
+                </div>
+            </div>
+
+            <div class="mt-8 grid lg:grid-cols-[320px_1fr] gap-8 items-start">
+                <!-- LEWA KOLUMNA - KATEGORIE / ZAKŁADKI TEMATYCZNE -->
+                <div class="lg:sticky lg:top-[70px] space-y-4">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-[14px] uppercase tracking-widest text-warm-800/60">Zakładki tematyczne</h3>
+                        <span id="catCount" class="text-[12px] bg-warm-100 px-2 py-0.5 rounded-full font-bold">6 kategorii</span>
+                    </div>
+                    <div id="categoriesList" class="space-y-2.5">
+                        <!-- JS inject -->
+                    </div>
+
+                    <div class="soft-card p-4 bg-sage-50/70 border-sage-200">
+                        <div class="font-bold text-[14px]">Jak działa?</div>
+                        <ul class="text-[13px] leading-[1.6] text-warm-800/75 mt-2 space-y-1.5 list-disc pl-4">
+                            <li>Kliknij zakładkę żeby filtrować tematy</li>
+                            <li>Masz nowy problem? Kliknij "Nowa zakładka tematyczna"</li>
+                            <li>Każdy temat można poprzeć głosem 👍</li>
+                            <li>Najlepsze trafiają do sołtysa</li>
+                        </ul>
+                        <div class="mt-3 text-[11px] text-warm-800/50">Moderacja: admin 61592454217806 + sołtysi. Zakaz obrażania, polityki krajowej, MLM.</div>
+                    </div>
+
+                    <div class="soft-card p-0 overflow-hidden">
+                        <img src="assets/forum-graphic.png" class="w-full h-[180px] object-cover opacity-90" alt="">
+                    </div>
+                </div>
+
+                <!-- PRAWA KOLUMNA - WĄTKI -->
+                <div>
+                    <div class="flex flex-wrap items-center gap-3">
+                        <div class="flex-1 min-w-[220px] relative">
+                            <input id="forumSearch" aria-label="Szukaj na forum" placeholder="Szukaj w Forum: dziura, latarnia, plac zabaw..." class="w-full h-11 pl-11 pr-4 rounded-full border border-warm-200 bg-warm-50 text-[14.5px] focus:outline-none focus:ring-2 focus:ring-sage-500 focus:bg-white">
+                            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-warm-800/40">🔍</span>
+                        </div>
+                        <select id="forumSort" class="h-11 rounded-full border border-warm-200 bg-white px-4 text-[13px] font-bold">
+                            <option value="newest">Najnowsze</option>
+                            <option value="votes">Najwięcej głosów</option>
+                            <option value="comments">Najwięcej komentarzy</option>
+                        </select>
+                    </div>
+
+                    <div id="activeFilter" class="mt-4 hidden">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-warm-900 text-white text-[13px] font-bold">
+                            <span>Filtr:</span><span id="activeFilterName"></span>
+                            <button onclick="clearCatFilter()" class="ml-1 w-5 h-5 rounded-full bg-white/20 flex items-center justify-center">✕</button>
+                        </div>
+                    </div>
+
+                    <!-- REGULAMIN BO 5K - pokazuje się tylko w kategorii Budżet -->
+                    <div id="boRegulation" class="mt-6 hidden">
+                        <div class="soft-card p-6 bg-emerald-50/70 border-emerald-200">
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[18px] shrink-0">📋</div>
+                                <div class="flex-1">
+                                    <div class="flex flex-wrap items-center gap-2">
+                                        <h4 class="font-display text-[18px] font-bold leading-tight">Regulamin Budżetu Obywatelskiego 5 000 zł - pilotaż</h4>
+                                        <span class="px-2.5 py-0.5 rounded-full bg-emerald-600 text-white text-[10px] font-bold uppercase tracking-widest">Zasady głosowania</span>
+                                    </div>
+                                    <div class="mt-4 grid sm:grid-cols-2 gap-4 text-[13.5px] leading-[1.6]">
+                                        <div>
+                                            <div class="font-bold text-warm-900">Kto może głosować?</div>
+                                            <ul class="mt-1.5 space-y-1 text-warm-800/80 list-disc pl-4">
+                                                <li>Mieszkaniec Mszany, Połomi, Gogołowej (meldunek nie wymagany, wystarczy zamieszkanie)</li>
+                                                <li>Wiek 13+ lat (młodzież też głosuje!)</li>
+                                                <li>1 osoba = <span class="font-bold">1 głos</span> na 1 projekt (system blokuje podwójne)</li>
+                                                <li>Głos oddajesz przyciskiem 👍 "Poprzyj"</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <div class="font-bold text-warm-900">Zasady projektu do 5 000 zł:</div>
+                                            <ul class="mt-1.5 space-y-1 text-warm-800/80 list-disc pl-4">
+                                                <li>Max koszt: <span class="font-bold">5 000 zł brutto</span> (z montażem)</li>
+                                                <li>Realny i legalny: ławka, zieleń, oświetlenie solarne, stojak, tablica, kosz, donice</li>
+                                                <li>Teren gminny lub ogólnodostępny (nie prywatny)</li>
+                                                <li>Bez kosztów utrzymania >500 zł/rok</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <div class="font-bold text-warm-900">Jak wygrywamy?</div>
+                                            <ul class="mt-1.5 space-y-1 text-warm-800/80 list-disc pl-4">
+                                                <li>Czas głosowania: <span class="font-bold">30 dni</span> od publikacji</li>
+                                                <li>Próg: <span class="font-bold">100 głosów</span> poparcia = wniosek do Rady Gminy</li>
+                                                <li>Rada decyduje o wpisaniu 20 000 zł do budżetu 2026 (4 x 5k)</li>
+                                                <li>Realizacja: Wiosna 2026 przez UG + sołtysów</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <div class="font-bold text-warm-900">Moderacja i fair play:</div>
+                                            <ul class="mt-1.5 space-y-1 text-warm-800/80 list-disc pl-4">
+                                                <li>Zakaz głosowania na własny pomysł z fake kont</li>
+                                                <li>Zakaz hejtu, obrażania innych pomysłów</li>
+                                                <li>Admin: Monika (61592454217806) + sołtysi weryfikują zamieszkanie</li>
+                                                <li>Każdy głos widoczny: imię + miejscowość</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="mt-5 p-3 rounded-xl bg-white border border-emerald-200 flex items-start gap-2.5">
+                                        <span class="text-[16px]">💡</span>
+                                        <div class="text-[12.5px] leading-[1.5] text-warm-800/70"><span class="font-bold text-warm-900">Przykład:</span> "2 latarnie solarne na ścieżce Mszana-Połomia - 5 000 zł - bezpieczna droga dzieci do szkoły zimą" - ma koszt, cel, miejsce i uzasadnienie. Tak zgłaszamy!</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="subcatBar" class="hidden mt-4 flex flex-wrap items-center gap-2"></div>
+    <div id="subcatInfo" class="mt-2">
+      <div id="subInfoTwojPomysl" class="soft-card p-6 bg-white mt-4">
+        <div class="flex items-start gap-3">
+          <div class="w-11 h-11 rounded-full bg-sage-600 text-white flex items-center justify-center text-[20px] shrink-0">💡</div>
+          <div class="flex-1">
+            <h4 class="font-display text-[19px] font-bold leading-tight">Twój pomysł — propozycja indywidualna</h4>
+            <p class="text-[14px] text-warm-800/75 mt-2 leading-[1.7]">Masz konkretny pomysł na rozwój Mszany, Połomi lub Gogołowej? Opisz go poniżej na Forum albo <b>wyślij jako indywidualną propozycję bezpośrednio do Urzędu Gminy</b> — takie zgłoszenia trafiają do właściwych komórek urzędu i są rozpatrywane, m.in. na komisjach Rady Gminy.</p>
+            <div class="flex flex-wrap gap-3 mt-4">
+              <a href="mailto:kontakt@mszana.info?subject=Moja%20propozycja%20dla%20Gminy%20Mszana&body=Dzie%C5%84%20dobry%2C%0A%0Achcia%C5%82bym%20przekaza%C4%87%20swoj%C4%85%20propozycj%C4%99%20dla%20gminy%3A%0A%0A%5Bopisz%20sw%C3%B3j%20pomys%C5%82%5D%0A%0AZ%20wyrazami%20szacunku%2C%0A%5Bimi%C4%99%20i%20nazwisko%2C%20miejscowo%C5%9B%C4%87%5D" class="h-11 px-5 rounded-full bg-sage-600 text-white font-bold inline-flex items-center gap-2 hover:bg-sage-700">📧 Wyślij pomysł e-mailem</a>
+              <a href="tel:324759754" class="h-11 px-5 rounded-full bg-white border border-warm-200 font-bold inline-flex items-center gap-2">📞 32 475 97 54</a>
+              <a href="https://mszana.ug.gov.pl" target="_blank" rel="noopener" class="h-11 px-5 rounded-full bg-white border border-warm-200 font-bold inline-flex items-center gap-2">🏛️ Strona gminy</a>
+              <a href="https://www.facebook.com/mszana.gmina?locale=pl_PL" target="_blank" rel="noopener" class="h-11 px-5 rounded-full bg-white border border-warm-200 font-bold inline-flex items-center gap-2">f Oficjalny FB gminy</a>
+              <button onclick="setSub('twoj-pomysl'); openNewTopicModal(true)" class="h-11 px-5 rounded-full bg-warm-900 text-white font-bold">+ Opublikuj na Forum</button>
+            </div>
+            <div class="mt-4 p-3 rounded-xl bg-sage-50 border border-sage-100 text-[12.5px] text-warm-800/70 leading-[1.6]">📧 <b>Kontakt redakcji Mszana INFO:</b> <a href="mailto:kontakt@mszana.info" class="font-bold text-sage-700">kontakt@mszana.info</a><br>📍 <b>Urząd Gminy Mszana</b> • ul. 1 Maja 81, 44-325 Mszana • tel. 32 475 97 54 • oficjalnie: <a href="https://mszana.ug.gov.pl" target="_blank" rel="noopener" class="font-bold text-sage-700">mszana.ug.gov.pl</a></div>
+          </div>
+        </div>
+      </div>
+      
+<div id="subInfoZglaszamy" class="hidden soft-card p-6 bg-white mt-4">
+        <div class="flex items-start gap-3">
+          <div class="w-11 h-11 rounded-full bg-teal-600 text-white flex items-center justify-center text-[20px] shrink-0">🔧</div>
+          <div class="flex-1">
+            <h4 class="font-display text-[19px] font-bold leading-tight">Zgłaszamy do naprawienia</h4>
+            <p class="text-[14px] text-warm-800/75 mt-2 leading-[1.7]">Widzisz usterkę — dziurę w drodze, nieświecącą latarnię, zepsuty znak, zapadniętą studzienkę? <b>Zgłoś ją!</b> Wyślij nam e-mail (przekażemy zgłoszenie do urzędu i właściwych służb) albo opublikuj je na Forum, żeby sąsiedzi mogli je poprzeć 👍.</p>
+            <div class="flex flex-wrap gap-3 mt-4">
+              <a href="mailto:kontakt@mszana.info?subject=Zg%C5%82oszenie%20do%20naprawy%3A%20%5Bco%20i%20gdzie%5D&body=Dzie%C5%84%20dobry%2C%0A%0Achc%C4%99%20zg%C5%82osi%C4%87%20do%20naprawy%3A%0A%0A%5Bopisz%20usterk%C4%99%20i%20lokalizacj%C4%99%5D%0A%0AZ%20powodzeniem%2C%0A%5Bimi%C4%99%20i%20nazwisko%2C%20miejscowo%C5%9B%C4%87%5D" class="h-11 px-5 rounded-full bg-teal-600 text-white font-bold inline-flex items-center gap-2 hover:bg-teal-700">📧 Zgłoś e-mailem: kontakt@mszana.info</a>
+              <button onclick="setSub('zglaszamy'); openNewTopicModal(true)" class="h-11 px-5 rounded-full bg-warm-900 text-white font-bold">+ Opublikuj zgłoszenie na Forum</button>
+            </div>
+            <div class="mt-4 p-3 rounded-xl bg-teal-50 border border-teal-100 text-[12.5px] text-warm-800/70 leading-[1.6]">📧 <b>kontakt@mszana.info</b> — odpowiadamy zwykle w ciągu 48 h. W zgłoszeniu podaj: co, gdzie (ulica / punkt), od kiedy i ewentualnie zdjęcie. Zgłoszenia przyjmują też oficjalnie: <a href="https://mszana.ug.gov.pl" target="_blank" rel="noopener" class="font-bold text-teal-700">Urząd Gminy (mszana.ug.gov.pl)</a> oraz <a href="https://www.facebook.com/mszana.gmina?locale=pl_PL" target="_blank" rel="noopener" class="font-bold text-teal-700">oficjalna strona FB gminy</a>.</div>
+          </div>
+        </div>
+      </div>
+      <div id="subInfoZrobione" class="hidden soft-card p-6 bg-white mt-4">
+        <div class="flex items-start gap-3">
+          <div class="w-11 h-11 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[20px] shrink-0">✅</div>
+          <div class="flex-1">
+            <h4 class="font-display text-[19px] font-bold leading-tight">Zrobione — Urząd Reaguje</h4>
+            <p class="text-[14px] text-warm-800/75 mt-2 leading-[1.7]">Usterka naprawiona? <b>Daj znać!</b> Potwierdzenia napraw pokazują, że zgłoszenia mieszkańców działają — i motywują urząd oraz służby do dalszego reagowania. Opublikuj na Forum wpis ze zdjęciem „przed / po” albo wyślij potwierdzenie e-mailem.</p>
+            <div class="flex flex-wrap gap-3 mt-4">
+              <button onclick="setSub('zrobione'); openNewTopicModal(true)" class="h-11 px-5 rounded-full bg-emerald-600 text-white font-bold">✅ Opublikuj potwierdzenie naprawy</button>
+              <a href="mailto:kontakt@mszana.info?subject=Potwierdzenie%20naprawy%3A%20%5Bco%20naprawiono%5D&body=Dzie%C5%84%20dobry%2C%0A%0Apotwierdzam%20napraw%C4%99%3A%0A%0A%5Bco%20zosta%C5%82o%20naprawione%20i%20gdzie%5D%0A%0AZ%20podzi%C4%99kowaniami%2C%0A%5Bimi%C4%99%20i%20nazwisko%2C%20miejscowo%C5%9B%C4%87%5D" class="h-11 px-5 rounded-full bg-white border border-warm-200 font-bold inline-flex items-center gap-2">📧 Potwierdź e-mailem</a>
+            </div>
+            <div class="mt-4 p-3 rounded-xl bg-emerald-50 border border-emerald-100 text-[12.5px] text-warm-800/70 leading-[1.6]">💡 <b>Jak działa Asystent mieszkańca:</b> Zgłaszasz → publikujemy / przekazujemy do urzędu → naprawione → potwierdzasz w „Zrobione — Urząd Reaguje”. Razem budujemy listę spraw załatwionych!</div>
+          </div>
+        </div>
+      </div>
+    <div id="threadsList" class="mt-6 space-y-4">
+                        <!-- JS -->
+                    </div>
+
+                    <div class="mt-10 text-center">
+                        <div class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-warm-50 border border-warm-200 text-[13px]">
+                            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                            <span>Forum jest publiczne - wpisy widzi kolega bez logowania. Twoje dane tylko imię + miejscowość.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O NAS: INFORMACJE O GRUPIE + ZASADY -->
+    <section id="onas" class="max-w-[1280px] mx-auto px-5 py-8">
+        <div class="soft-card overflow-hidden bg-white">
+            <div class="relative">
+                <img src="assets/grupa-mszana.png" alt="Gmina Mszana — Mszana – Przejrzysta Gmina &amp; Sprawy Mieszkańców" class="w-full h-52 sm:h-72 object-cover" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent"></div>
+                <div class="absolute bottom-5 left-6 right-6">
+                    <div class="font-display text-[26px] sm:text-[34px] font-bold text-white leading-tight drop-shadow">O nas — Gmina Mszana</div>
+                    <div class="text-[14px] font-bold text-white/90 mt-1">Mszana • Połomia • Gogołowa</div>
+                </div>
+            </div>
+            <div class="p-6 sm:p-10">
+
+                <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-warm-200">
+                    <div class="flex-1 min-w-[260px]">
+                        <div class="font-display text-[22px] font-bold leading-tight">📢 Mszana – Przejrzysta Gmina &amp; Sprawy Mieszkańców</div>
+                        <div class="text-[14.5px] font-bold text-sage-700 mt-1">Dla dobra mieszkańca Gminy Mszana 🏡</div>
+                        <p class="text-[14.5px] leading-[1.7] text-warm-800/80 mt-3 max-w-[75ch]">Witaj w grupie, która powstała z myślą o informowaniu, integracji i wspieraniu mieszkańców Gminy Mszana! Naszym celem jest dostarczanie rzetelnych, sprawdzonych i aktualnych informacji dotyczących życia w naszej gminie.</p>
+                    </div>
+                    <a href="https://www.facebook.com/groups/1245680220713294" target="_blank" rel="noopener" class="h-12 px-6 rounded-full bg-[#0866FF] text-white font-bold text-[14px] inline-flex items-center gap-2 shrink-0 hover:bg-[#0753cc] shadow-sm">f Dołącz do grupy na Facebooku</a>
+                </div>
+
+                <div class="mt-6 grid lg:grid-cols-2 gap-4">
+                    <div class="soft-card p-5 bg-sage-50/70 border-sage-200">
+                        <div class="font-bold text-[15px]">🔹 Co znajdziesz w grupie?</div>
+                        <ul class="mt-2.5 space-y-1.5 text-[13.5px] leading-[1.55] text-warm-800/85">
+                            <li>✅ <b>Aktualności lokalne</b> — ważne decyzje władz, inwestycje, wydarzenia kulturalne i sportowe.</li>
+                            <li>✅ <b>Informacje praktyczne</b> — terminy zbiórek odpadów, remonty dróg, awarie, zmiany w komunikacji.</li>
+                            <li>✅ <b>Dyskusje i wsparcie</b> — wymiana doświadczeń, pomoc sąsiedzka, porady prawne i administracyjne.</li>
+                            <li>✅ <b>Bezpieczeństwo</b> — alerty o zagrożeniach, działania służb, porady dotyczące ochrony mienia.</li>
+                            <li>✅ <b>Kultura i edukacja</b> — wydarzenia w szkołach, bibliotekach, domach kultury, warsztaty i konkursy.</li>
+                        </ul>
+                    </div>
+                    <div class="soft-card p-5 bg-amber-50/70 border-amber-200">
+                        <div class="font-bold text-[15px]">🔹 Zasady grupy:</div>
+                        <ul class="mt-2.5 space-y-1.5 text-[13.5px] leading-[1.55] text-warm-800/85">
+                            <li>✔ <b>Szacunek i kultura</b> — dyskusje prowadzimy w miłej atmosferze, bez hejtu i obraźliwych komentarzy.</li>
+                            <li>✔ <b>Rzetelność informacji</b> — publikujemy tylko sprawdzone wiadomości, unikamy fake newsów.</li>
+                            <li>✔ <b>Bez polityki</b> — skupiamy się na sprawach lokalnych, nie angażujemy się w spory partyjne.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-4 soft-card p-5 bg-sky-50/70 border-sky-200">
+                    <div class="font-bold text-[15px]">🗣 Krytyka i różne zdania</div>
+                    <p class="mt-2 text-[13.5px] leading-[1.7] text-warm-800/85">Różne zdania i rzeczowa krytyka są mile widziane — grupa powstała także po to, by mieszkańcy mogli zgłaszać problemy i pomysły. Krytykujemy problemy i działania, a nie osoby — bez hejtu i obrażania kogoś po imieniu.</p>
+                    <p class="mt-2 text-[13.5px] leading-[1.7] text-warm-800/85">Forma ma być kulturalna i rzeczowa; w jednym wątku piszemy o jednej sprawie. W przypadku konkretnych liczb lub zarzutów prosimy o wskazanie źródła (bez fake newsów). Administratorzy reagują na formę i treść wypowiedzi, nie na sam fakt krytyki. Komentarze obraźliwe lub powtarzane w kółko mogą być usuwane, a w razie uporczywych naruszeń po upomnieniu — grozi wykluczenie.</p>
+                    <div class="mt-3 pt-3 border-t border-sky-200/70">
+                        <div class="font-bold text-[14px]">✔ Współpraca z władzami</div>
+                        <p class="mt-1 text-[13.5px] leading-[1.6] text-warm-800/85">Kontaktujemy się z Urzędem Gminy, Strażą Pożarną, Policją i innymi instytucjami, aby dostarczać wiarygodne informacje.</p>
+                    </div>
+                </div>
+
+                <div class="mt-4 soft-card p-5 bg-warm-50 border-warm-200">
+                    <div class="font-bold text-[15px]">🔹 Dołącz do nas!</div>
+                    <p class="mt-2 text-[13.5px] leading-[1.7] text-warm-800/85">Jeśli chcesz być na bieżąco z tym, co dzieje się w Gminie Mszana, masz pytania, sugestie lub chcesz pomóc innym – zapraszamy! Razem możemy uczynić naszą gminę jeszcze lepszym miejscem do życia.</p>
+                    <p class="mt-2 text-[13.5px] font-bold text-warm-800">📩 Masz ważną informację? Prześlij ją do administratorów – zweryfikujemy i opublikujemy!</p>
+                    <a href="https://www.facebook.com/groups/1245680220713294" target="_blank" rel="noopener" class="mt-3 h-10 px-5 rounded-full bg-[#0866FF] text-white text-[13.5px] font-bold inline-flex items-center gap-2 hover:bg-[#0753cc]">f Przejdź do grupy</a>
+                </div>
+
+                <div class="mt-8 pt-7 border-t border-warm-200">
+                    <div class="flex flex-wrap items-start gap-4">
+                        <span class="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-[22px] shrink-0">⚠️</span>
+                        <div class="flex-1 min-w-[260px]">
+                            <h2 class="font-display text-[24px] sm:text-[26px] leading-tight">Ważna informacja — zasady naszej grupy</h2>
+                            <div class="text-[13px] font-bold text-warm-800/60 mt-1">Obowiązują wszystkich — także administrację</div>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-[11px] font-bold uppercase tracking-widest">Obowiązują wszystkich</span>
+                    </div>
+
+                    <p class="mt-5 text-[15px] leading-[1.8] text-warm-900">Szanowni Państwo,</p>
+                    <p class="mt-3 text-[15px] leading-[1.8] text-warm-900">chcemy, aby grupa „Mszana – Przejrzysta Gmina &amp; Sprawy Mieszkańców" była miejscem rzetelnym, kulturalnym i pomocnym dla wszystkich mieszkańców. Dlatego przedstawiamy zasady, które od dziś obowiązują wszystkich — także administrację.</p>
+
+                    <div class="mt-6 grid lg:grid-cols-3 gap-4">
+                        <div class="soft-card p-5 bg-sage-50/70 border-sage-200">
+                            <div class="font-bold text-[15px] flex items-center gap-2"><span class="text-[18px]">✅</span> Co jest dozwolone i mile widziane:</div>
+                            <ul class="mt-3 space-y-2 text-[14px] leading-[1.6] text-warm-800/85">
+                                <li><b>Rzeczowa krytyka i różne zdania</b> — grupa powstała także po to, by mieszkańcy mogli zgłaszać problemy i pomysły.</li>
+                                <li><b>Dyskusje i pytania pod postami</b> — komentarze są otwarte dla wszystkich członków.</li>
+                                <li><b>Wskazywanie problemów</b> wraz z konkretnymi faktami i propozycjami.</li>
+                            </ul>
+                        </div>
+                        <div class="soft-card p-5 bg-amber-50/70 border-amber-200">
+                            <div class="font-bold text-[15px] flex items-center gap-2"><span class="text-[18px]">⚠️</span> Na co zwracamy uwagę:</div>
+                            <ul class="mt-3 space-y-2 text-[14px] leading-[1.6] text-warm-800/85">
+                                <li>• <b>Kultura i szacunek</b> — bez hejtu i obrażania osób.</li>
+                                <li>• <b>Rzetelność</b> — przy konkretnych liczbach lub zarzutach podajemy źródło, unikamy fake newsów.</li>
+                                <li>• <b>Rzeczowa krytyka</b> dotyczy problemów, nie ludzi.</li>
+                                <li>• <b>W jednym wątku</b> piszemy o jednej sprawie.</li>
+                            </ul>
+                        </div>
+                        <div class="soft-card p-5 bg-sky-50/70 border-sky-200">
+                            <div class="font-bold text-[15px] flex items-center gap-2"><span class="text-[18px]">🤝</span> Jak działa grupa:</div>
+                            <ul class="mt-3 space-y-2 text-[14px] leading-[1.6] text-warm-800/85">
+                                <li>• <b>Posty informacyjne publikuje administracja</b> — dzięki temu dostarczamy sprawdzone i aktualne wiadomości.</li>
+                                <li>• <b>Państwo komentują, pytają i dyskutują</b> pod postami — to miejsce na Państwa głos.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 p-4 rounded-xl bg-warm-50 border border-warm-200 text-[14.5px] leading-[1.7] text-warm-800/85">
+                        <b>Administratorzy reagują na formę i treść wypowiedzi, a nie na sam fakt krytyki.</b> Komentarze naruszające zasady mogą być usuwane, a w razie uporczywych naruszeń po upomnieniu — grozi wykluczenie.
+                    </div>
+
+                    <p class="mt-5 text-[15px] leading-[1.8] text-warm-900">Razem możemy uczynić naszą gminę jeszcze lepszym miejscem do życia. Dziękujemy za zrozumienie i współpracę.</p>
+
+                    <div class="mt-6">
+                        <div class="font-display text-[18px] font-bold text-warm-900 leading-snug">Z poważaniem,<br><span class="text-sage-700">Administracja grupy</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MAPA + SOŁTYSI -->
+    <section id="mapa" class="max-w-[1280px] mx-auto px-5 py-12 grid lg:grid-cols-[1.1fr_0.9fr] gap-8">
+        <div>
+            <h3 class="font-display text-[26px]">Ważne miejsca</h3>
+            <div class="mt-4 rounded-[20px] overflow-hidden border border-warm-200 aspect-[16/10] bg-warm-100">
+                <iframe class="w-full h-full" style="border:0" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10288!2d18.518!3d49.973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47114f0cf739e8d3%3A0x2b9f3a3a3a3a3a3a!2sMszana%2C%20Poland!5e0!3m2!1spl!2spl"></iframe>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-3 mt-4 text-[13.5px]">
+                <div class="soft-card p-3"><span class="font-bold">Urząd Gminy</span><br>ul. 1 Maja 81, 44-325 Mszana<br>32 475 97 54</div>
+                <div class="soft-card p-3"><span class="font-bold">PSZOK</span><br>ul. Górnicza 14<br>wt 8-13, czw 12-18, sob 8-13</div>
+            </div>
+        </div>
+        <div id="kontakt">
+            <h3 class="font-display text-[22px]">Sołtysi - kontakt</h3>
+            <div class="mt-4 space-y-3">
+                <div class="soft-card p-4 flex gap-3"><div class="w-10 h-10 rounded-full bg-sage-600 text-white flex items-center justify-center font-bold">IM</div><div><div class="font-bold">Ilona Mura</div><div class="text-[12px] uppercase font-bold text-warm-800/60">Sołtys Mszany</div><div class="text-[13px]">695 286 555 • 1210 ha • ~3800 mieszkańców</div></div></div>
+                <div class="soft-card p-4 flex gap-3"><div class="w-10 h-10 rounded-full bg-sky-700 text-white flex items-center justify-center font-bold">MP</div><div><div class="font-bold">Mirosława Piechaczek</div><div class="text-[12px] uppercase font-bold text-warm-800/60">Sołtys Połomi</div><div class="text-[13px]">693 031 152 • 1438 ha • ~2600 mieszkańców</div></div></div>
+                <div class="soft-card p-4 flex gap-3"><div class="w-10 h-10 rounded-full bg-amber-700 text-white flex items-center justify-center font-bold">AO</div><div><div class="font-bold">Anna Orszulik-Oślizlok</div><div class="text-[12px] uppercase font-bold text-warm-800/60">Sołtys Gogołowej</div><div class="text-[13px]">695 210 755 • 495 ha • ~1100 mieszkańców</div></div></div>
+
+                <div class="soft-card p-5 bg-amber-50/70 border border-amber-200 mt-4">
+                    <div class="flex items-start gap-3">
+                        <div class="w-11 h-11 rounded-full bg-amber-600 text-white flex items-center justify-center font-bold text-[20px] shrink-0">👥</div>
+                        <div>
+                            <div class="font-display font-bold text-[18px] text-amber-950">Radni dla Mieszkańca — Kontakt do Radnych Gminy Mszana i Okręgi Wyborcze</div>
+                            <p class="text-[13.5px] text-warm-800/80 mt-1">Przekierowanie mieszkańców z poszczególnych okręgów gminy Mszana do oficjalnego kontaktu z radnymi oraz mapy okręgów wyborczych z 2024 roku:</p>
+                            <div class="flex flex-wrap gap-3 mt-3">
+                                <a href="https://mszana.ug.gov.pl/kontakt-do-radnych.html" target="_blank" rel="noopener" class="h-10 px-5 rounded-full bg-amber-700 text-white text-[13.5px] font-bold inline-flex items-center gap-2 hover:bg-amber-800">👥 Kontakt do Radnych Gminy Mszana</a>
+                                <a href="https://mszana.ug.gov.pl/wybory-samorzadowe-w-2024-roku.html" target="_blank" rel="noopener" class="h-10 px-5 rounded-full bg-amber-900 text-white text-[13.5px] font-bold inline-flex items-center gap-2 hover:bg-black">🗺️ Okręgi Wyborcze w 2024 roku</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- OGŁOSZENIA - moduł mieszkańców -->
+    <section id="ogloszenia" class="max-w-[1280px] mx-auto px-5 py-8">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+            <div>
+                <h2 class="font-display text-[28px]">📢 Ogłoszenia</h2>
+                <p class="text-[14px] text-warm-800/60 mt-1">Kupuj, sprzedawaj, pomagaj — tylko lokalnie. <span id="oglCount" class="font-bold text-sage-700"></span> <span id="oglCloudStatus" class="hidden text-[12px] font-bold text-sage-600 bg-sage-100 px-2 py-0.5 rounded-full align-middle">☁️ online</span></p>
+            </div>
+            <button onclick="openOglModal()" class="h-10 px-5 rounded-full bg-sage-600 text-white font-bold text-[13.5px] hover:bg-sage-700 shadow-sm">+ Dodaj ogłoszenie</button>
+        </div>
+        <div class="flex flex-wrap items-center gap-2.5 mt-5">
+            <div id="oglCats" class="flex flex-wrap gap-2"></div>
+            <div class="ml-auto flex flex-wrap items-center gap-2">
+                <select id="oglSort" class="h-10 rounded-full border border-warm-200 px-4 text-[13.5px] font-bold bg-white focus:outline-none focus:ring-2 focus:ring-sage-200">
+                    <option value="new">🕒 Najnowsze</option>
+                    <option value="priceAsc">💰 Cena: od najniższej</option>
+                    <option value="priceDesc">💸 Cena: od najwyższej</option>
+                    <option value="free">🎁 Najpierw za darmo</option>
+                </select>
+                <input id="oglSearch" aria-label="Szukaj w ogłoszeniach" placeholder="🔍 Szukaj w ogłoszeniach..." class="w-full sm:w-60 h-10 rounded-full border border-warm-200 px-4 text-[14px] bg-white focus:outline-none focus:ring-2 focus:ring-sage-200">
+            </div>
+        </div>
+        <div id="oglCloudInfo" class="hidden mt-3 text-[12.5px] text-warm-800/60 bg-amber-50 border border-amber-200 rounded-xl px-4 py-2">⚠️ Tryb offline — ogłoszenia są widoczne tylko na tym urządzeniu. Gdy połączenie z chmurą wróci, lista się zsynchronizuje.</div>
+        <div id="oglList" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5"></div>
+        <div id="oglEmpty" class="hidden soft-card p-8 text-center text-warm-800/60">Brak ogłoszeń w tej kategorii — dodaj pierwsze! 👆</div>
+    </section>
+
+    <!-- MODAL: NOWE / EDYCJA OGŁOSZENIA -->
+    <div id="oglModal" class="fixed inset-0 z-[90] hidden">
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm" onclick="closeOglModal()"></div>
+        <div class="relative max-w-[560px] mx-auto mt-[4vh] bg-white rounded-[24px] shadow-2xl border border-warm-200 overflow-hidden max-h-[94vh] overflow-y-auto">
+            <div class="p-6 border-b border-warm-100 flex items-center justify-between"><h3 id="oglModalTitle" class="font-display text-[20px] font-bold">Nowe ogłoszenie</h3><button onclick="closeOglModal()" class="w-8 h-8 rounded-full bg-warm-100">✕</button></div>
+            <form id="oglForm" class="p-6 space-y-4">
+                <div class="grid grid-cols-2 gap-3">
+                    <div><label class="text-[11px] font-bold uppercase tracking-widest text-warm-800/60">Kategoria</label><select id="oglCat" class="mt-1 w-full h-11 rounded-xl border border-warm-200 px-3 text-[14px] bg-white"></select></div>
+                    <div><label class="text-[11px] font-bold uppercase tracking-widest text-warm-800/60">Miejscowość</label><select id="oglPlace" class="mt-1 w-full h-11 rounded-xl border border-warm-200 px-3 text-[14px] bg-white"><option>Mszana</option><option>Połomia</option><option>Gogołowa</option></select></div>
+                </div>
+                <div><label class="text-[11px] font-bold uppercase tracking-widest text-warm-800/60">Ogłoszenie (krótko i jasno)</label><input id="oglTitle" required maxlength="80" placeholder="Np. Sprzedam rower górski 26&quot;" class="mt-1 w-full h-11 rounded-xl border border-warm-200 px-4 text-[15px]"><div id="oglTitleCount" class="text-right text-[11px] text-warm-800/40 mt-0.5">0/80</div></div>
+                <div><label class="text-[11px] font-bold uppercase tracking-widest text-warm-800/60">Opis / szczegóły</label><textarea id="oglDesc" rows="3" placeholder="Co sprzedajesz, za ile, gdzie odbiór, stan..." class="mt-1 w-full rounded-xl border border-warm-200 p-3 text-[14px]"></textarea></div>
+                <div><label class="text-[11px] font-bold uppercase tracking-widest text-warm-800/60">Zdjęcie (link, opcjonalnie)</label><input id="oglImg" maxlength="300" placeholder="https://... (link do zdjęcia)" class="mt-1 w-full h-11 rounded-xl border border-warm-200 px-4 text-[14px]"></div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div><label class="text-[11px] font-bold uppercase tracking-widest text-warm-800/60">Cena (opcjonalnie)</label><input id="oglPrice" maxlength="30" placeholder="Np. 350 zł lub „za darmo”" class="mt-1 w-full h-11 rounded-xl border border-warm-200 px-4 text-[15px]"></div>
+                    <div><label class="text-[11px] font-bold uppercase tracking-widest text-warm-800/60">Telefon kontaktowy</label><input id="oglPhone" required maxlength="20" placeholder="500 123 456" class="mt-1 w-full h-11 rounded-xl border border-warm-200 px-4 text-[15px]"></div>
+                </div>
+                <div id="oglPhoneErr" class="hidden text-[12.5px] text-red-700 bg-red-50 rounded-lg px-3 py-2">📵 Numer telefonu musi mieć co najmniej 9 cyfr.</div>
+                <button type="submit" id="oglSubmit" class="w-full h-11 rounded-full bg-sage-600 text-white font-bold hover:bg-sage-700">Opublikuj ogłoszenie</button>
+                <p class="text-[12px] text-warm-800/50 text-center">Ogłoszenia lokalne: Mszana, Połomia, Gogołowa. Bez hejtu i spamu — moderuje admin.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div id="oglToast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[99] hidden bg-warm-900 text-white text-[14px] font-bold px-5 py-3 rounded-full shadow-xl"></div>
+
+    <!-- WIDEO: TANECZNY WORKOUT CARDIO -->
+    <section id="wideo" class="max-w-[1280px] mx-auto px-5 py-8">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+            <div>
+                <h2 class="font-display text-[28px]">🎬 Wideo — Taneczny Workout Cardio</h2>
+                <p class="text-[14px] text-warm-800/60 mt-1">Trening w rytmie hitów Sanah • fragment od 7:00 do 9:30</p>
+            </div>
+            <a href="https://youtu.be/XirBe7BRhH0?si=6aXwJgCNmmW3jn9m" target="_blank" rel="noopener" class="h-10 px-5 rounded-full bg-red-600 text-white font-bold text-[13.5px] inline-flex items-center gap-2 hover:bg-red-700 shadow-sm">▶ Otwórz na YouTube</a>
+        </div>
+        <div class="soft-card mt-5 overflow-hidden grid lg:grid-cols-[1.1fr_0.9fr] items-stretch">
+            <div class="relative bg-[#0f0f0f]">
+                <iframe class="w-full h-full min-h-[320px]" src="https://www.youtube.com/embed/XirBe7BRhH0?start=420&end=570" title="Taneczny Workout Cardio w rytmie hitów Sanah – ćwicz bez wychodzenia z domu!" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="p-6 sm:p-8">
+                <h3 class="font-display text-[22px] leading-[1.2]">Taneczny Workout Cardio w rytmie hitów Sanah – ćwicz bez wychodzenia z domu!</h3>
+                <p class="text-[15px] leading-[1.75] text-warm-800/75 mt-3">Zadbaj o formę i dobrą energię we własnym salonie! Zapraszamy do udziału w lekkim, tanecznym treningu cardio, który z łatwością wykonasz w domowym zaciszu. Połączymy proste kroki z ćwiczeniami wzmacniającymi w rytm najpopularniejszych utworów Sanah. Trening nie wymaga żadnego specjalistycznego sprzętu ani dużej przestrzeni – wystarczy odrobina miejsca, wygodny strój i zapas wody. Dołącz i rozruszaj się z nami!</p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                    <span class="text-[12px] font-bold px-2.5 py-1 rounded-full bg-red-100 text-red-800">🎵 hity Sanah</span>
+                    <span class="text-[12px] font-bold px-2.5 py-1 rounded-full bg-sage-100 text-sage-700">⏱️ odcinek 7:00 – 9:30</span>
+                    <span class="text-[12px] font-bold px-2.5 py-1 rounded-full bg-amber-100 text-amber-800">🏠 bez wychodzenia z domu</span>
+                </div>
+                <a href="https://youtu.be/XirBe7BRhH0?si=6aXwJgCNmmW3jn9m" target="_blank" rel="noopener" class="mt-6 h-11 px-6 rounded-full bg-warm-900 text-white font-bold inline-flex items-center gap-2">▶ Obejrzyj cały fragment treningu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFICJALNE KANAŁY GMINY -->
+    <div class="max-w-[1280px] mx-auto px-5 pb-2">
+        <div class="soft-card p-5 flex flex-wrap items-center gap-4 justify-between">
+            <div class="flex items-center gap-3">
+                <img src="assets/herb-mszana.png" alt="Herb Gminy Mszana" class="w-11 h-auto rounded-lg border border-warm-200 shadow-sm" loading="lazy">
+                <span class="text-[22px]">🏛️</span>
+                <div>
+                    <div class="font-bold text-[15px]">Oficjalne kanały gminy Mszana</div>
+                    <div class="text-[12.5px] text-warm-800/60">aktualności, uchwały i komunikaty prosto z urzędu</div>
+                </div>
+            </div>
+            <div class="flex flex-wrap gap-3">
+                <a href="https://mszana.ug.gov.pl" target="_blank" rel="noopener" class="h-10 px-5 rounded-full bg-sage-600 text-white text-[13.5px] font-bold inline-flex items-center gap-2 hover:bg-sage-700">🏛️ mszana.ug.gov.pl</a>
+                <a href="https://www.facebook.com/mszana.gmina?locale=pl_PL" target="_blank" rel="noopener" class="h-10 px-5 rounded-full bg-[#0866FF] text-white text-[13.5px] font-bold inline-flex items-center gap-2">f facebook.com/mszana.gmina</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="max-w-[1280px] mx-auto px-5 pb-10">
+        <div class="soft-card p-6 sm:p-8 text-warm-100 text-[14px] leading-[1.6]" style="background:#23201c">
+            <div class="flex flex-wrap items-start justify-between gap-8">
+                <div class="flex items-start gap-4">
+                    <img src="assets/herb-mszana.png" alt="Herb Gminy Mszana" class="h-20 w-auto rounded-xl border border-white/15 shadow-lg" loading="lazy">
+                    <div>
+                        <div class="font-bold text-white text-[17px] leading-tight">Mszana INFO</div>
+                        <div class="text-[12.5px] text-warm-100/70 mt-1 max-w-[34ch]">Mszana – Przejrzysta Gmina &amp; Sprawy Mieszkańców • Portal i Forum: Mszana, Połomia, Gogołowa</div>
+                        <div class="text-[12px] text-warm-100/50 mt-2">Herb Gminy Mszana • ul. 1 Maja 81, 44-325 Mszana</div>
+                    </div>
+                </div>
+                <div class="text-[13px] leading-[1.8]">
+                    <div class="font-bold text-white mb-1.5">Na skróty</div>
+                    <a href="#aktualnosci" class="block text-warm-100/70 hover:text-white transition-colors">📰 Aktualności</a>
+                    <a href="#ogloszenia" class="block text-warm-100/70 hover:text-white transition-colors">📢 Ogłoszenia</a>
+                    <a href="#forum" class="block text-warm-100/70 hover:text-white transition-colors">💬 Forum — Twój Głos</a>
+                    <a href="#mapa" class="block text-warm-100/70 hover:text-white transition-colors">🗺️ Mapa i sołtysi</a>
+                    <a href="#komisje" class="block text-warm-100/70 hover:text-white transition-colors">🏛️ Komisje Rady Gminy</a>
+                    <a href="#sesje" class="block text-warm-100/70 hover:text-white transition-colors">📢 Sesje Rady Gminy</a>
+                    <a href="#wideo" class="block text-warm-100/70 hover:text-white transition-colors">🎬 Wideo — Workout</a>
+                    <a href="#onas" class="block text-warm-100/70 hover:text-white transition-colors">O nas</a>
+                </div>
+                <div class="text-[13px] leading-[1.8]">
+                    <div class="font-bold text-white mb-1.5">Oficjalne kanały gminy</div>
+                    <a href="https://mszana.ug.gov.pl" target="_blank" rel="noopener" class="block text-warm-100/70 hover:text-white transition-colors">🏛️ mszana.ug.gov.pl</a>
+                    <a href="https://www.facebook.com/mszana.gmina?locale=pl_PL" target="_blank" rel="noopener" class="block text-warm-100/70 hover:text-white transition-colors">f Gmina (facebook.com/mszana.gmina)</a>
+                    <a href="https://www.facebook.com/groups/1245680220713294?locale=pl_PL" target="_blank" rel="noopener" class="block text-warm-100/70 hover:text-white transition-colors">f Grupa mieszkańców</a>
+                    <a href="mailto:kontakt@mszana.info" class="block text-warm-100/70 hover:text-white transition-colors">📧 kontakt@mszana.info</a>
+                </div>
+            </div>
+            <div class="mt-7 pt-4 border-t border-white/15 text-[12px] text-warm-100/55 flex flex-wrap items-center justify-between gap-3">
+                <span>© 2026 Mszana INFO — portal mieszkańców gminy Mszana. Moderacja: 61592454217806.</span>
+                <span>Powiązane z grupą FB • Bez hejtu, z szacunkiem 💚</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL NOWA KATEGORIA -->
+    <div id="catModal" class="fixed inset-0 z-[90] hidden"><div class="absolute inset-0 bg-black/40 backdrop-blur-sm" onclick="closeCatModal()"></div><div class="relative max-w-[480px] mx-auto mt-[10vh] bg-white rounded-[24px] shadow-2xl border border-warm-200 p-6">
+        <div class="flex items-center justify-between"><h3 class="font-display text-[20px] font-bold">Nowa zakładka tematyczna</h3><button onclick="closeCatModal()" class="w-8 h-8 rounded-full bg-warm-100 flex items-center justify-center">✕</button></div>
+        <p class="text-[13.5px] text-warm-800/70 mt-2">Np. "Latarnie uliczne", "Dzikie wysypiska", "Plac zabaw". Mieszkańcy będą mogli w niej dodawać tematy.</p>
+        <form id="catForm" class="mt-5 space-y-3">
+            <input id="catName" required placeholder="Nazwa zakładki np. Bezpieczne przejścia" class="w-full h-11 px-4 rounded-xl border border-warm-200 text-[15px]">
+            <div class="grid grid-cols-2 gap-3">
+                <input id="catIcon" placeholder="Ikona emoji np. 🚸" class="h-11 px-4 rounded-xl border border-warm-200 text-[15px]" value="💬">
+                <select id="catColor" class="h-11 px-3 rounded-xl border border-warm-200 text-[13px] font-bold"><option value="bg-amber-100 text-amber-800">Żółty</option><option value="bg-red-100 text-red-800">Czerwony</option><option value="bg-sage-100 text-sage-700">Zielony</option><option value="bg-sky-100 text-sky-800">Niebieski</option><option value="bg-purple-100 text-purple-800">Fioletowy</option><option value="bg-orange-100 text-orange-800">Pomarańcz</option></select>
+            </div>
+            <button type="submit" class="w-full h-11 rounded-full bg-warm-900 text-white font-bold mt-2">Utwórz zakładkę</button>
+        </form>
+    </div></div>
+
+    <!-- MODAL NOWY TEMAT -->
+    <div id="topicModal" class="fixed inset-0 z-[90] hidden"><div class="absolute inset-0 bg-black/40 backdrop-blur-sm" onclick="closeTopicModal()"></div><div class="relative max-w-[560px] mx-auto mt-[6vh] bg-white rounded-[24px] shadow-2xl border border-warm-200 overflow-hidden">
+        <div class="p-6 border-b border-warm-100 flex items-center justify-between"><h3 class="font-display text-[20px] font-bold">Nowy temat na Forum</h3><button onclick="closeTopicModal()" class="w-8 h-8 rounded-full bg-warm-100">✕</button></div>
+        <form id="topicForm" class="p-6 space-y-4">
+            <div class="grid grid-cols-2 gap-3">
+                <div><label class="text-[11px] font-bold uppercase tracking-widest text-warm-800/60">Zakładka</label><select id="topicCat" class="mt-1 w-full h-11 rounded-xl border border-warm-200 px-3 text-[14px]"></select></div>
+                <div><label class="text-[11px] font-bold uppercase tracking-widest text-warm-800/60">Miejscowość</label><select id="topicPlace" class="mt-1 w-full h-11 rounded-xl border border-warm-200 px-3 text-[14px]"><option>Mszana</option><option>Połomia</option><option>Gogołowa</option></select></div>
+            </div>
+            <div><label class="text-[11px] font-bold uppercase tracking-widest text-warm-800/60">Tytuł (krótko i jasno)</label><input id="topicTitle" required maxlength="90" placeholder="Np. Dziura przy ul. Centralnej 12 - niebezpieczna" class="mt-1 w-full h-11 rounded-xl border border-warm-200 px-4 text-[15px]"></div>
+            <div id="topicSubWrap" class="hidden">
+                <label class="text-[11px] font-bold uppercase tracking-widest text-warm-800/60">Podkategoria (Pomysły dla Gminy)</label>
+                <select id="topicSub" class="mt-1 w-full h-11 rounded-xl border border-warm-200 px-3 text-[14px] bg-white">
+                    <option value="twoj-pomysl">💡 Twój pomysł</option>
+                    
+                </select>
+            </div>
+            <div><label class="text-[11px] font-bold uppercase tracking-widest text-warm-800/60">Opis + co proponujesz?</label><textarea id="topicDesc" required rows="4" placeholder="Opisz problem, dodaj zdjęcie jeśli masz, zaproponuj rozwiązanie. Podpisz się imieniem." class="mt-1 w-full rounded-xl border border-warm-200 p-3 text-[14px]"></textarea></div>
+            <div class="flex gap-2"><input id="topicAnon" type="checkbox"><label for="topicAnon" class="text-[13px]">Publikuj anonimowo (tylko dla admina widoczne imię)</label></div>
+            <button type="submit" class="w-full h-11 rounded-full bg-sage-600 text-white font-bold">Opublikuj na Forum</button>
+            <p class="text-[11px] text-center text-warm-800/60">Forum moderowane. Zakaz hejtu. Najlepsze tematy trafiają do sołtysa i na grupę FB.</p>
+        </form>
+    </div></div>
+
+    <!-- MODAL SZCZEGÓŁY WĄTKU -->
+    <div id="threadModal" class="fixed inset-0 z-[90] hidden"><div class="absolute inset-0 bg-black/40 backdrop-blur-sm" onclick="closeThreadModal()"></div><div class="relative max-w-[720px] mx-auto mt-[4vh] bg-[#fdfaf3] rounded-[24px] shadow-2xl border border-warm-200 max-h-[88vh] overflow-auto">
+        <div class="sticky top-0 bg-[#fdfaf3]/90 backdrop-blur p-6 border-b border-warm-200 flex items-start justify-between gap-4"><div id="threadDetailHeader"></div><button onclick="closeThreadModal()" class="w-8 h-8 rounded-full bg-white border border-warm-200 flex items-center justify-center shrink-0">✕</button></div>
+        <div id="threadDetailBody" class="p-6"></div>
+    </div></div>
+
+<script>
+const defaultCats = [
+  {id:'drogi', name:'Utrudnienia i drogi', icon:'🚧', color:'bg-amber-100 text-amber-800', count:0},
+  {id:'bezpieczenstwo', name:'Bezpieczeństwo', icon:'🚨', color:'bg-red-100 text-red-800', count:0},
+  {id:'pomysly', name:'Pomysły dla Gminy', icon:'💡', color:'bg-sage-100 text-sage-700', count:0, subcats:[{id:'twoj-pomysl',name:'Twój pomysł',icon:'💡'}]},
+  {id:'sesje', name:'Sesje', icon:'📋', color:'bg-sky-100 text-sky-800', count:0, desc:'Dyskusje, relacje z sesji, posiedzenia komisji i transmisje Rady Gminy Mszana.'},
+  {id:'fundusz', name:'Fundusz Sołecki', icon:'🏘️', color:'bg-yellow-100 text-yellow-800', count:0, desc:'Każde sołectwo ma 66 401,80 zł na 2026! Decydujemy na zebraniach wiejskich we wrześniu.'},
+  {id:'pomoc', name:'Pomoc sąsiedzka', icon:'🤝', color:'bg-sky-100 text-sky-800', count:0},
+  {id:'asystent', name:'Asystent mieszkańca', icon:'🧭', color:'bg-teal-100 text-teal-800', count:0, subcats:[{id:'zglaszamy', name:'Zgłaszamy do naprawienia', icon:'🔧'},{id:'zrobione', name:'Zrobione - Urząd Reaguje', icon:'✅'}]},
+  {id:'zwierzeta', name:'Zwierzęta', icon:'🐾', color:'bg-orange-100 text-orange-800', count:0},
+  {id:'mlodziez', name:'Młodzież i kultura', icon:'🎭', color:'bg-purple-100 text-purple-800', count:0},
+];
+let categories = defaultCats;
+localStorage.setItem('mszana_forum_cats', JSON.stringify(categories));
+// Podkategorie dla „Pomysły dla Gminy” (migracja)
+const pomyslySubcats = [
+  {id:'twoj-pomysl', name:'Twój pomysł', icon:'💡'}
+];
+const _pc = categories.find(c=>c.id==='pomysly');
+if(_pc && !_pc.subcats){ _pc.subcats = pomyslySubcats; }
+if(_pc && _pc.subcats){ _pc.subcats = _pc.subcats.filter(s=>s.id!=='budzet-obywatelski'); }
+const asystentSubcats = [
+  {id:'zglaszamy', name:'Zgłaszamy do naprawienia', icon:'🔧'},
+  {id:'zrobione', name:'Zrobione - Urząd Reaguje', icon:'✅'}
+];
+if(!categories.find(c=>c.id==='asystent')){
+  const _idx = categories.findIndex(c=>c.id==='pomoc');
+  categories.splice(_idx>=0?_idx+1:categories.length, 0, {id:'asystent', name:'Asystent mieszkańca', icon:'🧭', color:'bg-teal-100 text-teal-800', count:0, subcats:asystentSubcats});
+}
+const _ac = categories.find(c=>c.id==='asystent');
+if(_ac && !_ac.subcats){ _ac.subcats = asystentSubcats; }
+const defaultThreads = [
+  {id:112, catId:'sesje', title:'📋 XXVII Sesja Rady Gminy Mszana (27.07.2026) - dyskusja i wnioski mieszkańców', place:'Gmina Mszana', author:'Redakcja Mszana INFO', date:'2 dni temu', likes:35, liked:true, content:'Na XXVII Sesji Rady Gminy poruszono kluczowe tematy: sprawa jakości wody w Połomi, remonty dróg (w tym ul. 1 Maja i ul. Ładna), inwestycje oświetleniowe oraz Kartę Seniora. Zapraszamy do dyskusji o przebiegu sesji i zgłaszania wolnych wniosków, które warto poruszyć na kolejnych obradach komisji i sesji Rady Gminy!', replies:[
+    {author:'Mieszkaniec Połomi', content:'Najważniejszy wniosek: informowanie mieszkańców o awariach i skażeniach natychmiast przez SMS!', date:'1 dzień temu'},
+    {author:'Radny', content:'Wszystkie zawiadomienia o sesjach i komisjach śledźcie na mszana.ug.gov.pl/posiedzenia-komisji-rady-gminy.html oraz transmisje na esesja.tv/transmisja_na_zywo/1159/rada-gminy-mszana.htm', date:'12h temu'}
+  ]},
+  {id:108, catId:'fundusz', title:'🏘️ Fundusz Sołecki 2026: Mszana, Połomia, Gogołowa - po 66 401,80 zł do podziału!', place:'Gmina Mszana', author:'UG Info (zweryfikowane)', date:'2 dni temu', likes:31, liked:false, content:'Zebrania Wiejskie we wrześniu zadecydują o podziale funduszu sołeckiego. W 2026 każde sołectwo ma do rozdysponowania 66 401,80 zł [źródło: UG Mszana - zebrania 15-17 września]. To odpowiednik budżetu obywatelskiego dla wsi! Quorum: Mszana i Połomia 40 osób (25 w II terminie), Gogołowa 35 osób (20 w II terminie). W zeszłym roku Połomia przeznaczyła całość na oświetlenie boiska sportowego, Gogołowa na namioty sołeckie 15k, piłkochwyty 10k i dożynki 5k, Mszana na oświetlenie ul. Ks. Styry i znaki uliczne. Jakie macie pomysły na 2027? Piszcie propozycje - najlepsze zgłosimy na zebraniu!', replies:[
+    {author:'Ilona Mura (sołtys Mszany)', content:'Dziękuję za przypomnienie! Zebranie w Mszanie w połowie września - zapraszam! Propozycje można już zgłaszać do Rady Sołeckiej.', date:'1 dzień temu'},
+    {author:'Mieszkanka Połomi', content:'Może z funduszu 2027 zrobić plac zabaw dla maluchów? W Połomi brakuje', date:'12h temu'},
+    {author:'Radny', content:'Pamiętajcie, że fundusz sołecki to 100% Waszych decyzji - im więcej osób przyjdzie, tym lepiej! Minimum 40 osób żeby uchwała była ważna.', date:'6h temu'}
+  ]},
+  {id:110, catId:'asystent', sub:'zglaszamy', title:'🔧 Zgłoszenie: zapadnięta studzienka przy ul. Szkolnej', place:'Mszana', author:'Mieszkaniec', date:'3 godz. temu', likes:4, liked:false, content:'Przy ul. Szkolnej (koło skrętu na Połomię) zapadnięta studzienka kanalizacyjna - koła wpadają. Zgłosiłem też na kontakt@mszana.info, trzymajcie kciuki. Można zgłaszać usterki tutaj na Forum albo mailem!', replies:[]},
+  {id:111, catId:'asystent', sub:'zrobione', title:'✅ Urząd Reaguje! Naprawiono latarnię przy przejściu koło Biedronki', place:'Mszana', author:'Kasia M.', date:'1 dzień temu', likes:9, liked:false, content:'Latarnia przy przejściu dla pieszych koło Biedronki znowu świeci! Zgłoszenie z forum zadziałało - dzięki wszystkim za poparcie 👍. Piszcie o kolejnych naprawach, pokażmy że to działa!', replies:[{author:'Sąsiad', content:'Super, że działa! Może ktoś potwierdzi dziurę na Centralnej?', date:'20h temu'}]},
+  {id:101, catId:'drogi', title:'Dziura przy ul. Centralnej 12 - już 3 tygodnie', place:'Mszana', author:'Marek K.', date:'3h temu', likes:12, liked:false, content:'Witam, przy Centralnej 12 jest dziura głęboka na 15cm. Rowerzyści omijają przez chodnik. Zgłosiłem do UG ale bez odzewu. Może sołtys pomoże? Mam zdjęcie.', replies:[
+    {author:'Ilona Mura (sołtys)', content:'Dziękuję za sygnał! Przekazuję dziś do UG, postaram się o łaty do piątku. Proszę o cierpliwość.', date:'1h temu'},
+    {author:'Ania z Połomi', content:'U nas na Akacjowej też to samo. Może zbiorczy temat?', date:'45m temu'}
+  ]},
+  {id:102, catId:'pomysly', title:'💡 Pomysł: Oświetlenie ścieżki Mszana - Połomia dla dzieci do szkoły', place:'Mszana / Połomia', author:'Tata 2 dzieci', date:'5h temu', likes:18, liked:true, content:'Dzieci idą jesienią po ciemku 1.2km bez latarni. Może wniosek do budżetu sołeckiego? Koszt 4 latarni solarnych ~8k zł. Co myślicie? Podpiszmy petycję.', replies:[
+    {author:'Mirosława Piechaczek (sołtys Połomi)', content:'Super pomysł! Wrzucam na zebranie sołeckie w przyszłym tygodniu. Proszę polubić temat żeby pokazać poparcie.', date:'2h temu'}
+  ]},
+  {id:103, catId:'bezpieczenstwo', title:'Nie świeci latarnia przy przejściu koło Biedronki', place:'Mszana', author:'Kasia M.', date:'8h temu', likes:7, liked:false, content:'Przy przejściu dla pieszych koło Biedronki od tygodnia nie świeci latarnia. Dzieci wracają ze szkoły, niebezpiecznie.', replies:[]},
+  {id:104, catId:'pomoc', title:'Szukam opieki do mamy 2x w tygodniu - Mszana', place:'Mszana', author:'Ewa', date:'1 dzień temu', likes:3, liked:false, content:'Mama 78 lat, sprawna, ale potrzebuje towarzystwa i pomocy w zakupach pon/czw 10-13. 25zł/h. Tylko lokalne panie.', replies:[]},
+  {id:105, catId:'mlodziez', title:'Kto chętny na kino plenerowe w Połomi? Zróbmy listę filmów', place:'Połomia', author:'GOKiR Team', date:'1 dzień temu', likes:21, liked:false, content:'17 sierpnia kino plenerowe. Proponujemy 3 filmy: 1) Kos, 2) Chłopi, 3) Barbie. Głosujemy w komentarzach!', replies:[
+    {author:'Nastolatki z Połomi', content:'Barbie! + Kos!', date:'12h temu'}
+  ]},
+  {id:106, catId:'drogi', title:'Objazd Gogołowa ul. Słoneczna - kiedy koniec?', place:'Gogołowa', author:'Mieszkaniec', date:'2 dni temu', likes:9, liked:false, content:'Znak wskazuje objazd przez Polną ale tam też rozkopane. Ktoś wie do kiedy?', replies:[]},
+];
+
+let threads = defaultThreads;
+localStorage.setItem('mszana_forum_threads', JSON.stringify(threads));
+let activeCat = 'all';
+let activeSub = 'twoj-pomysl';
+let currentThreadId = null;
+
+function saveAll(){
+  localStorage.setItem('mszana_forum_cats', JSON.stringify(categories));
+  localStorage.setItem('mszana_forum_threads', JSON.stringify(threads));
+}
+
+function renderCategories(){
+  const list = document.getElementById('categoriesList');
+  const sel = document.getElementById('topicCat');
+  const allCount = threads.length;
+  let html = `
+    <button onclick="setCat('all')" class="w-full text-left flex items-center justify-between p-3.5 rounded-2xl border ${activeCat==='all' ? 'bg-warm-900 text-white border-warm-900 active-cat' : 'bg-white border-warm-200 hover:bg-warm-50'} transition">
+      <div class="flex items-center gap-3"><span class="text-[20px]">🗂️</span><span class="font-bold text-[14.5px]">Wszystkie tematy</span></div>
+      <span class="text-[11px] font-bold px-2 py-0.5 rounded-full ${activeCat==='all' ? 'bg-white/20' : 'bg-warm-100'}">${allCount}</span>
+    </button>
+  `;
+  categories.forEach(cat=>{
+    const count = threads.filter(t=>t.catId===cat.id).length;
+    const isActive = activeCat===cat.id;
+    const badgeNew = cat.id==='budzet' ? '<span class="ml-2 px-1.5 py-0.5 rounded bg-emerald-600 text-white text-[9px] font-bold uppercase tracking-widest">NOWA INICJATYWA</span>' : '';
+    html += `
+      <button onclick="setCat('${cat.id}')" class="w-full text-left flex flex-col p-3.5 rounded-2xl border ${isActive ? 'bg-white border-sage-600 ring-2 ring-sage-600/20' : 'bg-white border-warm-200 hover:border-warm-300'} transition">
+        <div class="flex items-center justify-between w-full">
+          <div class="flex items-center gap-3"><span class="text-[20px]">${cat.icon}</span><span class="font-bold text-[14px] leading-tight">${cat.name}${badgeNew}</span></div>
+          <div class="flex items-center gap-2"><span class="text-[11px] font-bold px-2 py-1 rounded-full ${cat.color}">${count}</span>${isActive ? '<span class="w-2 h-2 bg-sage-600 rounded-full"></span>' : ''}</div>
+        </div>
+        ${cat.desc ? `<div class="text-[11.5px] leading-[1.4] text-warm-800/60 mt-2 pl-8 text-left">${cat.desc}</div>` : ''}
+      </button>
+    `;
+  });
+  list.innerHTML = html;
+  document.getElementById('catCount').textContent = categories.length + ' kategorii';
+  // populate select
+  sel.innerHTML = categories.map(c=>`<option value="${c.id}">${c.icon} ${c.name}</option>`).join('');
+}
+
+function setCat(id){
+  activeCat = id;
+  if(id==='pomysly') activeSub = 'twoj-pomysl';
+  if(id==='asystent') activeSub = 'zglaszamy';
+  document.getElementById('activeFilter').classList.toggle('hidden', id==='all');
+  // Pokaż regulamin BO tylko dla kategorii budżet
+  const boReg = document.getElementById('boRegulation');
+  if(boReg) boReg.classList.toggle('hidden', id!=='budzet');
+  if(id!=='all'){
+    const cat = categories.find(c=>c.id===id);
+    document.getElementById('activeFilterName').textContent = cat ? cat.icon+' '+cat.name : id;
+  }
+  renderCategories();
+  renderSubcatUI();
+  renderThreads();
+}
+
+function clearCatFilter(){ setCat('all'); }
+
+// ---------- podkategorie „Pomysły dla Gminy” ----------
+function subName(id){ const s = pomyslySubcats.concat(asystentSubcats).find(x=>x.id===id); return s ? s.name : ''; }
+function subcatsFor(catId){
+  if(catId==='pomysly') return pomyslySubcats;
+  if(catId==='asystent') return asystentSubcats;
+  return null;
+}
+function setSub(id){ activeSub = id; renderSubcatUI(); renderThreads(); }
+function renderSubcatUI(){
+  const subs = subcatsFor(activeCat);
+  const bar = document.getElementById('subcatBar');
+  const info = document.getElementById('subcatInfo');
+  const allPanels = ['subInfoTwojPomysl','subInfoZglaszamy','subInfoZrobione'];
+  if(!subs){
+    if(bar) bar.classList.add('hidden');
+    if(info) info.classList.add('hidden');
+    allPanels.forEach(id=>{ const el = document.getElementById(id); if(el) el.classList.add('hidden'); });
+    return;
+  }
+  if(bar){
+    bar.classList.remove('hidden');
+    bar.innerHTML = '<span class="text-[11px] font-bold uppercase tracking-widest text-warm-800/50 self-center">Podkategorie:</span>' +
+      subs.map(s=>`<button onclick="setSub('${s.id}')" class="px-4 h-9 rounded-full text-[13.5px] font-bold border transition ${activeSub===s.id ? 'bg-warm-900 text-white border-warm-900' : 'bg-white border-warm-200 text-warm-800/75 hover:border-sage-300'}">${s.icon} ${s.name}</button>`).join('');
+  }
+  if(info) info.classList.remove('hidden');
+  const map = {
+    'twoj-pomysl':'subInfoTwojPomysl',
+    'zglaszamy':'subInfoZglaszamy','zrobione':'subInfoZrobione'
+  };
+  allPanels.forEach(id=>{
+    const el = document.getElementById(id);
+    if(el) el.classList.toggle('hidden', id !== map[activeSub]);
+  });
+}
+
+function renderThreads(){
+  const q = document.getElementById('forumSearch').value.toLowerCase();
+  const sort = document.getElementById('forumSort').value;
+  let filtered = threads.filter(t=>{
+    const matchCat = activeCat==='all' || t.catId===activeCat;
+    let matchSub = true;
+    if(activeCat==='pomysly'){
+      matchSub = activeSub==='twoj-pomysl' ? (!t.sub || t.sub==='twoj-pomysl' || !subcatsFor(activeCat).some(s=>s.id===t.sub)) : t.sub===activeSub;
+    } else if(activeCat==='asystent'){
+      matchSub = activeSub==='zglaszamy' ? (!t.sub || t.sub==='zglaszamy') : t.sub===activeSub;
+    }
+    const matchQ = (t.title+' '+t.content+' '+t.place).toLowerCase().includes(q);
+    return matchCat && matchSub && matchQ;
+  });
+  if(sort==='votes') filtered.sort((a,b)=>b.likes-a.likes);
+  if(sort==='comments') filtered.sort((a,b)=>b.replies.length-a.replies.length);
+  // newest already order
+
+  const container = document.getElementById('threadsList');
+  if(filtered.length===0){
+    container.innerHTML = `<div class="soft-card p-10 text-center"><div class="text-[48px]">🤷</div><div class="font-bold text-[18px] mt-3">Brak tematów w tej zakładce</div><div class="text-[14px] text-warm-800/60 mt-2">Bądź pierwszą osobą która zacznie dyskusję!</div><button onclick="openNewTopicModal()" class="mt-5 h-10 px-5 rounded-full bg-warm-900 text-white font-bold text-[14px]">+ Utwórz pierwszy temat</button></div>`;
+    return;
+  }
+  container.innerHTML = filtered.map(t=>{
+    const cat = categories.find(c=>c.id===t.catId);
+    return `
+      <div class="soft-card p-5 sm:p-6 cursor-pointer hover:border-sage-200" onclick="openThread(${t.id})">
+        <div class="flex items-start justify-between gap-3">
+          <div class="flex items-center gap-2.5">
+            <span class="text-[11px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full ${cat ? cat.color : 'bg-warm-100'}">${cat ? cat.icon+' '+cat.name : t.catId}</span>
+            ${t.sub ? `<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-sage-100 text-sage-700">${pomyslySubcats.find(s=>s.id===t.sub) ? pomyslySubcats.find(s=>s.id===t.sub).icon : ''} ${subName(t.sub)}</span>` : ''}
+            <span class="text-[11px] text-warm-800/60">${t.place} • ${t.date}</span>
+          </div>
+          <div class="flex items-center gap-1 text-[12px] text-warm-800/60">
+            <span>💬 ${t.replies.length}</span>
+            <span class="ml-2">👍 ${t.likes}</span>
+          </div>
+        </div>
+        <div class="font-bold text-[18px] leading-[1.35] mt-3">${t.title}</div>
+        <div class="text-[14.5px] leading-[1.6] text-warm-800/75 mt-2 line-clamp-2">${t.content.slice(0,140)}...</div>
+        <div class="mt-4 flex items-center justify-between">
+          <div class="flex items-center gap-2 text-[12px] text-warm-800/60">
+            <span class="w-6 h-6 rounded-full bg-warm-200 flex items-center justify-center font-bold text-[11px]">${t.author[0]}</span>
+            <span>${t.author}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="event.stopPropagation(); likeThread(${t.id})" class="h-7 px-3 rounded-full ${t.liked ? 'bg-sage-600 text-white' : 'bg-warm-100 hover:bg-warm-200'} text-[12px] font-bold transition">${t.liked ? '👍 Poparte' : '👍 Poprzyj'}</button>
+            <span class="text-[12px] font-bold text-sage-700">${t.likes} głosów</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function likeThread(id){
+  const t = threads.find(x=>x.id===id);
+  if(!t) return;
+  if(t.liked){ t.likes--; t.liked=false; } else { t.likes++; t.liked=true; }
+  saveAll();
+  renderThreads();
+  if(currentThreadId===id) openThread(id);
+}
+
+function openThread(id){
+  currentThreadId = id;
+  const t = threads.find(x=>x.id===id);
+  if(!t) return;
+  const cat = categories.find(c=>c.id===t.catId);
+  document.getElementById('threadDetailHeader').innerHTML = `
+    <div>
+      <div class="flex items-center gap-2"><span class="text-[11px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full ${cat?cat.color:'bg-warm-100'}">${cat?cat.icon+' '+cat.name:t.catId}</span><span class="text-[12px] text-warm-800/60">${t.place} • ${t.date}</span></div>
+      <div class="font-display text-[24px] font-bold leading-[1.2] mt-3">${t.title}</div>
+      <div class="text-[13px] text-warm-800/60 mt-1">Autor: ${t.author}</div>
+    </div>
+  `;
+  document.getElementById('threadDetailBody').innerHTML = `
+    <div class="soft-card p-5 bg-white">
+      <div class="text-[15.5px] leading-[1.7]">${t.content}</div>
+      <div class="mt-5 flex gap-2">
+        <button onclick="likeThread(${t.id})" class="h-9 px-4 rounded-full ${t.liked ? 'bg-sage-600 text-white' : 'bg-warm-900 text-white'} font-bold text-[13px]">👍 ${t.liked ? 'Poparte' : 'Poprzyj pomysł'} • ${t.likes}</button>
+        <button onclick="shareToFBThread(${t.id})" class="h-9 px-4 rounded-full bg-[#0866FF] text-white font-bold text-[13px]">Udostępnij na FB grupie</button>
+      </div>
+    </div>
+    <div class="mt-6">
+      <h4 class="font-bold text-[15px]">💬 Komentarze (${t.replies.length})</h4>
+      <div class="mt-4 space-y-3">
+        ${t.replies.map(r=>`<div class="soft-card p-4"><div class="flex items-center justify-between"><span class="font-bold text-[13px]">${r.author}</span><span class="text-[11px] text-warm-800/60">${r.date}</span></div><div class="text-[14.5px] leading-[1.6] mt-2">${r.content}</div></div>`).join('') || '<div class="text-[14px] text-warm-800/60">Brak komentarzy - bądź pierwszy!</div>'}
+      </div>
+      <form onsubmit="addReply(event, ${t.id})" class="mt-6 soft-card p-4">
+        <label class="text-[11px] font-bold uppercase tracking-widest text-warm-800/60">Dodaj komentarz</label>
+        <textarea id="replyText" required rows="3" placeholder="Napisz kulturalnie, konkretnie, podpisz się..." class="mt-2 w-full rounded-xl border border-warm-200 p-3 text-[14px]"></textarea>
+        <button type="submit" class="mt-3 h-9 px-5 rounded-full bg-warm-900 text-white font-bold text-[13px]">Wyślij komentarz</button>
+      </form>
+    </div>
+  `;
+  document.getElementById('threadModal').classList.remove('hidden');
+}
+
+function addReply(e, threadId){
+  e.preventDefault();
+  const text = document.getElementById('replyText').value;
+  const t = threads.find(x=>x.id===threadId);
+  t.replies.push({author:'Sąsiad z '+t.place, content:text, date:'przed chwilą'});
+  saveAll();
+  document.getElementById('replyText').value='';
+  openThread(threadId);
+  renderThreads();
+}
+
+function shareToFBThread(id){
+  const t = threads.find(x=>x.id===id);
+  const txt = encodeURIComponent(`FORUM Mszana INFO: ${t.title} - ${t.content.slice(0,100)}... Zobacz i zagłosuj: ${location.origin + location.pathname}#forum`);
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://www.facebook.com/groups/1245680220713294')}&quote=${txt}`, '_blank','width=700,height=600');
+}
+
+function openNewCategoryModal(){ document.getElementById('catModal').classList.remove('hidden'); }
+function closeCatModal(){ document.getElementById('catModal').classList.add('hidden'); }
+function openNewTopicModal(prefillPomysly){
+  renderCategories();
+  const catSel = document.getElementById('topicCat');
+  if(prefillPomysly || activeCat==='pomysly' || activeCat==='asystent'){
+    catSel.value = activeCat;
+    document.getElementById('topicSub').value = activeSub;
+  }
+  updateTopicSubVisibility();
+  document.getElementById('topicModal').classList.remove('hidden');
+}
+function updateTopicSubVisibility(){
+  const wrap = document.getElementById('topicSubWrap');
+  const sel = document.getElementById('topicSub');
+  const subs = subcatsFor(document.getElementById('topicCat').value);
+  if(!subs){ if(wrap) wrap.classList.add('hidden'); return; }
+  const prev = sel.value;
+  sel.innerHTML = subs.map(s=>`<option value="${s.id}">${s.icon} ${s.name}</option>`).join('');
+  if(subs.some(s=>s.id===prev)) sel.value = prev; else sel.value = subs[0].id;
+  if(wrap) wrap.classList.remove('hidden');
+}
+document.getElementById('topicCat').addEventListener('change', updateTopicSubVisibility);
+function closeTopicModal(){ document.getElementById('topicModal').classList.add('hidden'); }
+function closeThreadModal(){ document.getElementById('threadModal').classList.add('hidden'); currentThreadId=null; }
+
+document.getElementById('catForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  const name = document.getElementById('catName').value.trim();
+  const icon = document.getElementById('catIcon').value.trim() || '💬';
+  const color = document.getElementById('catColor').value;
+  const id = name.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'').slice(0,20) + '-' + Date.now().toString().slice(-3);
+  categories.push({id, name, icon, color, count:0});
+  saveAll();
+  closeCatModal();
+  e.target.reset();
+  renderCategories();
+  setCat(id);
+});
+
+document.getElementById('topicForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  const catId = document.getElementById('topicCat').value;
+  const sub = document.getElementById('topicSub').value;
+  const place = document.getElementById('topicPlace').value;
+  const title = document.getElementById('topicTitle').value;
+  const desc = document.getElementById('topicDesc').value;
+  const newThread = {id:Date.now(), catId, sub, place, title, content:desc, author:'Ty ('+place+')', date:'przed chwilą', likes:1, liked:true, replies:[]};
+  threads.unshift(newThread);
+  saveAll();
+  closeTopicModal();
+  e.target.reset();
+  renderThreads();
+  openThread(newThread.id);
+});
+
+document.getElementById('forumSearch').addEventListener('input', renderThreads);
+document.getElementById('forumSort').addEventListener('change', renderThreads);
+
+
+renderCategories();
+renderThreads();
+</script>
+
+<script>
+// ===== OGŁOSZENIA - moduł mieszkańców (v2: dopracowany + backend) =====
+// --- KONFIGURACJA BACKENDU ---
+// 'local'     = tylko ta przeglądarka (bez konta, dane lokalne)
+// 'supabase'  = wspólna baza dla wszystkich (zalecane) — uzupełnij 2 pola poniżej
+const OGL_BACKEND = {
+  mode: 'supabase',     // 'local' | 'supabase'
+  supabaseUrl: 'https://batkjqjtwfduyonvjtym.supabase.co',
+  supabaseAnonKey: 'sb_publishable_gUtHCxb0ICrRwqasoV766Q_C10nonpc'
+};
+
+const OGL_KEY = 'mszana_ogloszenia_v1';
+const OGL_MINE_KEY = 'mszana_ogl_mine_v1';
+const OGL_CATS = [
+  {id:'sprzedam', name:'Sprzedam', icon:'🛍️', cls:'bg-sage-100 text-sage-700'},
+  {id:'kupie',    name:'Kupię',    icon:'🤝', cls:'bg-sky-100 text-sky-700'},
+  {id:'oddam',    name:'Oddam',    icon:'🎁', cls:'bg-emerald-100 text-emerald-700'},
+  {id:'uslugi',   name:'Usługi',   icon:'🔧', cls:'bg-amber-100 text-amber-800'},
+  {id:'pilne',    name:'Pilne',    icon:'🚨', cls:'bg-red-100 text-red-800'},
+];
+const now = Date.now();
+const seedOgl = [
+  {id:'s1', cat:'sprzedam', title:'Jabłka 5kg - 15zł', desc:'Prosto z sadu, różne odmiany. Można też wziąć większą ilość na przetwory.', price:'15 zł', place:'Mszana', addr:'ul. Moszczeńska 42', phone:'500 123 456', img:'', ts: now-2*3600e3},
+  {id:'s2', cat:'uslugi', title:'Koparka mini - Połomia', desc:'Prace ziemne: wykopy, niwelacje, rozbiórki. Faktura VAT.', price:'', place:'Połomia', addr:'', phone:'607 700 800', img:'', ts: now-5*3600e3},
+  {id:'s3', cat:'pilne', title:'Zaginął kot - Centralna 45', desc:'Pręgowany Mruczek, nie wychodził nigdy na noc. Nagroda dla znalazcy!', price:'', place:'Mszana', addr:'ul. Centralna 45', phone:'693 111 222', img:'', ts: now-8*3600e3},
+  {id:'s4', cat:'sprzedam', title:'Rower górski 26" Kross', desc:'Nowe opony, przerzutki 21 biegów. Idealny w dobrym stanie na wiosnę.', price:'350 zł', place:'Połomia', addr:'', phone:'512 345 678', img:'', ts: now-26*3600e3},
+  {id:'s5', cat:'kupie', title:'Kupię siano na zimę', desc:'Szukam ok. 2 ton siana w belach dla konia. Zapłacę gotówką, odbiór własny.', price:'', place:'Mszana', addr:'', phone:'601 234 567', img:'', ts: now-30*3600e3},
+  {id:'s6', cat:'uslugi', title:'Koszenie trawy i żywopłoty', desc:'Koszenie, przycinanie żywopłotów, drobne porządki w ogrodzie. Mszana i okolice.', price:'od 40 zł', place:'Gogołowa', addr:'', phone:'665 432 109', img:'', ts: now-50*3600e3},
+  {id:'s7', cat:'oddam', title:'Oddam ubranka dziecięce 56-80', desc:'Czyste, po jednym dziecku. Do odbioru w Mszanie, odbiór własny.', price:'za darmo', place:'Mszana', addr:'', phone:'698 765 432', img:'', ts: now-3*24*3600e3},
+  {id:'s8', cat:'sprzedam', title:'Ziemia ogrodowa 1 m³', desc:'Przesiana, bez kamieni. Możliwość przywiezienia na miejsce.', price:'60 zł/m³', place:'Gogołowa', addr:'', phone:'570 111 222', img:'', ts: now-4*24*3600e3},
+];
+
+let ogloszenia = [];
+let oglCat = 'all';
+let oglEditId = null;
+let cloudOK = false;
+let supabaseClient = null;
+
+// ---------- warstwa danych (adapter backendu) ----------
+function saveOgl(){ try{ localStorage.setItem(OGL_KEY, JSON.stringify(ogloszenia)); }catch(e){} }
+function loadLocal(){ return JSON.parse(localStorage.getItem(OGL_KEY) || 'null') || seedOgl.slice(); }
+function getMine(){ try{ return JSON.parse(localStorage.getItem(OGL_MINE_KEY) || '[]'); }catch(e){ return []; } }
+function addMine(id){ const m = getMine(); if(!m.includes(id)){ m.push(id); localStorage.setItem(OGL_MINE_KEY, JSON.stringify(m)); } }
+function isMine(id){ return getMine().includes(id); }
+function removeMine(id){ localStorage.setItem(OGL_MINE_KEY, JSON.stringify(getMine().filter(x=>x!==id))); }
+
+async function loadSupabaseClient(){
+  if(supabaseClient) return supabaseClient;
+  await new Promise((res, rej) => {
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';
+    s.onload = res; s.onerror = rej;
+    document.head.appendChild(s);
+  });
+  supabaseClient = window.supabase.createClient(OGL_BACKEND.supabaseUrl, OGL_BACKEND.supabaseAnonKey);
+  return supabaseClient;
+}
+
+async function initOgl(){
+  ogloszenia = loadLocal();
+  renderOgl();
+  if(OGL_BACKEND.mode === 'supabase' && OGL_BACKEND.supabaseUrl && OGL_BACKEND.supabaseAnonKey){
+    try{
+      const sb = await loadSupabaseClient();
+      const { data, error } = await sb.from('ogloszenia').select('*').order('ts', {ascending:false}).limit(300);
+      if(error) throw error;
+      if(data && data.length){
+        ogloszenia = data.map(o => ({id:o.id, cat:o.cat, title:o.title, desc:o.descr||'', price:o.price||'', place:o.place||'', addr:o.addr||'', phone:o.phone||'', img:o.img||'', ts:Number(o.ts)}));
+        saveOgl();
+      }
+      cloudOK = true;
+      document.getElementById('oglCloudInfo').classList.add('hidden');
+      const st = document.getElementById('oglCloudStatus');
+      if(st) st.classList.remove('hidden');
+      renderOgl();
+    }catch(err){
+      console.warn('Chmura niedostępna, tryb offline:', err);
+      cloudOK = false;
+      document.getElementById('oglCloudInfo').classList.remove('hidden');
+    }
+  }
+}
+
+async function addOgl(o){
+  if(OGL_BACKEND.mode === 'supabase' && cloudOK){
+    try{
+      const sb = await loadSupabaseClient();
+      const { data, error } = await sb.from('ogloszenia').insert({cat:o.cat, title:o.title, descr:o.desc, price:o.price, place:o.place, addr:o.addr, phone:o.phone, img:o.img, ts:o.ts}).select().single();
+      if(error) throw error;
+      o.id = data.id;
+      ogloszenia.unshift(o);
+      saveOgl();
+      return true;
+    }catch(err){
+      console.warn('Zapis do chmury nieudany — zapis lokalny:', err);
+      cloudOK = false;
+      document.getElementById('oglCloudInfo').classList.remove('hidden');
+    }
+  }
+  ogloszenia.unshift(o); addMine(o.id); saveOgl();
+  return true;
+}
+
+// ---------- helpery ----------
+function escOgl(s){ return String(s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function catDef(id){ return OGL_CATS.find(x=>x.id===id); }
+function catCls(id){ const c = catDef(id); return c ? c.cls : 'bg-warm-100 text-warm-800'; }
+function catName(id){ const c = catDef(id); return c ? c.name : id; }
+function catIcon(id){ const c = catDef(id); return c ? c.icon : '📌'; }
+function isFree(o){ const p=(o.price||'').toLowerCase(); return !p.trim() || /darm|gratis|odda[mn]/.test(p); }
+function priceNum(o){
+  const m = String(o.price||'').replace(',','.').match(/-?\d+(\.\d+)?/g);
+  return m && m.length ? parseFloat(m[m.length-1]) : null;
+}
+function timeAgo(ts){
+  const s = Math.max(1, Math.floor((Date.now()-Number(ts))/1000));
+  if(s<60) return 'przed chwilą';
+  const m = Math.floor(s/60); if(m<60) return m+' min temu';
+  const h = Math.floor(m/60); if(h<24) return h+' godz. temu';
+  const d = Math.floor(h/24); if(d===1) return 'wczoraj';
+  if(d<7) return d+' dni temu';
+  return new Date(Number(ts)).toLocaleDateString('pl-PL');
+}
+function toast(msg){
+  const t = document.getElementById('oglToast');
+  t.textContent = msg; t.classList.remove('hidden');
+  clearTimeout(t._tm); t._tm = setTimeout(()=>t.classList.add('hidden'), 2600);
+}
+
+// ---------- render ----------
+function renderOglCats(){
+  const counts = {all: ogloszenia.length};
+  OGL_CATS.forEach(c => counts[c.id] = ogloszenia.filter(o=>o.cat===c.id).length);
+  const box = document.getElementById('oglCats');
+  const chip = (id, name) => {
+    const active = id===oglCat;
+    return `<button onclick="setOglCat('${id}')" class="px-3.5 h-9 rounded-full text-[13px] font-bold border transition-colors ${active ? 'bg-warm-900 text-white border-warm-900' : 'bg-white border-warm-200 text-warm-800/75 hover:border-sage-300'}">${name} <span class="${active?'text-white/70':'text-warm-800/45'} font-semibold">(${counts[id]||0})</span></button>`;
+  };
+  box.innerHTML = chip('all','🗂️ Wszystkie') + OGL_CATS.map(c=>chip(c.id, c.icon+' '+c.name)).join('');
+}
+
+function sortOgl(list){
+  const sort = document.getElementById('oglSort').value;
+  const pinned = list.filter(o=>o.cat==='pilne');
+  const rest = list.filter(o=>o.cat!=='pilne');
+  const pin = (arr) => [...pinned, ...arr];
+  if(sort==='priceAsc'){
+    const withP = rest.filter(o=>priceNum(o)!==null).sort((a,b)=>priceNum(a)-priceNum(b));
+    const noP = rest.filter(o=>priceNum(o)===null);
+    return pin([...withP, ...noP]);
+  }
+  if(sort==='priceDesc'){
+    const withP = rest.filter(o=>priceNum(o)!==null).sort((a,b)=>priceNum(b)-priceNum(a));
+    const noP = rest.filter(o=>priceNum(o)===null);
+    return pin([...withP, ...noP]);
+  }
+  if(sort==='free') return pin([...rest.filter(isFree).sort((a,b)=>b.ts-a.ts), ...rest.filter(o=>!isFree(o)).sort((a,b)=>b.ts-a.ts)]);
+  return pin(rest.sort((a,b)=>b.ts-a.ts));
+}
+
+function renderOgl(){
+  const q = (document.getElementById('oglSearch').value || '').toLowerCase();
+  let list = ogloszenia.filter(o => oglCat==='all' || o.cat===oglCat);
+  if(q) list = list.filter(o => (o.title+' '+o.desc+' '+o.place+' '+o.addr+' '+catName(o.cat)).toLowerCase().includes(q));
+  list = sortOgl(list);
+  document.getElementById('oglCount').textContent = list.length + ' ogłoszeń';
+  const empty = document.getElementById('oglEmpty');
+  if(!list.length){
+    empty.classList.remove('hidden'); document.getElementById('oglList').innerHTML=''; renderOglCats(); return;
+  }
+  empty.classList.add('hidden');
+  document.getElementById('oglList').innerHTML = list.map(o => {
+    const canEdit = (OGL_BACKEND.mode!=='supabase' || !cloudOK) ? true : isMine(o.id);
+    const editBtns = canEdit ? `
+      <button onclick="editOgl('${escOgl(String(o.id))}')" title="Edytuj" class="w-8 h-8 rounded-full bg-warm-100 text-warm-800/70 hover:bg-warm-200">✏️</button>
+      <button onclick="delOgl('${escOgl(String(o.id))}')" title="Usuń" class="w-8 h-8 rounded-full bg-warm-100 text-warm-800/70 hover:bg-red-100">🗑️</button>` : '';
+    const imgHtml = o.img ? `<img src="${escOgl(o.img)}" onerror="this.style.display='none'" alt="" class="w-full h-36 object-cover rounded-t-[19px] bg-warm-100" loading="lazy">` : '';
+    const priceHtml = isFree(o)
+      ? `<span class="text-[12px] font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700">🎁 za darmo</span>`
+      : (o.price ? `<span class="text-[13px] font-bold px-2.5 py-1 rounded-full bg-amber-100 text-amber-800">${escOgl(o.price)}</span>` : '');
+    return `
+    <div class="soft-card flex flex-col overflow-hidden ${o.cat==='pilne' ? 'border-red-200 bg-[#fff8f0]' : ''}">
+      ${imgHtml}
+      <div class="p-5 flex flex-col flex-1">
+        <div class="flex items-center justify-between gap-2">
+          <span class="text-[11px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full ${catCls(o.cat)}">${catIcon(o.cat)} ${catName(o.cat)}</span>
+          <span class="text-[11.5px] text-warm-800/50">${timeAgo(o.ts)}</span>
+        </div>
+        <div class="font-bold mt-2.5 text-[16px] leading-snug">${escOgl(o.title)}</div>
+        <div class="text-[13.5px] text-warm-800/70 mt-1 flex-1 clamp2">${escOgl(o.desc)}</div>
+        ${priceHtml ? '<div class="mt-2">'+priceHtml+'</div>' : ''}
+        <div class="flex items-center justify-between gap-2 mt-3 pt-3 border-t border-warm-100">
+          <div class="text-[12.5px] text-warm-800/60 leading-tight">📍 ${escOgl(o.addr ? o.addr+', ' : '')}${escOgl(o.place)}</div>
+          <div class="flex items-center gap-1.5">
+            ${editBtns}
+            <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(location.href.split('#')[0]+'#ogloszenia')}&quote=${encodeURIComponent('📢 '+o.title+' — ogłoszenie na Mszana INFO')}" target="_blank" rel="noopener" title="Udostępnij na FB" class="w-8 h-8 rounded-full bg-[#0866FF] text-white text-[13px] inline-flex items-center justify-center">f</a>
+            <a href="tel:${escOgl(o.phone).replace(/[^0-9+]/g,'')}" class="h-9 px-4 rounded-full bg-sage-600 text-white text-[13px] font-bold inline-flex items-center gap-1.5 hover:bg-sage-700">📞 Zadzwoń</a>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+  renderOglCats();
+}
+
+function setOglCat(id){ oglCat = id; renderOgl(); }
+
+// ---------- modal: dodaj / edytuj ----------
+function openOglModal(editId){
+  oglEditId = editId || null;
+  const sel = document.getElementById('oglCat');
+  if(!sel.options.length) sel.innerHTML = OGL_CATS.map(c=>`<option value="${c.id}">${c.icon} ${c.name}</option>`).join('');
+  document.getElementById('oglPhoneErr').classList.add('hidden');
+  if(oglEditId){
+    const o = ogloszenia.find(x=>String(x.id)===String(oglEditId));
+    if(!o) return;
+    document.getElementById('oglModalTitle').textContent = 'Edytuj ogłoszenie';
+    document.getElementById('oglSubmit').textContent = 'Zapisz zmiany';
+    sel.value = o.cat; document.getElementById('oglPlace').value = o.place||'Mszana';
+    document.getElementById('oglTitle').value = o.title||'';
+    document.getElementById('oglDesc').value = o.desc||'';
+    document.getElementById('oglImg').value = o.img||'';
+    document.getElementById('oglPrice').value = o.price||'';
+    document.getElementById('oglPhone').value = o.phone||'';
+  } else {
+    document.getElementById('oglModalTitle').textContent = 'Nowe ogłoszenie';
+    document.getElementById('oglSubmit').textContent = 'Opublikuj ogłoszenie';
+    document.getElementById('oglForm').reset();
+  }
+  updTitleCount();
+  document.getElementById('oglModal').classList.remove('hidden');
+  document.getElementById('oglTitle').focus();
+}
+function closeOglModal(){ document.getElementById('oglModal').classList.add('hidden'); oglEditId = null; }
+function updTitleCount(){
+  const v = document.getElementById('oglTitle').value.length;
+  document.getElementById('oglTitleCount').textContent = v + '/80';
+}
+function editOgl(id){ openOglModal(id); }
+function delOgl(id){
+  const o = ogloszenia.find(x=>String(x.id)===String(id));
+  if(!o) return;
+  if(!confirm('Usunąć ogłoszenie: „'+(o.title||'')+'”?')) return;
+  ogloszenia = ogloszenia.filter(x=>String(x.id)!==String(id));
+  removeMine(id);
+  saveOgl();
+  renderOgl();
+  toast('🗑️ Ogłoszenie usunięte');
+}
+
+document.getElementById('oglTitle').addEventListener('input', updTitleCount);
+document.getElementById('oglForm').addEventListener('submit', async e=>{
+  e.preventDefault();
+  const phone = document.getElementById('oglPhone').value.replace(/[^0-9+]/g,'');
+  if(phone.replace(/\D/g,'').length < 9){
+    document.getElementById('oglPhoneErr').classList.remove('hidden');
+    return;
+  }
+  document.getElementById('oglPhoneErr').classList.add('hidden');
+  const o = {
+    id: oglEditId || Date.now(),
+    cat: document.getElementById('oglCat').value,
+    title: document.getElementById('oglTitle').value.trim(),
+    desc: document.getElementById('oglDesc').value.trim() || '—',
+    price: document.getElementById('oglPrice').value.trim(),
+    place: document.getElementById('oglPlace').value,
+    addr: '',
+    phone: phone,
+    img: document.getElementById('oglImg').value.trim(),
+    ts: Date.now()
+  };
+  if(oglEditId){
+    const i = ogloszenia.findIndex(x=>String(x.id)===String(oglEditId));
+    if(i>=0){ ogloszenia[i] = {...ogloszenia[i], ...o, id: ogloszenia[i].id, ts: ogloszenia[i].ts}; saveOgl(); }
+    toast('✏️ Zmiany zapisane');
+  } else {
+    await addOgl(o);
+    toast('✅ Ogłoszenie opublikowane!');
+  }
+  closeOglModal();
+  e.target.reset();
+  oglCat = 'all';
+  document.getElementById('oglSearch').value = '';
+  renderOgl();
+  document.getElementById('ogloszenia').scrollIntoView({behavior:'smooth'});
+});
+
+document.getElementById('oglSearch').addEventListener('input', renderOgl);
+document.getElementById('oglSort').addEventListener('change', renderOgl);
+initOgl();
+</script>
+
+</body>
+</html>
+

@@ -4,6 +4,15 @@ Kompletny serwis (główna strona + 4 artykuły + wszystkie grafiki) po poprawka
 
 ## Co zostało zrobione
 
+### 🆕 Runda 3 (najnowsze zmiany)
+- **„Powiadomienia o posiedzeniach i sesjach” podzielone na 2 sekcje**:
+  - 🏛️ **Komisje Rady Gminy** (id=`komisje`) — 4 komisje z linkami do oficjalnych stron + **najbliższe posiedzenie z porządkiem obrad** (Komisja Rewizyjna 11.08.2026, 8:00) + link do BIP „Porządek obrad komisji”.
+  - 📢 **Sesje Rady Gminy** (id=`sesje`) — **porządek obrad ostatniej sesji** (27.07.2026, 14:30, 9 punktów) + linki: BIP „Porządek obrad sesji”, eSesja.tv na żywo, FB gminy.
+- **„Oficjalne kanały gminy Mszana” przeniesione na dół — pod filmik (przed stopkę).**
+- **Zakładka „O nas”** (zamiast „Zasady” w menu): baner z logo grupy + pełne informacje o grupie FB (z linkiem „Dołącz do grupy”) + zasady.
+- **Hero**: usunięty opis z numerem admina → wstawiony **herb Gminy**; plakietka „Forum Mieszkańców Gminy Mszana — Twój Głos” (bez dubla „X aktywnych dyskusji”).
+- **„Piekarnia Kozielska” → „Piekarnia Kozielski”** (strona główna + artykuł o ul. 1 Maja).
+
 ### 🆕 Runda 2 (najnowsze zmiany)
 - **Sekcja „Ważna informacja — zasady naszej grupy”** — pełny regulamin grupy FB dodany między Forum a Mapą (link „📜 Zasady” w menu nagłówka i stopce).
 - **Ogłoszenia przeniesione na sam dół strony** — teraz kolejność: Aktualności → Forum → Mapa/Sołtysi → **📢 Ogłoszenia** → **🎬 Wideo** → Stopka.
