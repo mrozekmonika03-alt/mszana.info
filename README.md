@@ -12,7 +12,7 @@
 - 📢 **Ogłoszenia** — kupię/sprzedam/oddam/usługi (dane w chmurze Supabase + tryb offline)
 - 💬 **Forum mieszkańców** — kategorie, głosowanie 👍, komentarze (dane w localStorage)
 - ⚠️ **Zasady grupy** — regulamin obowiązujący wszystkich
-- 🎬 **Wideo** — Taneczny Workout Cardio w rytmie hitów Sanah (fragment 7:00–9:30)
+- 🛣️ **Artykuły** — m.in. remont ul. 1 Maja, rozbudowa ul. Wolności w Połomi, relacje z sesji
 - 🗺️ **Mapa + sołtysi** — ważne miejsca i kontakty
 
 ## Technologie

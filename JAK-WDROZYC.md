@@ -4,6 +4,49 @@ Kompletny serwis (główna strona + 4 artykuły + wszystkie grafiki) po poprawka
 
 ## Co zostało zrobione
 
+### 🆕 Runda 10 — NOWY UKŁAD STRONY (layout)
+- **Nagłówek**: logo i nazwa po lewej; menu po prawej: Strona główna • Aktualności (rozwijane — lista artykułów) • Sesje Rady • Forum • Ogłoszenia • Kontakt.
+- **Banner ostrzegawczy (utrudnienia drogowe)**: pomarańczowy pasek pod nagłówkiem ⚠️ — alerty w jednym miejscu + przycisk „Szczegóły” (remont ul. 1 Maja, rozbudowa ul. Wolności).
+- **Sekcja główna — 2 kolumny**:
+  - Lewa (szeroka): **Aktualności** w kafelkach 2×2 (miniaturka/grafika, data, tytuł, 2-linijkowy skrót, „Czytaj więcej”).
+  - Prawa (panel boczny, błękitne tło): **Sesje Rady** — ostatnia/najbliższa sesja, duże przyciski „🎥 Transmisja na żywo (eSesja)” i „📋 Porządek obrad (BIP)” + **archiwum** (rozwijane: protokoły 2024–2029 i 2018–2024, nagrania wideo, porządek obrad ostatniej sesji, protokoły komisji).
+- **Stopka**: kontakt (e-mail, telefon, adres), godziny otwarcia urzędu, media społecznościowe, **deklaracja dostępności (WCAG)**, link do BIP.
+
+### 🆕 Runda 9 (najnowsze zmiany) — FORUM W CHMURZE ☁️
+- **Forum podłączone do Supabase** — posty, komentarze i głosy są teraz **wspólne dla wszystkich mieszkańców** (jak ogłoszenia).
+- **WAŻNE — 1 raz utwórz tabelę** w Supabase:
+  1. [supabase.com/dashboard](https://supabase.com/dashboard) → projekt → **SQL Editor** → New query,
+  2. wklej zawartość pliku **`supabase-forum.sql`** (w tym folderze) → **RUN**,
+  3. po tym forum działa w chmurze dla wszystkich.
+- Bez tabeli forum działa w trybie lokalnym (posty tylko u Ciebie) i pokazuje komunikat w konsoli.
+- Twoje "polubienia" (👍) są zapamiętywane per urządzenie (localStorage), ale liczba głosów i posty są wspólne.
+
+### 🆕 Runda 8 (najnowsze zmiany)
+- **Sekcja „O nas” przeniesiona na samą górę strony** — tuż pod hero („Forum Mieszkańców Gminy Mszana — Twój Głos / Twoja ulica, Twój głos się liczy.”), nad Aktualnościami.
+- **„O nas” usunięte z menu górnego i ze stopki** (sekcja jest teraz widoczna od razu na górze strony, bez zakładki).
+
+### 🆕 Runda 7 (najnowsze zmiany)
+- **Artykuł „Rozbudowa ul. Wolności w Połomi” zaktualizowany pełną, rzetelną treścią** (stan: 6 sierpnia 2026): ZDW Katowice szuka wykonawcy DW 930, chodnik ~692 m (szer. 2,10 m), przepust na Kolejówce, oświetlenie, organizacja robót, terminy (oferty do 7.08.2026) i finansowanie (800 tys. zł dotacji, szac. koszt 3 633 821 zł) + **10 źródeł (S1–S10) z linkami**.
+- Nowa grafika:  (1672×941, jasna).
+
+### 🆕 Runda 6 (najnowsze zmiany)
+- **Usunięte z górnego panelu (nawigacji)**: „Mapa” i „Sołtysi”.
+- **„🧭 Asystent”** w menu górnym prowadzi teraz tam, gdzie wcześniej prowadziła mapa — do sekcji  (ważne miejsca + sołtysi).
+
+### 🆕 Runda 5 (najnowsze zmiany)
+- **Usunięto wszystkie dane przykładowe (fake)**: wątki forum (Marek K., Kasia M., GOKiR itd.), komentarze, ogłoszenia demo (Jabłka 5kg, Koparka mini itd.), avatary i „Anna, Marek i 23 sąsiadów”, overlay „Ostatnio na Forum” w hero.
+- Forum i ogłoszenia startują **puste** — treści dodają mieszkańcy. Posty użytkowników nie są już nadpisywane przy odświeżeniu (localStorage czytany zamiast seeda).
+
+### 🆕 Runda 4 (najnowsze zmiany)
+- **Workout całkowicie usunięty** — baner-promo, sekcja wideo z Sanah, przycisk „🎬 Workout” w pasku, linki w menu i stopce.
+- **Z paska górnego usunięte**: Workout, „👥 Radni” i „🗺️ Okręgi” (Radni/Okręgi pozostają w dolnej karcie „Radni dla Mieszkańca” przy Mapie).
+- **Nowy artykuł „Rozbudowa ul. Wolności w Połomi”** (`artykuly/rozbudowa-ul-wolnosci-polomia.html`) z grafiką (`assets/ul-wolnosci-polomia.png`) + karta w Aktualnościach.
+- **Forum ↔ artykuły**:
+  - zakładki „Utrudnienia i drogi”, „Sesje” i „Fundusz Sołecki” pokazują teraz automatycznie **karty powiązanych artykułów** (m.in. „Co dalej z remontem ul. 1 Maja”, „XXVII Sesja”, „Fundusz sołecki”),
+  - zakładka **Sesje** ma podkategorię **„Rok 2026”** — kliknięcie przekierowuje do artykułu o sesji,
+  - kategoria **„Asystent mieszkańca” usunięta z zakładek forum**, a link **„🧭 Asystent” trafił do menu górnego** (wątki „studzienka” i „latarnia” przeniesione do zakładek Drogi / Bezpieczeństwo).
+- **Sekcja „Informacje o posiedzeniach sesji Rady Gminy” przeniesiona na dół** — tuż przed „Oficjalne kanały gminy Mszana” (komisje zostają wyżej).
+
 ### 🆕 Runda 3 (najnowsze zmiany)
 - **„Powiadomienia o posiedzeniach i sesjach” podzielone na 2 sekcje**:
   - 🏛️ **Komisje Rady Gminy** (id=`komisje`) — 4 komisje z linkami do oficjalnych stron + **najbliższe posiedzenie z porządkiem obrad** (Komisja Rewizyjna 11.08.2026, 8:00) + link do BIP „Porządek obrad komisji”.
