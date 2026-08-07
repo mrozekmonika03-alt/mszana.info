@@ -4,6 +4,10 @@ Kompletny serwis (główna strona + 4 artykuły + wszystkie grafiki) po poprawka
 
 ## Co zostało zrobione
 
+### 🆕 LICZNIK WYŚWIETLEŃ 👁️
+- **Licznik wyświetleń w prawym górnym rogu** (pasek górny) — liczy realne otwarcia strony, wspólne dla wszystkich odwiedzających (Supabase), odświeża się automatycznie co 30 s.
+- **WAŻNE — 1 raz utwórz tabelę** w Supabase: SQL Editor → wklej **** → RUN. Bez tego licznik jest ukryty (i działa w trybie offline).
+
 ### 🆕 Runda 10 — NOWY UKŁAD STRONY (layout)
 - **Nagłówek**: logo i nazwa po lewej; menu po prawej: Strona główna • Aktualności (rozwijane — lista artykułów) • Sesje Rady • Forum • Ogłoszenia • Kontakt.
 - **Banner ostrzegawczy (utrudnienia drogowe)**: pomarańczowy pasek pod nagłówkiem ⚠️ — alerty w jednym miejscu + przycisk „Szczegóły” (remont ul. 1 Maja, rozbudowa ul. Wolności).
