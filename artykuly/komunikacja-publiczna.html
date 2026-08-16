@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komunikacja publiczna — Mszana.info</title>
+    <meta name="description" content="Najnowsze informacje z XXVII Sesji Rady Gminy Mszana (27 lipca 2026): remont ul. 1 Maja, przepust do 1 września, utrudnienia na odcinku Dino - Piekarnia Kozielski, płyty ażurowe na skarpach.">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        readable: ['Atkinson Hyperlegible', 'system-ui', 'sans-serif'],
+                        display: ['Fraunces', 'serif'],
+                    },
+                    colors: {
+                        warm: { 50:'#fdfaf3', 100:'#f9f0e0', 200:'#f3e8d0', 300:'#e8e0d0', 800:'#4a453e', 900:'#2d2a26' },
+                        sage: { 50:'#f4f7f4', 100:'#e3ebe3', 200:'#c8d9ca', 500:'#6b8f71', 600:'#4a7c59', 700:'#3d6549' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #fdfaf3; color: #2d2a26; line-height: 1.8; font-size: 17px; }
+        .soft-card { background: #ffffff; border: 1px solid #f0e9db; box-shadow: 0 4px 24px -8px rgba(45,42,38,0.08), 0 1px 4px rgba(45,42,38,0.04); border-radius: 20px; transition: all 0.25s ease; }
+        .soft-card:hover { box-shadow: 0 12px 32px -10px rgba(45,42,38,0.12), 0 4px 12px rgba(0,0,0,0.04); }
+        .info-box { background:#fff8e6; border-left:4px solid #f59e0b; border-radius:12px; padding:14px 18px; }
+        .info-box.red { background:#fdeeee; border-left-color:#e12b26; }
+        .info-box .tag { font-weight:700; display:block; }
+        .art-img { border-radius:16px; border:1px solid #f0e9db; box-shadow: 0 8px 28px -12px rgba(45,42,38,0.18); }
+        .chip { background:#eef2ff; color:#3730a3; border-radius:20px; padding:8px 14px; font-size:14px; font-weight:700; }
+        .chip small { display:block; font-weight:500; color:#4f46a5; }
+    </style>
+</head>
+<body class="font-readable antialiased" id="bodyRoot">
+
+    <!-- ACCESSIBILITY BAR -->
+    <div class="sticky top-0 z-50 bg-warm-50/90 backdrop-blur-md border-b border-warm-200">
+        <div class="max-w-[1280px] mx-auto px-5 h-[52px] flex items-center justify-between gap-3">
+            <div class="flex items-center gap-2">
+                <a href="mailto:kontakt@mszana.info" class="px-3 sm:px-4 h-8 rounded-full bg-teal-600 text-white text-[13px] font-bold inline-flex items-center gap-1.5" title="Kontakt do redakcji">📧 kontakt@mszana.info</a>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <a href="https://mszana.ug.gov.pl/kontakt-do-radnych.html" target="_blank" rel="noopener" class="px-3 sm:px-4 h-8 rounded-full bg-amber-600 text-white text-[13px] font-bold inline-flex items-center gap-1.5" title="Kontakt do radnych z poszczególnych okręgów">👥 Radni dla Mieszkańca</a>
+                <a href="https://mszana.ug.gov.pl/wybory-samorzadowe-w-2024-roku.html" target="_blank" rel="noopener" class="px-3 sm:px-4 h-8 rounded-full bg-amber-700 text-white text-[13px] font-bold inline-flex items-center gap-1.5" title="Okręgi Wyborcze w 2024 roku">🗺️ Okręgi Wyborcze</a>
+                <a href="https://mszana.ug.gov.pl" target="_blank" rel="noopener" class="px-3 sm:px-4 h-8 rounded-full bg-sage-600 text-white text-[13px] font-bold inline-flex items-center gap-1.5">🏛️ UG Mszana</a>
+                <a href="https://www.facebook.com/mszana.gmina?locale=pl_PL" target="_blank" rel="noopener" class="px-3 sm:px-4 h-8 rounded-full bg-[#0866FF] text-white text-[13px] font-bold inline-flex items-center gap-1.5">f Gmina</a>
+                <a href="https://www.facebook.com/groups/1245680220713294?locale=pl_PL" target="_blank" class="px-3 sm:px-4 h-8 rounded-full bg-white border border-warm-200 text-[13px] font-bold inline-flex items-center gap-1.5">f Grupa</a>
+                <a class='px-4 h-8 rounded-full bg-warm-900 text-warm-50 text-[13px] font-bold inline-flex items-center' href='../#forum'>💬 Forum</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="max-w-[1280px] mx-auto px-5 pt-7 pb-4">
+        <div class="flex items-center justify-between">
+            <a class='flex items-center gap-3' href='../'>
+                <img src="../assets/logo-mszana-info.png" class="w-11 h-11 rounded-2xl bg-white p-1 shadow-sm border border-warm-200" alt="">
+                <div>
+                    <div class="font-display text-[23px] leading-none tracking-tight text-warm-900 font-bold">Mszana INFO</div>
+                    <div class="text-[11.5px] tracking-[0.12em] uppercase font-bold text-sage-600 mt-0.5">Portal Mieszkańców • Forum • Twój Głos</div>
+                </div>
+            </a>
+            <nav class="hidden lg:flex items-center gap-5 text-[14.5px] font-bold text-warm-900/75">
+                <a class='text-sage-700 bg-sage-50 px-3 py-1 rounded-full border border-sage-200' href='../#aktualnosci'>📰 Aktualności</a>
+                <a class='hover:text-sage-700' href='../#ogloszenia'>Ogłoszenia</a>
+                <a class='hover:text-sage-700' href='../#forum'>Forum</a>
+                <a class='hover:text-sage-700' href='../#mapa'>Mapa</a>
+                <a class='hover:text-sage-700' href='../#kontakt'>Sołtysi</a>
+                <a href="https://mszana.ug.gov.pl" target="_blank" rel="noopener" class="hover:text-sage-700">🏛️ UG Mszana</a>
+                <a href="https://www.facebook.com/mszana.gmina?locale=pl_PL" target="_blank" rel="noopener" class="hover:text-sage-700">f Gmina</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ARTYKUŁ -->
+    <main class="max-w-[980px] mx-auto px-5 pt-4 pb-12">
+        <a class='text-[13.5px] font-bold text-sage-700 hover:text-sage-600' href='../#aktualnosci'>← Wróć na stronę główną</a>
+
+        <div class="flex flex-wrap items-center gap-2 mt-4">
+            <span class="text-[11px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-sky-100 text-sky-800">🚌 Komunikacja publiczna</span>
+            <span class="text-[13px] text-warm-800/60">Gmina Mszana • MZK Jastrzębie-Zdrój</span>
+        </div>
+
+        <h1 class="font-display text-[34px] sm:text-[42px] leading-[1.1] tracking-tight mt-4">
+            🚌 Komunikacja publiczna w Gminie Mszana
+        </h1>
+
+        <p class="text-[17px] text-warm-800/75 mt-4">
+            Przez Gminę Mszana kursują autobusy <b>dwóch przewoźników</b>: <b>MZK — Międzygminny Związek Komunikacyjny w Jastrzębiu-Zdroju</b> oraz <b>Wodzisławska Komunikacja Powiatowa</b> (od 1 stycznia 2026 r.). Poniżej znajdziesz linie, przystanki i możliwości połączeń.
+        </p>
+
+        <!-- ZAKŁADKI -->
+        <div class="flex flex-wrap gap-2 mt-6" id="kpTabs">
+            <button class="kp-tab px-4 h-10 rounded-full bg-warm-900 text-white font-bold text-[13.5px]" data-tab="linie">🚌 Linie</button>
+            <button class="kp-tab px-4 h-10 rounded-full bg-white border border-warm-200 font-bold text-[13.5px]" data-tab="dojazdy">🧭 Dojazdy</button>
+            <button class="kp-tab px-4 h-10 rounded-full bg-white border border-warm-200 font-bold text-[13.5px]" data-tab="przystanki">📍 Przystanki</button>
+            <button class="kp-tab px-4 h-10 rounded-full bg-white border border-warm-200 font-bold text-[13.5px]" data-tab="faq">❓ FAQ</button>
+            <button class="kp-tab px-4 h-10 rounded-full bg-white border border-warm-200 font-bold text-[13.5px]" data-tab="uwagi">📝 Uwagi</button>
+        </div>
+
+        <!-- ===== LINIE ===== -->
+        <section id="linie" class="kp-panel mt-6">
+            <h2 class="font-display text-[26px] font-bold mb-3">🚌 Linie autobusowe</h2>
+            <p class="text-[14.5px] text-warm-800/70 mb-4">Linie oznaczone kolorem. Kliknij linię, aby zobaczyć trasę i przystanki.</p>
+
+            <div class="grid sm:grid-cols-2 gap-3" id="kpLinieList"></div>
+
+            <div id="kpLiniaDetail" class="hidden soft-card p-5 mt-4 bg-sky-50/70 border-sky-200"></div>
+
+            <div class="mt-5 p-4 rounded-2xl bg-amber-50 border border-amber-200 text-[13.5px] leading-[1.6] text-warm-800/85">
+                <b>⚠️ Uwaga:</b> linie i rozkłady mogą ulegać zmianom. Aktualne informacje zawsze na oficjalnej stronie: <a href="https://mzkjastrzebie.com" target="_blank" rel="noopener" class="font-bold text-sky-700">mzkjastrzebie.com</a> oraz w aplikacji <b>E-bilet</b> / <b>moBILET</b>.
+            </div>
+        </section>
+
+        <!-- ===== NAJKORZYSTNIEJSZE ROZWIĄZANIA DOJAZDU ===== -->
+        <section id="dojazdy" class="kp-panel hidden mt-6">
+            <h2 class="font-display text-[26px] font-bold mb-3">🧭 Najkorzystniejsze rozwiązania, by dostać się z:</h2>
+            <p class="text-[14.5px] text-warm-800/70 mb-4">Przykładowe, najwygodniejsze połączenia z miejscowości Gminy Mszana (bez przesiadek, o ile to możliwe). Sprawdź aktualne godziny w rozkładach przewoźników.</p>
+            <div class="space-y-3" id="kpDojazdy"></div>
+            <p class="text-[12.5px] text-warm-800/55 mt-3">* Połączenia poglądowe na podstawie tras linii; dokładne godziny — w systemach rozkładowych przewoźników.</p>
+        </section>
+
+        <!-- ===== PRZYSTANKI ===== -->
+        <section id="przystanki" class="kp-panel hidden mt-6">
+            <h2 class="font-display text-[26px] font-bold mb-3">📍 Przystanki w Gminie Mszana</h2>
+            <p class="text-[14.5px] text-warm-800/70 mb-4">Kliknij przystanek, aby zobaczyć jego nazwę i obsługujące go linie.</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3" id="kpPrzystankiList"></div>
+            <div id="kpPrzystanekDetail" class="hidden soft-card p-5 mt-4 bg-emerald-50/70 border-emerald-200"></div>
+
+            <div class="mt-5 soft-card p-4">
+                <div class="font-bold text-[15px] mb-2">🗺️ Wyznacz trasę</div>
+                <p class="text-[13.5px] text-warm-800/70 mb-3">Zaplanuj podróż autobusem przez Mszanę (integracja z mapami):</p>
+                <div class="flex flex-wrap gap-2.5">
+                    <a href="https://www.google.com/maps/dir//Mszana,+Poland" target="_blank" rel="noopener" class="h-10 px-5 rounded-full bg-[#4285F4] text-white text-[13.5px] font-bold inline-flex items-center gap-2">Google Maps</a>
+                    <a href="https://www.openstreetmap.org/?mlat=49.973&mlon=18.518#map=14/49.973/18.518" target="_blank" rel="noopener" class="h-10 px-5 rounded-full bg-[#7ebc6f] text-white text-[13.5px] font-bold inline-flex items-center gap-2">OpenStreetMap</a>
+                    <a href="https://mzkjastrzebie.com" target="_blank" rel="noopener" class="h-10 px-5 rounded-full bg-warm-900 text-white text-[13.5px] font-bold inline-flex items-center gap-2">🚌 Planer MZK</a>
+                    <a href="https://rozklady.powiatwodzislawski.pl" target="_blank" rel="noopener" class="h-10 px-5 rounded-full bg-teal-600 text-white text-[13.5px] font-bold inline-flex items-center gap-2">🚌 Rozkłady powiatowe</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FAQ ===== -->
+        <section id="faq" class="kp-panel hidden mt-6">
+            <h2 class="font-display text-[26px] font-bold mb-3">❓ Pytania i odpowiedzi</h2>
+            <div class="space-y-3" id="kpFaq"></div>
+        </section>
+
+        <!-- ===== UWAGI ===== -->
+        <section id="uwagi" class="kp-panel hidden mt-6">
+            <h2 class="font-display text-[26px] font-bold mb-3">📝 Zgłoś uwagę / sugestię</h2>
+            <p class="text-[14.5px] text-warm-800/70 mb-4">Twoje uwagi o komunikacji (nowe linie, godziny, przystanki) przekażemy do organizatora i gminy.</p>
+            <div class="soft-card p-5 max-w-[560px]">
+                <form id="kpForm" class="space-y-3">
+                    <input id="kpImie" required maxlength="80" placeholder="Imię i nazwisko *" class="w-full h-11 rounded-xl border border-warm-200 px-4 text-[14px]">
+                    <input id="kpEmail" type="email" required maxlength="120" placeholder="Twój e-mail *" class="w-full h-11 rounded-xl border border-warm-200 px-4 text-[14px]">
+                    <select id="kpTemat" class="w-full h-11 rounded-xl border border-warm-200 px-3 text-[14px] bg-white">
+                        <option>Uwaga do rozkładu</option>
+                        <option>Propozycja nowej linii / kursu</option>
+                        <option>Problem z przystankiem</option>
+                        <option>Bilety i taryfa</option>
+                        <option>Inne</option>
+                    </select>
+                    <textarea id="kpTresc" required rows="4" placeholder="Opisz swoją uwagę / sugestię *" class="w-full rounded-xl border border-warm-200 p-3 text-[14px]"></textarea>
+                    <button type="submit" class="w-full h-11 rounded-full bg-sky-600 text-white font-bold hover:bg-sky-700">📨 Wyślij uwagę</button>
+                </form>
+                <div id="kpOk" class="hidden p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-[14px] text-emerald-900">✅ Dziękujemy! Twoja uwaga została wysłana.</div>
+            </div>
+            <p class="text-[13px] text-warm-800/55 mt-3">Kontakt do organizatora: <b>MZK Jastrzębie-Zdrój</b>, tel. 32 47 63 474 (sekretariat), planowanie komunikacji: 32 47 63 577.</p>
+        </section>
+
+        <div class="mt-8 pt-4 border-t border-warm-200 text-[13px] text-warm-800/60">#Komunikacja #MZK #Autobusy #Mszana #Połomia #Gogołowa #MapyTras #Połączenia</div>
+    </main>
+
+<script>
+// ===== KOMUNIKACJA PUBLICZNA — dane =====
+const KP_POWIAT = true;
+const KP_LINIE = [
+  { id:'W11', nazwa:'W11', kolor:'#2563eb', trasa:'Jastrzębie-Zdrój – Gogołowa – Połomia – Wodzisław Śl.', przystanki:['Jastrzębie-Zdrój','Gogołowa Jastrzębska','Gogołowa Jastrzębska-Kąty','Połomia','Mszana','Wodzisław Śl.'] },
+  { id:'W10', nazwa:'W10', kolor:'#dc2626', trasa:'Jastrzębie-Zdrój – Mszana – Wodzisław Śl.', przystanki:['Jastrzębie-Zdrój','Mszana','Wodzisław Śl.'] },
+  { id:'50', nazwa:'50', kolor:'#0d9488', przod:true, trasa:'Mszana – Wodzisław Śl. – Czyżowice (powiatowa)', przystanki:['Mszana Mszańskie Granice','Mszana 1 Maja / Urząd Gminy','Wodzisław Śl.','Czyżowice'] },
+  { id:'59', nazwa:'59', kolor:'#e11d48', przod:true, trasa:'Mszana – Wodzisław Śl. – Radlin – Rydułtowy (powiatowa)', przystanki:['Mszana Mszańskie Granice','Mszana Wodzisławska Skrzyżowanie','Mszana Wodzisławska Boisko','Mszana Wodzisławska Uchytów','Wodzisław Śl.','Radlin','Rydułtowy'] },
+  { id:'53', nazwa:'53', kolor:'#ca8a04', przod:true, trasa:'Połomia – Marklowice – Wodzisław Śl. (powiatowa)', przystanki:['Połomia Szkolna','Połomia Centralna Kościół','Połomia Centralna Na Końcu','Połomia Centralna Folwark','Marklowice','Wodzisław Śl.'] },
+  { id:'W09', nazwa:'W09', kolor:'#d97706', trasa:'Jastrzębie – Mszana – Wodzisław (nawiązuje do W10/W11)', przystanki:['Jastrzębie-Zdrój','Mszana','Wodzisław Śl.'] },
+  { id:'S13', nazwa:'S13', kolor:'#059669', trasa:'Jastrzębie-Zdrój – Gogołowa', przystanki:['Jastrzębie-Zdrój','Gogołowa Jastrzębska','Gogołowa Jastrzębska-Kąty'] },
+  { id:'S15', nazwa:'S15', kolor:'#7c3aed', trasa:'Jastrzębie-Zdrój – Gogołowa', przystanki:['Jastrzębie-Zdrój','Gogołowa Jastrzębska','Gogołowa Jastrzębska-Kąty'] },
+  { id:'S16', nazwa:'S16', kolor:'#db2777', trasa:'Jastrzębie-Zdrój – Gogołowa', przystanki:['Jastrzębie-Zdrój','Gogołowa Jastrzębska','Gogołowa Jastrzębska-Kąty'] },
+];
+const KP_PRZYSTANKI = [
+  { nazwa:'Mszana (centrum)', linie:['W11','W10','W09'], opis:'centrum wsi, przy Urzędzie Gminy' },
+  { nazwa:'Mszana Szkoła', linie:['W11'], opis:'przy szkole podstawowej' },
+  { nazwa:'Szeroka-Boczna', linie:['W10','W09'], opis:'południowa część Mszany' },
+  { nazwa:'Kolonia Kąty', linie:['S13','S15','S16'], opis:'zachodnia część Mszany' },
+  { nazwa:'Połomia', linie:['W11'], opis:'centrum sołectwa Połomia' },
+  { nazwa:'Gogołowa Jastrzębska', linie:['W11','S13','S15','S16'], opis:'centrum sołectwa Gogołowa' },
+  { nazwa:'Gogołowa Jastrzębska-Kąty', linie:['W11','S13','S15','S16'], opis:'północna część Gogołowej' },
+  { nazwa:'Mszana Mszańskie Granice', linie:['50','59'], opis:'początek/koniec tras powiatowych, ul. Moszczeńska' },
+  { nazwa:'Mszana 1 Maja / Urząd Gminy', linie:['50'], opis:'przy Urzędzie Gminy, ul. 1 Maja' },
+  { nazwa:'Mszana Wodzisławska Skrzyżowanie', linie:['59'], opis:'ul. Wodzisławska (DW 933)' },
+  { nazwa:'Mszana Wodzisławska Boisko', linie:['59'], opis:'ul. Wodzisławska' },
+  { nazwa:'Mszana Wodzisławska Uchytów', linie:['59'], opis:'ul. Wodzisławska' },
+  { nazwa:'Połomia Szkolna', linie:['53'], opis:'ul. Szkolna, przy szkole' },
+  { nazwa:'Połomia Centralna Kościół', linie:['53'], opis:'ul. Centralna, przy kościele' },
+  { nazwa:'Połomia Centralna Na Końcu', linie:['53'], opis:'ul. Centralna' },
+  { nazwa:'Połomia Centralna Folwark', linie:['53'], opis:'ul. Centralna' },
+];
+const KP_FAQ = [
+  { q:'Jakie autobusy jeżdżą przez Mszanę?', a:'Dwa przewoźniki: MZK Jastrzębie-Zdrój (linie W11, W10, W09, S13/S15/S16) oraz Wodzisławska Komunikacja Powiatowa (linie 50, 59 i 53). Linie powiatowe kursują od 1 stycznia 2026 r.' },
+  { q:'Gdzie mogę sprawdzić aktualny rozkład jazdy?', a:'Aktualne rozkłady i możliwości połączeń publikuje MZK — w systemie biletowo-rozkładowym (E-bilet) oraz na stronie mzkjastrzebie.com. Rozkłady bywają zmieniane, dlatego zawsze sprawdzaj oficjalne źródło.' },
+  { q:'Czy przysługują mi ulgi?', a:'Tak — ulgi przysługują m.in. uczniom, studentom, emerytom i rencistom (zgodnie z uprawnieniami i taryfą MZK). Warto mieć przy sobie dokument uprawniający do ulgi.' },
+  { q:'Czy mogę przewieźć rower lub wózek?', a:'Możliwość przewozu rowerów i wózków zależy od taboru i regulaminu przewoźnika. Informacje uzyskasz u organizatora (MZK) lub kierowcy.' },
+
+  { q:'Czy mogę zgłosić uwagę o komunikacji?', a:'Tak — skorzystaj z formularza „Uwagi i sugestie” na tej stronie albo skontaktuj się z MZK (tel. 32 47 63 577 — planowanie komunikacji).' },
+];
+
+// ===== NAJKORZYSTNIEJSZE DOJAZDY =====
+const KP_DOJAZDY = [
+  { skad:'Mszana', dokad:'Wodzisław Śląski', rozw:'🚌 linia 50 (ul. 1 Maja / Urząd Gminy) lub 59 (ul. Wodzisławska) — bezpośrednio', uwaga:'najszybsza: linia 50 z przystanku Mszana 1 Maja/Urząd Gminy', link:'https://rozklady.powiatwodzislawski.pl' },
+  { skad:'Mszana', dokad:'Jastrzębie-Zdrój', rozw:'🚌 linia W11 (przez Gogołowę) lub W10/W09 — bezpośrednio', uwaga:'W11 obsługuje też Gogołowę', link:'https://bilet.mzkjastrzebie.com:8088' },
+  { skad:'Mszana', dokad:'Radlin', rozw:'🚌 linia 59 — bezpośrednio', uwaga:'linia powiatowa od 2026 r.', link:'https://rozklady.powiatwodzislawski.pl' },
+  { skad:'Mszana', dokad:'Rydułtowy', rozw:'🚌 linia 59 — bezpośrednio', uwaga:'kontynuacja linii 59 za Radlinem', link:'https://rozklady.powiatwodzislawski.pl' },
+  { skad:'Mszana', dokad:'Czyżowice', rozw:'🚌 linia 50 — bezpośrednio', uwaga:'', link:'https://rozklady.powiatwodzislawski.pl' },
+  { skad:'Mszana', dokad:'Rybnik', rozw:'🚌 linia W11 (przesiadka w Wodzisławiu na linię do Rybnika)', uwaga:'sprawdź przesiadkę na dworcu w Wodzisławiu Śl.', link:'https://bilet.mzkjastrzebie.com:8088' },
+  { skad:'Mszana', dokad:'Szkoły w Wodzisławiu Śl.', rozw:'🚌 linie 50 / 59 — bezpośrednio do centrum i szkół', uwaga:'ulgi dla uczniów przysługują na liniach powiatowych', link:'https://rozklady.powiatwodzislawski.pl' },
+  { skad:'Mszana', dokad:'Ośrodek Zdrowia (Mszana)', rozw:'🚌 przystanki przy trasach linii 50/59 w Mszanie', uwaga:'najbliższe przystanki w centrum Mszany', link:'https://rozklady.powiatwodzislawski.pl' },
+  { skad:'Połomia', dokad:'Wodzisław Śląski', rozw:'🚌 linia 53 (przez Marklowice) — bezpośrednio', uwaga:'start: Połomia Szkolna / Centralna', link:'https://rozklady.powiatwodzislawski.pl' },
+  { skad:'Połomia', dokad:'Jastrzębie-Zdrój', rozw:'🚌 linia W11 (przez Mszanę) — z przystanku w Połomi', uwaga:'sprawdź przystanek przy trasie W11', link:'https://bilet.mzkjastrzebie.com:8088' },
+  { skad:'Połomia', dokad:'Marklowice', rozw:'🚌 linia 53 — bezpośrednio', uwaga:'', link:'https://rozklady.powiatwodzislawski.pl' },
+  { skad:'Połomia', dokad:'Szkoła w Połomi', rozw:'🚌 linia 53 — przystanek Połomia Szkolna', uwaga:'przystanek przy szkole', link:'https://rozklady.powiatwodzislawski.pl' },
+  { skad:'Gogołowa', dokad:'Jastrzębie-Zdrój', rozw:'🚌 linie S13 / S15 / S16 — bezpośrednio', uwaga:'z przystanków Gogołowa Jastrzębska', link:'https://bilet.mzkjastrzebie.com:8088' },
+  { skad:'Gogołowa', dokad:'Wodzisław Śląski', rozw:'🚌 linia W11 (Gogołowa → Połomia → Wodzisław) — bezpośrednio', uwaga:'', link:'https://bilet.mzkjastrzebie.com:8088' },
+  { skad:'Gogołowa', dokad:'Mszana (centrum)', rozw:'🚌 linia W11 — bezpośrednio', uwaga:'przystanki w centrum Mszany', link:'https://bilet.mzkjastrzebie.com:8088' },
+  { skad:'Gogołowa', dokad:'Radlin / Rydułtowy', rozw:'🚌 linia W11 do Wodzisławia + przesiadka na linię 59', uwaga:'przesiadka w Wodzisławiu Śl.', link:'https://bilet.mzkjastrzebie.com:8088' },
+];
+document.getElementById('kpDojazdy').innerHTML = KP_DOJAZDY.map(d => `
+  <div class="soft-card p-4">
+    <div class="flex flex-wrap items-center gap-2">
+      <span class="px-3 py-1 rounded-full bg-warm-900 text-white text-[12.5px] font-bold">${d.skad}</span>
+      <span class="text-warm-800/50">→</span>
+      <span class="px-3 py-1 rounded-full bg-sage-600 text-white text-[12.5px] font-bold">${d.dokad}</span>
+    </div>
+    <div class="mt-2 text-[14px] text-warm-800/85 leading-snug">${d.rozw}</div>
+    ${d.uwaga ? `<div class="mt-1 text-[12.5px] text-warm-800/55">💡 ${d.uwaga}</div>` : ''}
+    <div class="mt-2.5">
+      <a href="${d.link}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 h-8 px-3.5 rounded-full ${d.link.includes('powiatwodzislawski') ? 'bg-teal-600' : 'bg-sky-600'} text-white text-[12px] font-bold hover:opacity-90">🕒 Rozkład jazdy →</a>
+    </div>
+  </div>`).join('');
+
+// Render linii
+const linieList = document.getElementById('kpLinieList');
+linieList.innerHTML = KP_LINIE.map(l => `
+  <button onclick="kpShowLinia('${l.id}')" class="soft-card p-4 text-left hover:shadow-lg transition">
+    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-white text-[13px] font-bold" style="background:${l.kolor}">🚌 ${l.nazwa}</span>
+    <span class="ml-1 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wide ${l.przod ? 'bg-teal-100 text-teal-800' : 'bg-sky-100 text-sky-800'}">${l.przod ? 'Powiatowa' : 'MZK'}</span>
+    <div class="mt-2 text-[13.5px] text-warm-800/75 leading-snug">${l.trasa}</div>
+    <span class="inline-flex items-center gap-1 mt-2 text-[12px] font-bold text-sky-700">🗺️ Mapa trasy</span>
+  </button>`).join('');
+
+function kpShowLinia(id){
+  const l = KP_LINIE.find(x=>x.id===id);
+  const d = document.getElementById('kpLiniaDetail');
+  if(!l){ return; }
+  d.classList.remove('hidden');
+  d.innerHTML = `
+    <div class="flex items-center gap-2.5">
+      <span class="inline-flex items-center px-3 py-1 rounded-full text-white text-[14px] font-bold" style="background:${l.kolor}">🚌 ${l.nazwa}</span>
+      <span class="px-2 py-0.5 rounded-full text-[11px] font-bold uppercase ${l.przod ? 'bg-teal-100 text-teal-800' : 'bg-sky-100 text-sky-800'}">${l.przod ? 'Powiatowa' : 'MZK'}</span>
+      <span class="font-bold text-[15px]">${l.trasa}</span>
+    </div>
+    <div class="mt-3"><span class="font-bold text-[13px]">Przystanki:</span>
+      <div class="flex flex-wrap gap-1.5 mt-1.5">${l.przystanki.map(p=>`<span class="px-2.5 py-1 rounded-full bg-white border border-warm-200 text-[12.5px] font-semibold">📍 ${p}</span>`).join('')}</div>
+    </div>
+    <div class="mt-4 flex flex-wrap gap-2.5">
+      <a href="https://www.google.com/maps/dir/Mszana,+Poland/${encodeURIComponent(l.przystanki[l.przystanki.length-1] + ', Poland')}" target="_blank" rel="noopener" class="h-9 px-4 rounded-full bg-[#4285F4] text-white text-[12.5px] font-bold inline-flex items-center gap-1.5">🗺️ Google Maps — trasa ${l.nazwa}</a>
+      <a href="https://www.openstreetmap.org/?mlat=49.973&mlon=18.518#map=12/49.97/18.52" target="_blank" rel="noopener" class="h-9 px-4 rounded-full bg-[#7ebc6f] text-white text-[12.5px] font-bold inline-flex items-center gap-1.5">🗺️ OpenStreetMap</a>
+    </div>
+  `;
+  d.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+// Render przystanków
+const przystankiList = document.getElementById('kpPrzystankiList');
+przystankiList.innerHTML = KP_PRZYSTANKI.map(p => `
+  <button onclick="kpShowPrzystanek('${p.nazwa}')" class="soft-card p-4 text-left hover:border-emerald-300 transition">
+    <div class="font-bold text-[14px]">📍 ${p.nazwa}</div>
+    <div class="text-[12px] text-warm-800/55 mt-0.5">${p.opis}</div>
+    <div class="flex flex-wrap gap-1 mt-2">${p.linie.map(l=>{const ll=KP_LINIE.find(x=>x.id===l); return `<span class="px-2 py-0.5 rounded-full text-white text-[11px] font-bold" style="background:${ll?ll.kolor:'#888'}">${l}</span>`;}).join('')}</div>
+  </button>`).join('');
+
+function kpShowPrzystanek(nazwa){
+  const p = KP_PRZYSTANKI.find(x=>x.nazwa===nazwa);
+  const d = document.getElementById('kpPrzystanekDetail');
+  if(!p) return;
+  d.classList.remove('hidden');
+  d.innerHTML = `
+    <div class="font-bold text-[16px]">📍 ${p.nazwa}</div>
+    <div class="text-[13px] text-warm-800/60 mt-0.5">${p.opis}</div>
+    <div class="mt-3"><span class="font-bold text-[13px]">Obsługujące linie:</span>
+      <div class="flex flex-wrap gap-2 mt-2">${p.linie.map(l=>{const ll=KP_LINIE.find(x=>x.id===l); return `<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-white text-[13px] font-bold" style="background:${ll?ll.kolor:'#888'}">🚌 ${l}</span>`;}).join('')}</div>
+    </div>`;
+  d.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+// FAQ
+document.getElementById('kpFaq').innerHTML = KP_FAQ.map((f,i) => `
+  <details class="group soft-card p-4">
+    <summary class="cursor-pointer list-none flex items-center justify-between gap-2 font-bold text-[14.5px]">${f.q}<span class="text-[11px] text-warm-800/40 transition-transform group-open:rotate-180">▼</span></summary>
+    <p class="mt-2 text-[13.5px] leading-[1.65] text-warm-800/80">${f.a}</p>
+  </details>`).join('');
+
+// Zakładki
+document.querySelectorAll('.kp-tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.kp-tab').forEach(b => { b.classList.remove('bg-warm-900','text-white'); b.classList.add('bg-white','border','border-warm-200'); });
+    btn.classList.add('bg-warm-900','text-white'); btn.classList.remove('bg-white','border','border-warm-200');
+    document.querySelectorAll('.kp-panel').forEach(p => p.classList.add('hidden'));
+    const t = document.getElementById(btn.getAttribute('data-tab'));
+    if(t) t.classList.remove('hidden');
+  });
+});
+
+// Formularz uwag -> mailto
+document.getElementById('kpForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const imie = document.getElementById('kpImie').value.trim();
+  const email = document.getElementById('kpEmail').value.trim();
+  const temat = document.getElementById('kpTemat').value;
+  const tresc = document.getElementById('kpTresc').value.trim();
+  if(!imie || !email || !tresc) return;
+  const subject = encodeURIComponent('Komunikacja publiczna — uwaga: ' + temat);
+  const body = encodeURIComponent('Imię i nazwisko: ' + imie + '\nE-mail: ' + email + '\nTemat: ' + temat + '\n\nTreść:\n' + tresc);
+  window.location.href = 'mailto:kontakt@mszana.info?subject=' + subject + '&body=' + body;
+  document.getElementById('kpForm').classList.add('hidden');
+  document.getElementById('kpOk').classList.remove('hidden');
+});
+</script>
+
+
+    <footer class="max-w-[1280px] mx-auto px-5 pb-10">
+        <div class="border-t border-warm-200 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[13.5px] text-warm-800/60">
+            <div>Mszana INFO — Portal + Forum Mieszkańców Mszany, Połomi i Gogołowej.<br><span class="text-[12.5px]">Oficjalne kanały gminy: <a href="https://mszana.ug.gov.pl" target="_blank" rel="noopener" class="font-bold text-sage-700 hover:text-sage-600">mszana.ug.gov.pl</a> • <a href="https://www.facebook.com/mszana.gmina?locale=pl_PL" target="_blank" rel="noopener" class="font-bold text-sage-700 hover:text-sage-600">f Gmina (FB)</a></span><br><span class="text-[12.5px]">📧 Kontakt redakcji: <a href="mailto:kontakt@mszana.info" class="font-bold text-sage-700 hover:text-sage-600">kontakt@mszana.info</a></span></div>
+            <a class='font-bold text-sage-700 hover:text-sage-600' href='../'>← Strona główna</a>
+        </div>
+    </footer>
+
+    <script>
+    </script>
+</body>
+</html>
