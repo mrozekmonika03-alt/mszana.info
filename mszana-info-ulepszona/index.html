@@ -144,6 +144,7 @@
                             </div>
                             <a href="artykuly/komunikacja-publiczna.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>🚌</span> Komunikacja publiczna</a>
                             <a href="#ogloszenia" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>📢</span> Ogłoszenia</a>
+                            <a href="#ankieta" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>📋</span> Ankieta — fundusz sołecki</a>
                         </div>
                     </div>
                 </div>
@@ -193,10 +194,27 @@
                         💬 Społeczność / Narzędzia
                         <svg class="w-3.5 h-3.5 opacity-60 transition-transform group-hover/menu:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                     </button>
-                    <div class="absolute left-0 top-full pt-2 z-50 hidden group-hover/menu:block min-w-[230px]">
+                    <div class="absolute left-0 top-full pt-2 z-50 hidden group-hover/menu:block min-w-[290px]">
                         <div class="soft-card p-2 bg-white shadow-xl border border-warm-200 rounded-2xl space-y-0.5">
-                            <a href="#forum" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>💬</span> Forum</a>
-                            <a href="#" onclick="openChat(event)" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>🧭</span> Asystent</a>
+                            <div class="relative group/item">
+                                <a href="#ankieta" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>📊</span> Głos Mieszkańców (Ankiety) <span class="ml-auto text-[11px] text-warm-800/40">▸</span></a>
+                                <div class="absolute left-full top-0 pl-2 z-50 hidden group-hover/item:block min-w-[290px]">
+                                    <div class="soft-card p-2 bg-white shadow-xl border border-warm-200 rounded-2xl space-y-0.5">
+                                        <a href="#ankieta" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>📋</span> Ankieta — fundusz sołecki 2027 / Budżet</a>
+                                        <a href="#ankieta-mszana-po-pracy" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>🌿</span> Ankieta — Mszana po pracy</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#forum" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>💬</span> Dyskusje / Forum</a>
+                            <div class="relative group/item">
+                                <span class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl cursor-default select-none text-[13.5px]"><span>🧰</span> Pozostałe narzędzia <span class="ml-auto text-[11px] text-warm-800/40">▸</span></span>
+                                <div class="absolute left-full top-0 pl-2 z-50 hidden group-hover/item:block min-w-[230px]">
+                                    <div class="soft-card p-2 bg-white shadow-xl border border-warm-200 rounded-2xl space-y-0.5">
+                                        <a href="#" onclick="openChat(event)" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>🧭</span> Asystent — napisz do redakcji</a>
+                                        <a href="#" onclick="event.preventDefault(); openNewTopicModal()" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>➕</span> Nowy temat na Forum</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -250,6 +268,7 @@
                         </details>
                         <a href="artykuly/komunikacja-publiczna.html" onclick="closeMobileMenu()" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">🚌 Komunikacja publiczna</a>
                         <a href="#ogloszenia" onclick="closeMobileMenu()" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">📢 Ogłoszenia</a>
+                        <a href="#ankieta" onclick="closeMobileMenu()" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">📋 Ankieta — fundusz sołecki</a>
                     </div>
                 </details>
 
@@ -287,8 +306,21 @@
                 <details class="group/mg rounded-2xl border border-warm-200 bg-white overflow-hidden">
                     <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3 font-bold text-[15px] text-warm-900"><span>💬 Społeczność / Narzędzia</span><span class="text-[10px] text-warm-800/40 transition-transform group-open/mg:rotate-180">▼</span></summary>
                     <div class="px-3 pb-3 space-y-0.5">
-                        <a href="#forum" onclick="closeMobileMenu()" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">💬 Forum</a>
-                        <a href="#" onclick="closeMobileMenu(); openChat(event)" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">🧭 Asystent</a>
+                        <details class="group/mi rounded-xl bg-warm-50 border border-warm-100 overflow-hidden">
+                            <summary class="list-none cursor-pointer flex items-center justify-between px-3 py-2.5 font-semibold text-[14px] text-warm-800"><span>📊 Głos Mieszkańców (Ankiety)</span><span class="text-[9px] text-warm-800/40 transition-transform group-open/mi:rotate-180">▼</span></summary>
+                            <div class="px-2 pb-2 space-y-0.5">
+                                <a href="#ankieta" onclick="closeMobileMenu()" class="flex items-center gap-2 px-3 py-2 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">📋 Fundusz sołecki 2027 / Budżet</a>
+                                <a href="#ankieta-mszana-po-pracy" onclick="closeMobileMenu()" class="flex items-center gap-2 px-3 py-2 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">🌿 Mszana po pracy</a>
+                            </div>
+                        </details>
+                        <a href="#forum" onclick="closeMobileMenu()" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">💬 Dyskusje / Forum</a>
+                        <details class="group/mi rounded-xl bg-warm-50 border border-warm-100 overflow-hidden">
+                            <summary class="list-none cursor-pointer flex items-center justify-between px-3 py-2.5 font-semibold text-[14px] text-warm-800"><span>🧰 Pozostałe narzędzia</span><span class="text-[9px] text-warm-800/40 transition-transform group-open/mi:rotate-180">▼</span></summary>
+                            <div class="px-2 pb-2 space-y-0.5">
+                                <a href="#" onclick="closeMobileMenu(); openChat(event)" class="flex items-center gap-2 px-3 py-2 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">🧭 Asystent — napisz do redakcji</a>
+                                <a href="#" onclick="closeMobileMenu(); event.preventDefault(); openNewTopicModal()" class="flex items-center gap-2 px-3 py-2 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">➕ Nowy temat na Forum</a>
+                            </div>
+                        </details>
                     </div>
                 </details>
 
@@ -490,6 +522,7 @@ Forum Mieszkańców Gminy Mszana — Twój Głos
             <div id="ankietaFormWrap" class="p-6 sm:p-10">
                 <p class="text-[14.5px] leading-[1.7] text-warm-800/80">Każde sołectwo ma 66 401,80 zł z funduszu sołeckiego — o podziale na 2027 rok zadecydujemy na zebraniach wiejskich we wrześniu. Wypełnij ankietę, a Twoje odpowiedzi trafią do sołtysów i Rad Sołeckich. <b>Ankieta jest anonimowa.</b></p>
 
+                <div id="ankWarn" class="hidden mt-4 p-4 rounded-2xl bg-red-50 border border-red-200 text-[13.5px] text-red-800 leading-snug">⚠️ <b>Nie udało się zapisać odpowiedzi w bazie.</b> Sprawdź, czy w Supabase uruchomiono SQL dla tabeli <b>ankieta_fundusz</b> (plik supabase-ankieta.sql).</div>
                 <form id="ankietaForm" class="mt-6 space-y-7">
                     <!-- A. Sołectwo -->
                     <div>
@@ -547,6 +580,147 @@ Forum Mieszkańców Gminy Mszana — Twój Głos
                     <div class="text-[40px]">✅</div>
                     <div class="font-bold text-[18px] text-emerald-900 mt-2">Dziękujemy!</div>
                     <p class="text-[14px] text-emerald-800 mt-1">Twoja ankieta została wysłana. Wyniki przekażemy sołtysom i Radom Sołeckim.</p>
+                </div>
+            </div>
+        </div>
+        <!-- ANKIETA: MSZANA PO PRACY (nowa) -->
+        <div id="ankieta-mszana-po-pracy" class="soft-card overflow-hidden bg-white mt-8 scroll-mt-24">
+            <div class="bg-gradient-to-r from-green-700 via-green-600 to-green-500 px-6 sm:px-10 py-6">
+                <div class="flex flex-wrap items-start justify-between gap-4">
+                    <div class="flex-1 min-w-[260px]">
+                        <div class="text-[11.5px] font-bold uppercase tracking-widest text-white/80">🤝 Wstępne badanie opinii mieszkańców</div>
+                        <h2 class="font-display text-[22px] sm:text-[26px] font-bold text-white leading-tight mt-1">Mszana po pracy – czas na integrację, wiedzę i wycieczki! 🌿</h2>
+                        <p class="text-[13.5px] text-white/90 mt-2 leading-[1.7] max-w-[85ch]">Do naszej redakcji wpłynęła <b class="text-white">propozycja</b> zorganizowania cyklu lokalnych spotkań i wyjazdów – z myślą o ciekawym wypoczynku po godzinach, zdobywaniu nowej wiedzy i integracji naszej społeczności. To na razie <b class="text-white">pomysł do konsultacji</b> – to, czy i w jakim kształcie zostanie zrealizowany, zależy od Waszych opinii.</p>
+                    </div>
+                    <span class="px-3 py-1.5 rounded-full bg-white/20 text-white text-[11px] font-bold uppercase tracking-widest border border-white/30 shrink-0">ok. 3 minuty</span>
+                </div>
+                <div class="mt-4 rounded-xl bg-white/15 border border-white/25 px-4 py-3 text-[13px] text-white/95 leading-[1.6]">👥 Ankieta skierowana jest do mieszkańców Mszany, Połomi i Gogołowej <b class="text-white">do 65 roku życia</b>. Wypełnienie zajmie ok. <b class="text-white">3 minuty</b>. Ankieta jest <b class="text-white">anonimowa</b> (podanie kontaktu jest dobrowolne).</div>
+            </div>
+
+            <div id="ankMsPracaWrap" class="p-6 sm:p-10">
+                <div id="ankMsPracaWarn" class="hidden mb-5 p-4 rounded-2xl bg-red-50 border border-red-200 text-[13.5px] text-red-800 leading-snug">⚠️ <b>Nie udało się zapisać odpowiedzi w bazie.</b> Sprawdź, czy w Supabase uruchomiono SQL dla tabeli <b>ankieta_mszana_po_pracy</b> (plik supabase-ankieta-mszana-po-pracy.sql). Odpowiedź możesz skopiować przyciskiem poniżej.</div>
+                <form id="ankMsPracaForm" class="space-y-5">
+
+                    <!-- METRYCZKA -->
+                    <div class="rounded-2xl bg-sage-50/70 border border-sage-200 border-l-4 border-l-sage-600 p-5 sm:p-6">
+                        <h3 class="font-bold text-[16px] text-sage-700">📋 Metryczka</h3>
+                        <p class="text-[13px] text-warm-800/65 mt-0.5">Kilka informacji o Tobie – pomogą nam dopasować charakter zajęć do uczestników.</p>
+                        <div class="mt-4">
+                            <div class="font-bold text-[14px]">Płeć <span class="text-red-600">*</span></div>
+                            <div class="flex flex-wrap gap-x-6 gap-y-1 mt-1.5">
+                                <label class="flex items-center gap-2 text-[14px] cursor-pointer"><input type="radio" name="msp-plec" value="Kobieta" required class="accent-green-700"> 👩 Kobieta</label>
+                                <label class="flex items-center gap-2 text-[14px] cursor-pointer"><input type="radio" name="msp-plec" value="Mężczyzna" class="accent-green-700"> 👨 Mężczyzna</label>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="font-bold text-[14px]">Przedział wiekowy <span class="text-red-600">*</span></div>
+                            <p class="text-[12.5px] text-warm-800/60">Propozycja skierowana jest do osób do 65 roku życia.</p>
+                            <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1.5">
+                                <label class="flex items-center gap-1.5 text-[13.5px] cursor-pointer"><input type="radio" name="msp-wiek" value="16–18 lat" required class="accent-green-700"> 16–18 lat</label>
+                                <label class="flex items-center gap-1.5 text-[13.5px] cursor-pointer"><input type="radio" name="msp-wiek" value="19–30 lat" class="accent-green-700"> 19–30</label>
+                                <label class="flex items-center gap-1.5 text-[13.5px] cursor-pointer"><input type="radio" name="msp-wiek" value="31–45 lat" class="accent-green-700"> 31–45</label>
+                                <label class="flex items-center gap-1.5 text-[13.5px] cursor-pointer"><input type="radio" name="msp-wiek" value="46–55 lat" class="accent-green-700"> 46–55</label>
+                                <label class="flex items-center gap-1.5 text-[13.5px] cursor-pointer"><input type="radio" name="msp-wiek" value="56–65 lat" class="accent-green-700"> 56–65</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PYTANIE 1 -->
+                    <div class="rounded-2xl bg-white border border-warm-200 border-l-4 border-l-green-600 p-5 sm:p-6">
+                        <h3 class="font-bold text-[15.5px]">1. Czy jesteś zainteresowany/-a udziałem w cyklu spotkań „Mszana po pracy”? <span class="text-red-600">*</span></h3>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q1" value="Tak, zdecydowanie" required class="mt-1 accent-green-700 shrink-0"> ✅ Tak, zdecydowanie!</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q1" value="Raczej tak" class="mt-1 accent-green-700 shrink-0"> 🙂 Raczej tak – zależy od tematów i terminów</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q1" value="Jeszcze nie wiem" class="mt-1 accent-green-700 shrink-0"> 🤔 Jeszcze nie wiem</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q1" value="Nie" class="mt-1 accent-green-700 shrink-0"> ❌ Nie, dziękuję</label>
+                    </div>
+
+                    <!-- PYTANIE 2 -->
+                    <div class="rounded-2xl bg-white border border-warm-200 border-l-4 border-l-green-600 p-5 sm:p-6">
+                        <h3 class="font-bold text-[15.5px]">2. Które formy zajęć interesują Cię najbardziej? <span class="text-red-600">*</span></h3>
+                        <p class="text-[13px] text-warm-800/60 mt-0.5">Możesz zaznaczyć kilka odpowiedzi.</p>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="checkbox" name="msp-q2" value="Zajęcia ruchowe" class="mt-1 accent-green-700 shrink-0"> 🧘 Zajęcia ruchowe – dla zdrowia i dobrej energii</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="checkbox" name="msp-q2" value="Warsztaty AI" class="mt-1 accent-green-700 shrink-0"> 💻 Warsztaty: sztuczna inteligencja (AI) w codziennym życiu</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="checkbox" name="msp-q2" value="Warsztaty cyberbezpieczeństwo" class="mt-1 accent-green-700 shrink-0"> 🔐 Warsztaty: cyberbezpieczeństwo</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="checkbox" name="msp-q2" value="Wycieczki piesze" class="mt-1 accent-green-700 shrink-0"> 🥾 Wycieczki piesze – aktywne poznawanie Śląska</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="checkbox" name="msp-q2" value="Wycieczki rowerowe" class="mt-1 accent-green-700 shrink-0"> 🚴 Wycieczki rowerowe</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="checkbox" name="msp-q2" value="Wieczory integracyjne i gry" class="mt-1 accent-green-700 shrink-0"> 🎲 Wieczory integracyjne i gry planszowe</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="checkbox" name="msp-q2" value="Klub podróżniczo-krajoznawczy" class="mt-1 accent-green-700 shrink-0"> 🗺️ Klub podróżniczo-krajoznawczy (prelekcje + wycieczki jednodniowe)</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer">
+                            <input type="checkbox" name="msp-q2" value="Inne" id="mspQ2inne" class="mt-1 accent-green-700 shrink-0"> ✍️ Inne – jakie?
+                            <input type="text" name="msp-q2inneTekst" placeholder="np. warsztaty kulinarne, fotografia…" class="ml-2 h-9 px-3 rounded-lg border border-warm-200 text-[13.5px] w-56 max-w-full">
+                        </label>
+                    </div>
+
+                    <!-- PYTANIE 3 -->
+                    <div class="rounded-2xl bg-white border border-warm-200 border-l-4 border-l-green-600 p-5 sm:p-6">
+                        <h3 class="font-bold text-[15.5px]">3. Który termin spotkań pasuje Ci najbardziej? <span class="text-red-600">*</span></h3>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q3" value="Dni robocze 18:00–20:00" required class="mt-1 accent-green-700 shrink-0"> 🌆 Dni robocze, godz. 18:00–20:00</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q3" value="Sobotnie przedpołudnia" class="mt-1 accent-green-700 shrink-0"> ☀️ Sobotnie przedpołudnia</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q3" value="Oba pasują" class="mt-1 accent-green-700 shrink-0"> 👍 Oba warianty mi pasują</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q3" value="Żaden nie pasuje" class="mt-1 accent-green-700 shrink-0"> ⏰ Żaden – zaproponuję inny w uwagach (pyt. 8)</label>
+                    </div>
+
+                    <!-- PYTANIE 4 -->
+                    <div class="rounded-2xl bg-white border border-warm-200 border-l-4 border-l-green-600 p-5 sm:p-6">
+                        <h3 class="font-bold text-[15.5px]">4. Czy częstotliwość „2 spotkania w miesiącu” jest dla Ciebie odpowiednia? <span class="text-red-600">*</span></h3>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q4" value="W sam raz" required class="mt-1 accent-green-700 shrink-0"> ✅ Tak, w sam raz</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q4" value="Wolałbym częściej" class="mt-1 accent-green-700 shrink-0"> ➕ Wolał(a)bym częściej (np. co tydzień)</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q4" value="Wolałbym rzadziej" class="mt-1 accent-green-700 shrink-0"> ➖ Wolał(a)bym rzadziej (np. raz w miesiącu)</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q4" value="Bez znaczenia" class="mt-1 accent-green-700 shrink-0"> 🤷 Nie ma to dla mnie znaczenia</label>
+                    </div>
+
+                    <!-- PYTANIE 5 -->
+                    <div class="rounded-2xl bg-white border border-warm-200 border-l-4 border-l-green-600 p-5 sm:p-6">
+                        <h3 class="font-bold text-[15.5px]">5. W której miejscowości najwygodniej byłoby Ci uczestniczyć w spotkaniach? <span class="text-red-600">*</span></h3>
+                        <p class="text-[13px] text-warm-800/60 mt-0.5">Spotkania planowane są rotacyjnie – wskaż preferowane miejsce.</p>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q5" value="Mszana" required class="mt-1 accent-green-700 shrink-0"> 📍 Mszana</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q5" value="Połomia" class="mt-1 accent-green-700 shrink-0"> 📍 Połomia</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q5" value="Gogołowa" class="mt-1 accent-green-700 shrink-0"> 📍 Gogołowa</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q5" value="Obojętnie" class="mt-1 accent-green-700 shrink-0"> 🔄 Obojętnie – mogę dojechać wszędzie</label>
+                    </div>
+
+                    <!-- PYTANIE 6 -->
+                    <div class="rounded-2xl bg-white border border-warm-200 border-l-4 border-l-green-600 p-5 sm:p-6">
+                        <h3 class="font-bold text-[15.5px]">6. Jakie kierunki wycieczek jednodniowych po Śląsku i okolicy chciał(a)byś zaproponować?</h3>
+                        <p class="text-[13px] text-warm-800/60 mt-0.5">Pytanie otwarte – wpisz swoje pomysły (np. Beskidy, Zabytkowa Kopalnia w Zabrzu, Pszczyna…).</p>
+                        <textarea name="msp-q6" rows="3" placeholder="Twoje propozycje…" class="mt-2 w-full rounded-xl border border-warm-200 p-3 text-[14px] focus:outline-none focus:ring-2 focus:ring-green-300 resize-y"></textarea>
+                    </div>
+
+                    <!-- PYTANIE 7 -->
+                    <div class="rounded-2xl bg-white border border-warm-200 border-l-4 border-l-green-600 p-5 sm:p-6">
+                        <h3 class="font-bold text-[15.5px]">7. Czy w razie potrzeby był(a)byś gotowy/-a ponieść drobną opłatę (np. bilety wstępu, składka na materiały)? <span class="text-red-600">*</span></h3>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q7" value="Tak" required class="mt-1 accent-green-700 shrink-0"> ✅ Tak, to naturalne</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q7" value="Tak, do 30 zł" class="mt-1 accent-green-700 shrink-0"> 💰 Tak, ale w granicach ok. 30 zł za wydarzenie</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q7" value="Tylko bezpłatne" class="mt-1 accent-green-700 shrink-0"> 🆓 Wolał(a)bym tylko wydarzenia w pełni bezpłatne</label>
+                        <label class="flex items-start gap-2.5 py-1.5 text-[14px] leading-snug cursor-pointer"><input type="radio" name="msp-q7" value="Trudno powiedzieć" class="mt-1 accent-green-700 shrink-0"> 🤷 Trudno powiedzieć</label>
+                    </div>
+
+                    <!-- PYTANIE 8 -->
+                    <div class="rounded-2xl bg-white border border-warm-200 border-l-4 border-l-green-600 p-5 sm:p-6">
+                        <h3 class="font-bold text-[15.5px]">8. Uwagi, pomysły, sugestie 💬</h3>
+                        <p class="text-[13px] text-warm-800/60 mt-0.5">Masz inny pomysł na zajęcia? Chcesz pomóc w organizacji lub poprowadzić prelekcję? Daj znać!</p>
+                        <textarea name="msp-q8" rows="3" placeholder="Miejsce na Twoje uwagi…" class="mt-2 w-full rounded-xl border border-warm-200 p-3 text-[14px] focus:outline-none focus:ring-2 focus:ring-green-300 resize-y"></textarea>
+                    </div>
+
+                    <!-- PYTANIE 9 -->
+                    <div class="rounded-2xl bg-white border border-warm-200 border-l-4 border-l-green-600 p-5 sm:p-6">
+                        <h3 class="font-bold text-[15.5px]">9. Kontakt (opcjonalnie) 📧</h3>
+                        <p class="text-[13px] text-warm-800/60 mt-0.5">Zostaw e-mail lub telefon, jeśli chcesz otrzymywać informacje o terminach spotkań i zapisach.</p>
+                        <input type="text" name="msp-q9" placeholder="E-mail lub numer telefonu" class="mt-2 w-full h-11 rounded-xl border border-warm-200 px-4 text-[14px] focus:outline-none focus:ring-2 focus:ring-green-300">
+                        <p class="text-[11.5px] text-warm-800/50 mt-1.5">Podając dane kontaktowe wyrażasz zgodę na ich przetwarzanie wyłącznie w celu informowania o wydarzeniach cyklu „Mszana po pracy”.</p>
+                    </div>
+
+                    <button type="submit" class="w-full h-12 rounded-full bg-green-700 text-white font-bold text-[15.5px] hover:bg-green-800 transition shadow-sm">📨 Wyślij odpowiedzi</button>
+                </form>
+
+                <div id="ankMsPracaOk" class="hidden mt-6 p-6 rounded-2xl bg-emerald-50 border border-emerald-200">
+                    <h3 class="font-bold text-[19px] text-emerald-900">🎉 Dziękujemy za wypełnienie ankiety!</h3>
+                    <p class="text-[13.5px] text-emerald-800 mt-1 leading-[1.7]">Wyniki tego wstępnego badania opinii posłużą do podjęcia decyzji o dalszych krokach. Poniżej podsumowanie Twoich odpowiedzi – możesz je skopiować i przesłać do redakcji.</p>
+                    <pre id="podsumowanieMsp" class="mt-3 bg-white border border-emerald-200 rounded-xl p-4 text-[12.5px] leading-[1.5] whitespace-pre-wrap overflow-x-auto"></pre>
+                    <button type="button" onclick="kopiujMsp()" class="mt-4 h-10 px-5 rounded-full bg-green-700 text-white text-[13.5px] font-bold inline-flex items-center gap-2 hover:bg-green-800">📋 Kopiuj podsumowanie</button>
+                </div>
+                <div class="mt-5 -mb-1 pt-4 border-t border-warm-100 text-center">
+                    <button type="button" onclick="kopiujLinkMsp()" class="text-[12.5px] font-bold text-sage-700 hover:text-sage-600 inline-flex items-center gap-1.5">🔗 Skopiuj link do tej ankiety</button>
                 </div>
             </div>
         </div>
@@ -721,7 +895,7 @@ Forum Mieszkańców Gminy Mszana — Twój Głos
                             <details class="group">
                                 <summary class="cursor-pointer list-none flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl bg-white border border-warm-200 text-[13.5px] font-bold hover:border-sky-300 transition">Nagrania wideo<span class="text-[10px] text-warm-800/40 transition-transform group-open:rotate-180">▼</span></summary>
                                 <div class="px-3.5 pt-2 text-[13px] text-warm-800/80 leading-relaxed">
-                                    <a href="https://esesja.tv/transmisja_na_zywo/1159/rada-gminy-mszana.htm" target="_blank" rel="noopener" class="block text-sky-700 font-bold hover:underline">Transmisje i archiwum eSesja.tv →</a>
+                                    <a href="https://esesja.tv/transmisje_z_obrad/1159/rada-gminy-mszana.htm" target="_blank" rel="noopener" class="block text-sky-700 font-bold hover:underline">Transmisje archiwalne (eSesja.tv) →</a>
                                 </div>
                             </details>
                             <details class="group">
@@ -2106,13 +2280,30 @@ if(chatFormEl) chatFormEl.addEventListener('submit', async function(ev){
         zebranie: zebranie,
         ts: Date.now()
       };
+      let cloudFail = false;
       try{
-        await fetch(SUPA_URL + '/rest/v1/ankieta_fundusz', {
+        const r = await fetch(SUPA_URL + '/rest/v1/ankieta_fundusz', {
           method: 'POST',
           headers: { 'apikey': SUPA_KEY, 'Authorization': 'Bearer ' + SUPA_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
           body: JSON.stringify(payload)
         });
-      }catch(e2){ console.warn('Ankieta: zapis w chmurze nieudany', e2); }
+        if(!r.ok) throw new Error('HTTP ' + r.status);
+      }catch(e2){ console.warn('Ankieta: zapis w chmurze nieudany', e2); cloudFail = true; }
+      const warnBox = document.getElementById('ankWarn');
+      if(warnBox) warnBox.classList.toggle('hidden', !cloudFail);
+      // Backup: wyślij też e-mail na kontakt@mszana.info (FormSubmit)
+      try{
+        await fetch('https://formsubmit.co/ajax/kontakt@mszana.info', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            _subject: '📋 ANKIETA fundusz sołecki 2027 — nowa odpowiedź',
+            _template: 'table',
+            'Sołectwo': payload.solectwo, 'Priorytety': (payload.priorytety||[]).join(', '),
+            'Pomysł': payload.pomysl, 'Zebranie': payload.zebranie
+          })
+        });
+      }catch(err3){ console.warn('Ankieta fundusz: e-mail backup nieudany', err3); }
       document.getElementById('ankietaFormWrap').classList.add('hidden');
       document.getElementById('ankOk').classList.remove('hidden');
     }finally{
@@ -2120,6 +2311,106 @@ if(chatFormEl) chatFormEl.addEventListener('submit', async function(ev){
     }
   });
 })();
+
+<script>
+// ===== ANKIETA: MSZANA PO PRACY =====
+function kopiujLinkMsp(){
+  const url = location.origin + location.pathname + '#ankieta-mszana-po-pracy';
+  if(navigator.clipboard){ navigator.clipboard.writeText(url).then(function(){ alert('Link skopiowany! 📋\n' + url); }); }
+}
+function kopiujMsp(){
+  const t = document.getElementById('podsumowanieMsp');
+  if(!t) return;
+  const txt = t.textContent;
+  if(navigator.clipboard){ navigator.clipboard.writeText(txt).then(function(){ alert('Skopiowano! 📋'); }); }
+}
+(function(){
+  const form = document.getElementById('ankMsPracaForm');
+  if(!form) return;
+  const SUPA_URL = 'https://batkjqjtwfduyonvjtym.supabase.co';
+  const SUPA_KEY = 'sb_publishable_gUtHCxb0ICrRwqasoV766Q_C10nonpc';
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    const f = e.target;
+    if(!f.checkValidity()){
+      const inv = f.querySelector(':invalid');
+      const map = {'msp-plec':'Płeć','msp-wiek':'Przedział wiekowy','msp-q1':'Pytanie 1 — zainteresowanie udziałem','msp-q2':'Pytanie 2 — formy zajęć','msp-q3':'Pytanie 3 — termin','msp-q4':'Pytanie 4 — częstotliwość','msp-q5':'Pytanie 5 — miejscowość','msp-q7':'Pytanie 7 — opłaty'};
+      const name = inv ? (map[inv.name] || inv.name) : 'jedno z pól';
+      if(inv){ inv.scrollIntoView({behavior:'smooth', block:'center'}); inv.focus({preventScroll:true}); }
+      alert('⚠️ Uzupełnij brakujące pole: ' + name + '.');
+      return;
+    }
+    function radio(n){ const r = f.querySelector('input[name="'+n+'"]:checked'); return r ? r.value : '—'; }
+    function checks(n){
+      const arr = Array.prototype.slice.call(f.querySelectorAll('input[name="'+n+'"]:checked')).map(function(c){return c.value;});
+      const i = arr.indexOf('Inne');
+      const inny = f.querySelector('[name="msp-q2inneTekst"]');
+      if(i > -1 && inny && inny.value.trim()) arr[i] = 'Inne: ' + inny.value.trim();
+      return arr.length ? arr.join(', ') : '—';
+    }
+    function val(n){ const el = f.querySelector('[name="'+n+'"]'); return el ? el.value.trim() : ''; }
+    if(!f.querySelector('input[name="msp-q2"]:checked')){ alert('Zaznacz przynajmniej jedną formę zajęć w pytaniu 2.'); return; }
+    const s =
+      'ANKIETA „MSZANA PO PRACY” – WSTĘPNE BADANIE OPINII\n' +
+      '==================================================\n' +
+      'Płeć: ' + radio('msp-plec') + '\n' +
+      'Przedział wiekowy: ' + radio('msp-wiek') + '\n' +
+      '--------------------------------------------------\n' +
+      '1. Zainteresowanie udziałem: ' + radio('msp-q1') + '\n' +
+      '2. Interesujące formy zajęć: ' + checks('msp-q2') + '\n' +
+      '3. Preferowany termin: ' + radio('msp-q3') + '\n' +
+      '4. Częstotliwość 2x/mies.: ' + radio('msp-q4') + '\n' +
+      '5. Preferowana miejscowość: ' + radio('msp-q5') + '\n' +
+      '6. Propozycje wycieczek: ' + (val('msp-q6') || '—') + '\n' +
+      '7. Gotowość do drobnych opłat: ' + radio('msp-q7') + '\n' +
+      '8. Uwagi: ' + (val('msp-q8') || '—') + '\n' +
+      '9. Kontakt: ' + (val('msp-q9') || '—');
+    const pre = document.getElementById('podsumowanieMsp');
+    if(pre) pre.textContent = s;
+    const ok = document.getElementById('ankMsPracaOk');
+    if(ok){ ok.classList.remove('hidden'); ok.scrollIntoView({behavior:'smooth'}); }
+    const btn = form.querySelector('button[type="submit"]');
+    if(btn){ btn.disabled = true; btn.textContent = '⏳ Wysyłanie...'; }
+    try{
+      const payload = {
+        plec: radio('msp-plec'), wiek: radio('msp-wiek'),
+        q1: radio('msp-q1'), q2: checks('msp-q2'), q3: radio('msp-q3'), q4: radio('msp-q4'),
+        q5: radio('msp-q5'), q6: val('msp-q6'), q7: radio('msp-q7'), q8: val('msp-q8'), q9: val('msp-q9'),
+        ts: Date.now()
+      };
+      let cloudFail = false;
+      try{
+        const r = await fetch(SUPA_URL + '/rest/v1/ankieta_mszana_po_pracy', {
+          method: 'POST',
+          headers: { 'apikey': SUPA_KEY, 'Authorization': 'Bearer ' + SUPA_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
+          body: JSON.stringify(payload)
+        });
+        if(!r.ok) throw new Error('HTTP ' + r.status);
+      }catch(err){ console.warn('Ankieta Mszana po pracy: zapis w chmurze nieudany', err); cloudFail = true; }
+      const warnBox = document.getElementById('ankMsPracaWarn');
+      if(warnBox) warnBox.classList.toggle('hidden', !cloudFail);
+      // Backup: wyślij też e-mail na kontakt@mszana.info (FormSubmit)
+      try{
+        await fetch('https://formsubmit.co/ajax/kontakt@mszana.info', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            _subject: '📊 ANKIETA „Mszana po pracy” — nowa odpowiedź',
+            _template: 'table',
+            'Płeć': payload.plec, 'Wiek': payload.wiek,
+            '1. Zainteresowanie': payload.q1, '2. Formy zajęć': payload.q2,
+            '3. Termin': payload.q3, '4. Częstotliwość': payload.q4,
+            '5. Miejscowość': payload.q5, '6. Wycieczki': payload.q6,
+            '7. Opłaty': payload.q7, '8. Uwagi': payload.q8, '9. Kontakt': payload.q9
+          })
+        });
+      }catch(err2){ console.warn('Ankieta: e-mail backup nieudany', err2); }
+    }finally{
+      if(btn){ btn.disabled = false; btn.textContent = '📨 Wyślij odpowiedzi'; }
+    }
+  });
+})();
+</script>
 
 // ===== LICZNIK WYŚWIETLEŃ (Supabase — wersja działająca) =====
 const VIEW_URL = 'https://batkjqjtwfduyonvjtym.supabase.co';
