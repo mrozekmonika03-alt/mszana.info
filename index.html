@@ -87,6 +87,7 @@
         .active-cat { box-shadow: 0 0 0 2px #4a7c59; transform: scale(1.02); }
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        details > summary::-webkit-details-marker, details > summary::marker { display: none; }
 
         section[id], #kontakt, footer { scroll-margin-top: 92px; }
     </style>
@@ -214,9 +215,103 @@
                     </div>
                 </div>
 </nav>
+            <button id="menuBtn" onclick="toggleMobileMenu()" aria-label="Otwórz menu" aria-expanded="false" class="lg:hidden w-11 h-11 rounded-xl bg-sage-600 text-white flex items-center justify-center shadow-sm hover:bg-sage-700 transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
         </div>
     </header>
+    <!-- MENU MOBILNE (telefony i tablety) -->
+    <div id="mobileMenu" class="lg:hidden fixed inset-0 z-[95] hidden" role="dialog" aria-modal="true" aria-label="Menu mobilne">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="closeMobileMenu()"></div>
+        <div class="absolute right-0 top-0 h-full w-[330px] max-w-[88vw] bg-[#fdfaf3] shadow-2xl border-l border-warm-200 overflow-y-auto">
+            <div class="sticky top-0 z-10 bg-[#fdfaf3]/95 backdrop-blur border-b border-warm-200 px-5 py-4 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <img src="assets/herb-mszana.png" alt="Herb Gminy Mszana" class="h-9 w-auto rounded-lg border border-warm-200 bg-white p-0.5" loading="lazy">
+                    <div>
+                        <div class="font-display font-bold text-[17px] leading-none text-warm-900">Mszana INFO</div>
+                        <div class="text-[9.5px] tracking-[0.12em] uppercase font-bold text-sage-600 mt-1">menu strony</div>
+                    </div>
+                </div>
+                <button onclick="closeMobileMenu()" aria-label="Zamknij menu" class="w-9 h-9 rounded-full bg-warm-100 hover:bg-warm-200 flex items-center justify-center text-[15px] shrink-0">✕</button>
+            </div>
 
+            <div class="px-4 py-4 space-y-2.5">
+                <!-- MIESZKANIEC / GMINA -->
+                <details class="group/mg rounded-2xl border border-warm-200 bg-white overflow-hidden">
+                    <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3 font-bold text-[15px] text-warm-900"><span>🏘️ Mieszkaniec / Gmina</span><span class="text-[10px] text-warm-800/40 transition-transform group-open/mg:rotate-180">▼</span></summary>
+                    <div class="px-3 pb-3 space-y-0.5">
+                        <details class="group/mi rounded-xl bg-warm-50 border border-warm-100 overflow-hidden">
+                            <summary class="list-none cursor-pointer flex items-center justify-between px-3 py-2.5 font-semibold text-[14px] text-warm-800"><span>🏡 Sołectwa</span><span class="text-[9px] text-warm-800/40 transition-transform group-open/mi:rotate-180">▼</span></summary>
+                            <div class="px-2 pb-2 space-y-0.5">
+                                <a href="artykuly/solectwo-mszana.html" onclick="closeMobileMenu()" class="flex items-center gap-2 px-3 py-2 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">🏡 Mszana</a>
+                                <a href="artykuly/solectwo-polomia.html" onclick="closeMobileMenu()" class="flex items-center gap-2 px-3 py-2 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">🏘️ Połomia</a>
+                                <a href="artykuly/solectwo-gogolowa.html" onclick="closeMobileMenu()" class="flex items-center gap-2 px-3 py-2 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">🏠 Gogołowa</a>
+                            </div>
+                        </details>
+                        <a href="artykuly/komunikacja-publiczna.html" onclick="closeMobileMenu()" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">🚌 Komunikacja publiczna</a>
+                        <a href="#ogloszenia" onclick="closeMobileMenu()" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">📢 Ogłoszenia</a>
+                    </div>
+                </details>
+
+                <!-- SAMORZĄD -->
+                <details class="group/mg rounded-2xl border border-warm-200 bg-white overflow-hidden">
+                    <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3 font-bold text-[15px] text-warm-900"><span>🏛️ Samorząd</span><span class="text-[10px] text-warm-800/40 transition-transform group-open/mg:rotate-180">▼</span></summary>
+                    <div class="px-3 pb-3 space-y-0.5">
+                        <a href="#sesje" onclick="closeMobileMenu()" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">📋 Sesje Rady</a>
+                        <a href="#komisje" onclick="closeMobileMenu()" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">🏛️ Komisje</a>
+                    </div>
+                </details>
+
+                <!-- INFORMACJE I KONTAKT -->
+                <details class="group/mg rounded-2xl border border-warm-200 bg-white overflow-hidden">
+                    <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3 font-bold text-[15px] text-warm-900"><span>🧭 Informacje i Kontakt</span><span class="text-[10px] text-warm-800/40 transition-transform group-open/mg:rotate-180">▼</span></summary>
+                    <div class="px-3 pb-3 space-y-0.5">
+                        <details class="group/mi rounded-xl bg-warm-50 border border-warm-100 overflow-hidden">
+                            <summary class="list-none cursor-pointer flex items-center justify-between px-3 py-2.5 font-semibold text-[14px] text-warm-800"><span>📰 Aktualności</span><span class="text-[9px] text-warm-800/40 transition-transform group-open/mi:rotate-180">▼</span></summary>
+                            <div class="px-2 pb-2 space-y-0.5">
+                                <a href="artykuly/remont-ul-1-maja.html" onclick="closeMobileMenu()" class="flex items-center gap-2 px-3 py-2 rounded-xl text-[13.5px] font-semibold text-warm-800 hover:bg-sage-50">🚧 Remont ul. 1 Maja w Mszanie</a>
+                                <a href="artykuly/rozbudowa-ul-wolnosci-polomia.html" onclick="closeMobileMenu()" class="flex items-center gap-2 px-3 py-2 rounded-xl text-[13.5px] font-semibold text-warm-800 hover:bg-sage-50">🛣️ Rozbudowa ul. Wolności w Połomi</a>
+                                <a href="artykuly/sesja-27-lipca-2026-relacja.html" onclick="closeMobileMenu()" class="flex items-center gap-2 px-3 py-2 rounded-xl text-[13.5px] font-semibold text-warm-800 hover:bg-sage-50">📋 XXVII Sesja Rady Gminy — relacja</a>
+                                <a href="artykuly/fundusz-solecki-jak-bo.html" onclick="closeMobileMenu()" class="flex items-center gap-2 px-3 py-2 rounded-xl text-[13.5px] font-semibold text-warm-800 hover:bg-sage-50">🏘️ Fundusz sołecki 2026</a>
+                                <a href="artykuly/fundusz-solecki-propozycje.html" onclick="closeMobileMenu()" class="flex items-center gap-2 px-3 py-2 rounded-xl text-[13.5px] font-semibold text-warm-800 hover:bg-sage-50">📝 Zgłoś propozycję — fundusz sołecki</a>
+                                <a href="artykuly/programy-wieloletnie-2026.html" onclick="closeMobileMenu()" class="flex items-center gap-2 px-3 py-2 rounded-xl text-[13.5px] font-semibold text-warm-800 hover:bg-sage-50">📊 Programy wieloletnie 2026</a>
+                                <a href="artykuly/budzet-2027-wnioski.html" onclick="closeMobileMenu()" class="flex items-center gap-2 px-3 py-2 rounded-xl text-[13.5px] font-semibold text-warm-800 hover:bg-sage-50">💰 Budżet 2027 — wnioski radnych</a>
+                                <a href="artykuly/afera-wodna-polomia.html" onclick="closeMobileMenu()" class="flex items-center gap-2 px-3 py-2 rounded-xl text-[13.5px] font-semibold text-warm-800 hover:bg-sage-50">💧 „Afera wodna” w Połomi</a>
+                            </div>
+                        </details>
+                        <a href="#kontakt" onclick="closeMobileMenu()" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">✉️ Kontakt</a>
+                    </div>
+                </details>
+
+                <!-- SPOŁECZNOŚĆ / NARZĘDZIA -->
+                <details class="group/mg rounded-2xl border border-warm-200 bg-white overflow-hidden">
+                    <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3 font-bold text-[15px] text-warm-900"><span>💬 Społeczność / Narzędzia</span><span class="text-[10px] text-warm-800/40 transition-transform group-open/mg:rotate-180">▼</span></summary>
+                    <div class="px-3 pb-3 space-y-0.5">
+                        <a href="#forum" onclick="closeMobileMenu()" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">💬 Forum</a>
+                        <a href="#" onclick="closeMobileMenu(); openChat(event)" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">🧭 Asystent</a>
+                    </div>
+                </details>
+
+                <!-- PAMIĘĆ I HISTORIA -->
+                <details class="group/mg rounded-2xl border border-warm-200 bg-white overflow-hidden">
+                    <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3 font-bold text-[15px] text-warm-900"><span>🕯️ Pamięć i Historia</span><span class="text-[10px] text-warm-800/40 transition-transform group-open/mg:rotate-180">▼</span></summary>
+                    <div class="px-3 pb-3 space-y-0.5">
+                        <a href="https://wodzislawtmzw.pl/marsz-pamieci-im-j-stolarza" target="_blank" rel="noopener" onclick="closeMobileMenu()" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">🕯️ Marsz Pamięci im. J. Stolarza <span class="ml-auto text-[11px] font-bold text-sage-700">→</span></a>
+                        <a href="https://sp-mszana.com/iii-rajd-szlakiem-powstan-slaskich-w-gminie-mszana/" target="_blank" rel="noopener" onclick="closeMobileMenu()" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">🥾 Rajd Szlakiem Powstań Śląskich <span class="ml-auto text-[11px] font-bold text-sage-700">→</span></a>
+                        <a href="#pamiec-historia" onclick="closeMobileMenu()" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-[14px] font-semibold text-warm-800 hover:bg-sage-50">📜 Karta „Pamięć i Historia”</a>
+                    </div>
+                </details>
+            </div>
+
+            <div class="px-5 pb-7">
+                <div class="rounded-2xl bg-sage-600 text-white p-4">
+                    <div class="font-bold text-[14px]">💬 Forum Mieszkańców</div>
+                    <p class="text-[12px] text-white/85 mt-1">Twój głos się liczy — dołącz do dyskusji!</p>
+                    <a href="#forum" onclick="closeMobileMenu()" class="mt-3 w-full h-10 rounded-full bg-white text-sage-700 font-bold text-[13.5px] inline-flex items-center justify-center">Wejdź na Forum →</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- O NAS: INFORMACJE O GRUPIE + ZASADY -->
     <section id="onas" class="max-w-[1280px] mx-auto px-5 py-8">
@@ -2061,6 +2156,27 @@ loadViewCounter();
 </script>
 
 
+
+<script>
+// ===== MENU MOBILNE (telefony i tablety) =====
+function toggleMobileMenu(){
+  const p = document.getElementById('mobileMenu');
+  if(!p) return;
+  const hide = !p.classList.contains('hidden');
+  p.classList.toggle('hidden', hide);
+  const b = document.getElementById('menuBtn');
+  if(b) b.setAttribute('aria-expanded', String(!hide));
+  document.body.style.overflow = hide ? '' : 'hidden';
+}
+function closeMobileMenu(){
+  const p = document.getElementById('mobileMenu');
+  if(p) p.classList.add('hidden');
+  const b = document.getElementById('menuBtn');
+  if(b) b.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeMobileMenu(); });
+</script>
 
 </body>
 </html>
