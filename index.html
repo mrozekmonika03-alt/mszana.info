@@ -522,6 +522,7 @@ Forum Mieszkańców Gminy Mszana — Twój Głos
             <div id="ankietaFormWrap" class="p-6 sm:p-10">
                 <p class="text-[14.5px] leading-[1.7] text-warm-800/80">Każde sołectwo ma 66 401,80 zł z funduszu sołeckiego — o podziale na 2027 rok zadecydujemy na zebraniach wiejskich we wrześniu. Wypełnij ankietę, a Twoje odpowiedzi trafią do sołtysów i Rad Sołeckich. <b>Ankieta jest anonimowa.</b></p>
 
+                <div id="ankWarn" class="hidden mt-4 p-4 rounded-2xl bg-red-50 border border-red-200 text-[13.5px] text-red-800 leading-snug">⚠️ <b>Nie udało się zapisać odpowiedzi w bazie.</b> Sprawdź, czy w Supabase uruchomiono SQL dla tabeli <b>ankieta_fundusz</b> (plik supabase-ankieta.sql).</div>
                 <form id="ankietaForm" class="mt-6 space-y-7">
                     <!-- A. Sołectwo -->
                     <div>
@@ -597,6 +598,7 @@ Forum Mieszkańców Gminy Mszana — Twój Głos
             </div>
 
             <div id="ankMsPracaWrap" class="p-6 sm:p-10">
+                <div id="ankMsPracaWarn" class="hidden mb-5 p-4 rounded-2xl bg-red-50 border border-red-200 text-[13.5px] text-red-800 leading-snug">⚠️ <b>Nie udało się zapisać odpowiedzi w bazie.</b> Sprawdź, czy w Supabase uruchomiono SQL dla tabeli <b>ankieta_mszana_po_pracy</b> (plik supabase-ankieta-mszana-po-pracy.sql). Odpowiedź możesz skopiować przyciskiem poniżej.</div>
                 <form id="ankMsPracaForm" class="space-y-5">
 
                     <!-- METRYCZKA -->
@@ -2278,13 +2280,17 @@ if(chatFormEl) chatFormEl.addEventListener('submit', async function(ev){
         zebranie: zebranie,
         ts: Date.now()
       };
+      let cloudFail = false;
       try{
-        await fetch(SUPA_URL + '/rest/v1/ankieta_fundusz', {
+        const r = await fetch(SUPA_URL + '/rest/v1/ankieta_fundusz', {
           method: 'POST',
           headers: { 'apikey': SUPA_KEY, 'Authorization': 'Bearer ' + SUPA_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
           body: JSON.stringify(payload)
         });
-      }catch(e2){ console.warn('Ankieta: zapis w chmurze nieudany', e2); }
+        if(!r.ok) throw new Error('HTTP ' + r.status);
+      }catch(e2){ console.warn('Ankieta: zapis w chmurze nieudany', e2); cloudFail = true; }
+      const warnBox = document.getElementById('ankWarn');
+      if(warnBox) warnBox.classList.toggle('hidden', !cloudFail);
       document.getElementById('ankietaFormWrap').classList.add('hidden');
       document.getElementById('ankOk').classList.remove('hidden');
     }finally{
@@ -2313,6 +2319,14 @@ function kopiujMsp(){
   form.addEventListener('submit', async function(e){
     e.preventDefault();
     const f = e.target;
+    if(!f.checkValidity()){
+      const inv = f.querySelector(':invalid');
+      const map = {'msp-plec':'Płeć','msp-wiek':'Przedział wiekowy','msp-q1':'Pytanie 1 — zainteresowanie udziałem','msp-q2':'Pytanie 2 — formy zajęć','msp-q3':'Pytanie 3 — termin','msp-q4':'Pytanie 4 — częstotliwość','msp-q5':'Pytanie 5 — miejscowość','msp-q7':'Pytanie 7 — opłaty'};
+      const name = inv ? (map[inv.name] || inv.name) : 'jedno z pól';
+      if(inv){ inv.scrollIntoView({behavior:'smooth', block:'center'}); inv.focus({preventScroll:true}); }
+      alert('⚠️ Uzupełnij brakujące pole: ' + name + '.');
+      return;
+    }
     function radio(n){ const r = f.querySelector('input[name="'+n+'"]:checked'); return r ? r.value : '—'; }
     function checks(n){
       const arr = Array.prototype.slice.call(f.querySelectorAll('input[name="'+n+'"]:checked')).map(function(c){return c.value;});
@@ -2351,13 +2365,17 @@ function kopiujMsp(){
         q5: radio('msp-q5'), q6: val('msp-q6'), q7: radio('msp-q7'), q8: val('msp-q8'), q9: val('msp-q9'),
         ts: Date.now()
       };
+      let cloudFail = false;
       try{
-        await fetch(SUPA_URL + '/rest/v1/ankieta_mszana_po_pracy', {
+        const r = await fetch(SUPA_URL + '/rest/v1/ankieta_mszana_po_pracy', {
           method: 'POST',
           headers: { 'apikey': SUPA_KEY, 'Authorization': 'Bearer ' + SUPA_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
           body: JSON.stringify(payload)
         });
-      }catch(err){ console.warn('Ankieta Mszana po pracy: zapis w chmurze nieudany', err); }
+        if(!r.ok) throw new Error('HTTP ' + r.status);
+      }catch(err){ console.warn('Ankieta Mszana po pracy: zapis w chmurze nieudany', err); cloudFail = true; }
+      const warnBox = document.getElementById('ankMsPracaWarn');
+      if(warnBox) warnBox.classList.toggle('hidden', !cloudFail);
     }finally{
       if(btn){ btn.disabled = false; btn.textContent = '📨 Wyślij odpowiedzi'; }
     }
