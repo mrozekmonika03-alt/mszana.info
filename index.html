@@ -122,53 +122,80 @@
                     <div class="text-[10.5px] sm:text-[11.5px] tracking-[0.1em] uppercase font-bold text-sage-600 mt-1 leading-snug">Mszana – Przejrzysta Gmina &amp; Sprawy Mieszkańców</div>
                 </div>
             </div>
-            <nav aria-label="Nawigacja główna" class="hidden lg:flex items-center gap-5 text-[14.5px] font-bold text-warm-900/75">
-                <div class="relative group">
-                    <button class="flex items-center gap-1.5 text-sage-700 bg-sage-50 px-3 py-1 rounded-full border border-sage-200 hover:bg-sage-100 transition">
-                        📰 Aktualności
-                        <svg class="w-3.5 h-3.5 opacity-60 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                        <nav aria-label="Nawigacja główna" class="hidden lg:flex items-center gap-3 text-[13.5px] font-bold text-warm-900/75">
+                <!-- MIESZKANIEC / GMINA -->
+                <div class="relative group/menu">
+                    <button class="flex items-center gap-1.5 hover:text-sage-700 transition whitespace-nowrap">
+                        🏘️ Mieszkaniec / Gmina
+                        <svg class="w-3.5 h-3.5 opacity-60 transition-transform group-hover/menu:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                     </button>
-                    <div class="absolute left-0 top-full pt-2 z-50 hidden group-hover:block min-w-[300px]">
+                    <div class="absolute left-0 top-full pt-2 z-50 hidden group-hover/menu:block min-w-[260px]">
                         <div class="soft-card p-2 bg-white shadow-xl border border-warm-200 rounded-2xl space-y-0.5">
-                            <a href="artykuly/remont-ul-1-maja.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>🚧</span> Remont ul. 1 Maja w Mszanie</a>
-                            <a href="artykuly/rozbudowa-ul-wolnosci-polomia.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>🛣️</span> Rozbudowa ul. Wolności w Połomi</a>
-                            <a href="artykuly/sesja-27-lipca-2026-relacja.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>📋</span> XXVII Sesja Rady Gminy — relacja</a>
-                            <a href="artykuly/fundusz-solecki-jak-bo.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>🏘️</span> Fundusz sołecki 2026</a>
-                            <a href="artykuly/fundusz-solecki-propozycje.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>📝</span> Zgłoś propozycję — fundusz sołecki</a>
-                            <a href="artykuly/programy-wieloletnie-2026.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>📊</span> Programy wieloletnie 2026</a>
-                            <a href="artykuly/budzet-2027-wnioski.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>💰</span> Budżet 2027 — wnioski radnych</a>
-                            <a href="artykuly/afera-wodna-polomia.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>💧</span> „Afera wodna” w Połomi</a>
+                            <div class="relative group/item">
+                                <a href="artykuly/solectwo-mszana.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>🏡</span> Sołectwa <span class="ml-auto text-[11px] text-warm-800/40">▸</span></a>
+                                <div class="absolute left-full top-0 pl-2 z-50 hidden group-hover/item:block min-w-[190px]">
+                                    <div class="soft-card p-2 bg-white shadow-xl border border-warm-200 rounded-2xl space-y-0.5">
+                                        <a href="artykuly/solectwo-mszana.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px] font-bold">🏡 Mszana</a>
+                                        <a href="artykuly/solectwo-polomia.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px] font-bold">🏘️ Połomia</a>
+                                        <a href="artykuly/solectwo-gogolowa.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px] font-bold">🏠 Gogołowa</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="artykuly/komunikacja-publiczna.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>🚌</span> Komunikacja publiczna</a>
+                            <a href="#ogloszenia" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>📢</span> Ogłoszenia</a>
                         </div>
                     </div>
                 </div>
-                <a href="#" onclick="openChat(event)" class="hover:text-sage-700" title="Asystent mieszkańca — napisz do redakcji">🧭 Asystent</a>
-                <div class="relative group">
-                    <button class="flex items-center gap-1.5 hover:text-sage-700 transition">
-                        🏡 Sołectwa
-                        <svg class="w-3.5 h-3.5 opacity-60 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                <!-- SAMORZĄD -->
+                <div class="relative group/menu">
+                    <button class="flex items-center gap-1.5 hover:text-sage-700 transition whitespace-nowrap">
+                        🏛️ Samorząd
+                        <svg class="w-3.5 h-3.5 opacity-60 transition-transform group-hover/menu:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                     </button>
-                    <div class="absolute left-0 top-full pt-2 z-50 hidden group-hover:block min-w-[180px]">
+                    <div class="absolute left-0 top-full pt-2 z-50 hidden group-hover/menu:block min-w-[200px]">
                         <div class="soft-card p-2 bg-white shadow-xl border border-warm-200 rounded-2xl space-y-0.5">
-                            <a href="artykuly/solectwo-mszana.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px] font-bold">🏡 Mszana</a>
-                            <a href="artykuly/solectwo-polomia.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px] font-bold">🏘️ Połomia</a>
-                            <a href="artykuly/solectwo-gogolowa.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px] font-bold">🏠 Gogołowa</a>
+                            <a href="#sesje" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>📋</span> Sesje Rady</a>
+                            <a href="#komisje" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>🏛️</span> Komisje</a>
                         </div>
                     </div>
                 </div>
-                <a href="artykuly/komunikacja-publiczna.html" class="hover:text-sage-700">🚌 Komunikacja publiczna</a>
-                <a href="#sesje" class="hover:text-sage-700">Sesje Rady</a>
-                <a href="#komisje" class="hover:text-sage-700">🏛️ Komisje</a>
-                <a href="#forum" class="hover:text-sage-700">Forum</a>
-                <a href="#ogloszenia" class="hover:text-sage-700">Ogłoszenia</a>
-                <a href="#kontakt" class="hover:text-sage-700">Kontakt</a>
-                <div class="relative group">
-                    <button class="flex items-center gap-1.5 hover:text-sage-700 transition">
-                        🕯️ Marsz Pamięci im. J. Stolarza
-                        <svg class="w-3.5 h-3.5 opacity-60 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                <!-- INFORMACJE I KONTAKT -->
+                <div class="relative group/menu">
+                    <button class="flex items-center gap-1.5 hover:text-sage-700 transition whitespace-nowrap">
+                        🧭 Informacje i Kontakt
+                        <svg class="w-3.5 h-3.5 opacity-60 transition-transform group-hover/menu:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                     </button>
-                    <div class="absolute left-0 top-full pt-2 z-50 hidden group-hover:block min-w-[260px]">
+                    <div class="absolute left-0 top-full pt-2 z-50 hidden group-hover/menu:block min-w-[260px]">
                         <div class="soft-card p-2 bg-white shadow-xl border border-warm-200 rounded-2xl space-y-0.5">
-                            <a href="https://wodzislawtmzw.pl/marsz-pamieci-im-j-stolarza" target="_blank" rel="noopener" class="flex items-center gap-2.5 px-3.5 py-3 rounded-xl hover:bg-sage-50 transition text-[13.5px] font-bold">🕯️ Marsz Pamięci im. J. Stolarza <span class="ml-auto text-[11px] font-bold text-sage-700">→</span></a>
+                            <div class="relative group/item">
+                                <a href="#aktualnosci" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>📰</span> Aktualności <span class="ml-auto text-[11px] text-warm-800/40">▸</span></a>
+                                <div class="absolute left-full top-0 pl-2 z-50 hidden group-hover/item:block min-w-[300px]">
+                                    <div class="soft-card p-2 bg-white shadow-xl border border-warm-200 rounded-2xl space-y-0.5">
+                                        <a href="artykuly/remont-ul-1-maja.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>🚧</span> Remont ul. 1 Maja w Mszanie</a>
+                                        <a href="artykuly/rozbudowa-ul-wolnosci-polomia.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>🛣️</span> Rozbudowa ul. Wolności w Połomi</a>
+                                        <a href="artykuly/sesja-27-lipca-2026-relacja.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>📋</span> XXVII Sesja Rady Gminy — relacja</a>
+                                        <a href="artykuly/fundusz-solecki-jak-bo.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>🏘️</span> Fundusz sołecki 2026</a>
+                                        <a href="artykuly/fundusz-solecki-propozycje.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>📝</span> Zgłoś propozycję — fundusz sołecki</a>
+                                        <a href="artykuly/programy-wieloletnie-2026.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>📊</span> Programy wieloletnie 2026</a>
+                                        <a href="artykuly/budzet-2027-wnioski.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>💰</span> Budżet 2027 — wnioski radnych</a>
+                                        <a href="artykuly/afera-wodna-polomia.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>💧</span> „Afera wodna” w Połomi</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#kontakt" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>✉️</span> Kontakt</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- SPOŁECZNOŚĆ / NARZĘDZIA -->
+                <div class="relative group/menu">
+                    <button class="flex items-center gap-1.5 hover:text-sage-700 transition whitespace-nowrap">
+                        💬 Społeczność / Narzędzia
+                        <svg class="w-3.5 h-3.5 opacity-60 transition-transform group-hover/menu:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="absolute left-0 top-full pt-2 z-50 hidden group-hover/menu:block min-w-[230px]">
+                        <div class="soft-card p-2 bg-white shadow-xl border border-warm-200 rounded-2xl space-y-0.5">
+                            <a href="#forum" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>💬</span> Forum</a>
+                            <a href="#" onclick="openChat(event)" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-sage-50 transition text-[13.5px]"><span>🧭</span> Asystent</a>
                         </div>
                     </div>
                 </div>
@@ -416,7 +443,53 @@ Forum Mieszkańców Gminy Mszana — Twój Głos
         </div>
     </section>
 
-    <!-- AKTUALNOŚCI - ważny artykuł -->
+            <!-- PAMIĘĆ I HISTORIA - KARTA NA STRONIE GŁÓWNEJ -->
+    <section aria-label="Pamięć i Historia" class="max-w-[1280px] mx-auto px-5 py-8">
+        <div class="soft-card overflow-hidden p-6 sm:p-10 relative" style="background:linear-gradient(120deg,#23201c 0%,#2c3a2c 55%,#3d6549 100%)">
+            <div class="absolute inset-0 pointer-events-none opacity-[0.07]" style="background-image:radial-gradient(circle at 15% 20%,#ffffff 0,transparent 38%),radial-gradient(circle at 85% 85%,#ffffff 0,transparent 38%);"></div>
+            <div class="relative">
+                <div class="flex flex-wrap items-center gap-4">
+                    <span class="w-14 h-14 rounded-2xl bg-white/10 border border-white/20 text-white flex items-center justify-center text-[26px] shrink-0 shadow-lg">🕯️</span>
+                    <div>
+                        <div class="text-[11px] font-bold uppercase tracking-widest text-white/55">Pamięć i tożsamość • Gmina Mszana</div>
+                        <h2 class="font-display text-[24px] sm:text-[28px] font-bold text-white leading-tight mt-1">Pamięć i Historia</h2>
+                    </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-5 mt-7">
+                    <!-- Marsz Pamięci im. J. Stolarza -->
+                    <div class="rounded-2xl bg-white/5 border border-white/15 p-5 sm:p-6 flex flex-col">
+                        <div class="flex items-center gap-2.5">
+                            <span class="text-[22px]">🕯️</span>
+                            <h3 class="font-bold text-white text-[17px] leading-tight">Marsz Pamięci im. J. Stolarza</h3>
+                        </div>
+                        <p class="text-[13.5px] text-white/75 leading-[1.7] mt-3 flex-1">Co roku w styczniu piechurzy pokonują trasę <b class="text-white">Oświęcim (KL Auschwitz) → Wodzisław Śląski</b>, upamiętniając ofiary „marszu śmierci” — ewakuacji więźniów obozu w 1945 r. Trasa prowadzi przez <b class="text-white">Gminę Mszana</b>, gdzie uczestnicy zatrzymują się przy mogile Ofiar na cmentarzu w Mszanie.</p>
+                        <span class="inline-flex self-start mt-3 px-2.5 py-1 rounded-full bg-white/10 text-white/70 text-[11px] font-bold">Kolejna edycja: styczeń 2027 (XVI, planowana)</span>
+                        <div class="flex flex-wrap items-center gap-3 mt-4">
+                            <a href="https://wodzislawtmzw.pl/marsz-pamieci-im-j-stolarza" target="_blank" rel="noopener" class="h-10 px-5 rounded-full bg-white text-warm-900 text-[13.5px] font-bold inline-flex items-center gap-2 hover:bg-warm-100 transition">Szczegóły i trasa →</a>
+                            <span class="text-[11.5px] text-white/50">Organizator: TMZW</span>
+                        </div>
+                    </div>
+                    <!-- Rajd Szlakiem Powstań Śląskich -->
+                    <div class="rounded-2xl bg-white/5 border border-white/15 p-5 sm:p-6 flex flex-col">
+                        <div class="flex items-center gap-2.5">
+                            <span class="text-[22px]">🥾</span>
+                            <h3 class="font-bold text-white text-[17px] leading-tight">Rajd Szlakiem Powstań Śląskich</h3>
+                        </div>
+                        <p class="text-[13.5px] text-white/75 leading-[1.7] mt-3 flex-1">Rajd szlakiem powstańczych miejsc <b class="text-white">w Gminie Mszana</b> — aktywna forma poznawania historii Powstań Śląskich, organizowana przez Roberta Furtaka (TMZW). Uczestnicy przemierzają trasę łączącą miejsca pamięci powstańczej.</p>
+                        <span class="inline-flex self-start mt-3 px-2.5 py-1 rounded-full bg-white/10 text-white/70 text-[11px] font-bold">III edycja: 23 maja 2026</span>
+                        <div class="flex flex-wrap items-center gap-3 mt-4">
+                            <a href="https://sp-mszana.com/iii-rajd-szlakiem-powstan-slaskich-w-gminie-mszana/" target="_blank" rel="noopener" class="h-10 px-5 rounded-full bg-white text-warm-900 text-[13.5px] font-bold inline-flex items-center gap-2 hover:bg-warm-100 transition">Zobacz relację →</a>
+                            <span class="text-[11.5px] text-white/50">Źródło: sp-mszana.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5 text-[11.5px] text-white/45">Źródła: wodzislawtmzw.pl • sp-mszana.com • TMZW</div>
+            </div>
+        </div>
+    </section>
+
+<!-- AKTUALNOŚCI - ważny artykuł -->
     <!-- SEKCJA GŁÓWNA: AKTUALNOŚCI (lewa) + SESJE RADY (prawa) -->
     <section id="aktualnosci" class="max-w-[1280px] mx-auto px-5 py-8">
         <div class="grid lg:grid-cols-[1fr_330px] gap-8 items-start">
